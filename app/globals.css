@@ -1504,28 +1504,37 @@ img {
    ============================================================ */
 
 .hz-split-layout {
-  display: flex;
-  height: calc(100vh - 60px); /* Assuming 60px navbar */
+  position: relative;
+  height: calc(100vh - 60px);
   width: 100vw;
   overflow: hidden;
-  background-color: var(--color-bg);
-}
-
-.hz-split-list-pane {
-  width: 45%;
-  max-width: 600px;
-  height: 100%;
-  overflow-y: auto;
-  border-right: 1px solid var(--color-border);
-  padding: 1.5rem;
-  background-color: var(--color-surface);
 }
 
 .hz-split-map-pane {
-  flex: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  position: relative;
+  z-index: 1;
+}
+
+.hz-split-list-pane {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  width: 400px;
+  max-width: calc(100vw - 2rem);
   z-index: 10;
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .hz-property-list {
