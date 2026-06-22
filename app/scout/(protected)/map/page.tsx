@@ -19,6 +19,12 @@ export default function ScoutMapPage() {
   const [distance, setDistance] = useState(0);
   const [pathPoints, setPathPoints] = useState<[number, number][]>([]);
 
+  // Vision Tags State
+  const [showTagDrawer, setShowTagDrawer] = useState(false);
+  const [selectedTag, setSelectedTag] = useState('Caveat Emptor Graffiti');
+  const [tagNotes, setTagNotes] = useState('');
+  const [visionTags, setVisionTags] = useState<{ id: string; tag: string; notes: string; timestamp: number }[]>([]);
+
   // 1. Persist terms modal
   useEffect(() => {
     const hasSeen = localStorage.getItem('hz_seen_terms');
@@ -43,11 +49,39 @@ export default function ScoutMapPage() {
         console.error("Failed to restore path", e);
       }
     }
+
+    const savedTags = sessionStorage.getItem('hz_vision_tags');
+    if (savedTags) {
+      try {
+        setVisionTags(JSON.parse(savedTags));
+      } catch (e) {
+        console.error("Failed to restore vision tags", e);
+      }
+    }
   }, []);
 
   const handleUnderstand = () => {
     localStorage.setItem('hz_seen_terms', 'true');
     setShowTerms(false);
+  };
+
+  const handleSaveTag = () => {
+    if (!tagNotes.trim()) {
+      alert('Please add some details before saving.');
+      return;
+    }
+    const newTag = {
+      id: Math.random().toString(36).substring(7),
+      tag: selectedTag,
+      notes: tagNotes,
+      timestamp: Date.now()
+    };
+    const updatedTags = [...visionTags, newTag];
+    setVisionTags(updatedTags);
+    sessionStorage.setItem('hz_vision_tags', JSON.stringify(updatedTags));
+    
+    setTagNotes('');
+    setShowTagDrawer(false);
   };
 
   const handlePathUpdate = useCallback((points: [number, number][], distMeters: number) => {
@@ -102,18 +136,37 @@ export default function ScoutMapPage() {
           onPathUpdate={handlePathUpdate} 
         />
         
-        {/* Floating Camera Button (only active when tracking) */}
+        {/* Floating Action Buttons (only active when tracking) */}
         {isTracking && (
-          <button 
-            className="hz-map-camera-btn"
-            onClick={() => fileInputRef.current?.click()}
-            aria-label="Take Photo"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
-              <circle cx="12" cy="13" r="3"/>
-            </svg>
-          </button>
+          <>
+            <button 
+              className="hz-map-camera-btn"
+              onClick={() => fileInputRef.current?.click()}
+              aria-label="Take Photo"
+              style={{ bottom: '1.5rem', zIndex: 1000 }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                <circle cx="12" cy="13" r="3"/>
+              </svg>
+            </button>
+            <button 
+              className="hz-map-camera-btn"
+              onClick={() => setShowTagDrawer(true)}
+              aria-label="Log Observation"
+              style={{ bottom: '5.5rem', backgroundColor: 'var(--color-dark-surface)', color: 'var(--color-primary)', border: '1px solid var(--color-primary)', zIndex: 1000 }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+              {visionTags.length > 0 && (
+                <span style={{ position: 'absolute', top: '-5px', right: '-5px', background: 'var(--color-primary)', color: 'white', borderRadius: '50%', width: '20px', height: '20px', fontSize: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {visionTags.length}
+                </span>
+              )}
+            </button>
+          </>
         )}
         <input 
           type="file" 
@@ -184,6 +237,48 @@ export default function ScoutMapPage() {
               onClick={handleUnderstand}
             >
               I Understand — Start Mapping
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Tag Drawer Modal */}
+      {showTagDrawer && (
+        <div className="hz-scout-modal-overlay">
+          <div className="hz-scout-modal" style={{ marginTop: 'auto', marginBottom: 0, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <h2 className="hz-scout-modal-title" style={{ margin: 0 }}>Log Vision Tag</h2>
+              <button onClick={() => setShowTagDrawer(false)} style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', fontSize: '1.5rem', cursor: 'pointer' }}>&times;</button>
+            </div>
+            
+            <div className="hz-scout-modal-body" style={{ textAlign: 'left' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Select Tag Type</label>
+              <select 
+                value={selectedTag}
+                onChange={(e) => setSelectedTag(e.target.value)}
+                style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--color-border)', backgroundColor: 'var(--color-dark-bg)', color: 'var(--color-text-inverse)', marginBottom: '1rem' }}
+              >
+                <option value="Caveat Emptor Graffiti">🛑 "Caveat Emptor" Graffiti</option>
+                <option value="Squatter Encampment">🚨 Squatter Encampment</option>
+                <option value="Destroyed Beacons">⚠️ Destroyed Beacons</option>
+                <option value="Physical Roadblock">🚧 Physical Roadblock</option>
+                <option value="Active Construction">🚜 Active Construction</option>
+                <option value="Other Observation">👁️ Other Observation</option>
+              </select>
+
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Additional Details</label>
+              <textarea 
+                placeholder="e.g. 'Graffiti says not for sale, call 07...'"
+                value={tagNotes}
+                onChange={(e) => setTagNotes(e.target.value)}
+                style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--color-border)', backgroundColor: 'var(--color-dark-bg)', color: 'var(--color-text-inverse)', minHeight: '80px', marginBottom: '1rem', resize: 'vertical' }}
+              />
+            </div>
+            <button 
+              className="btn-primary w-full"
+              onClick={handleSaveTag}
+            >
+              Save Tag
             </button>
           </div>
         </div>
