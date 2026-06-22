@@ -95,9 +95,8 @@ export default function MapSearchPage() {
       <main className="hz-split-layout">
         
         {/* Floating Side Panel: Property List & Filters */}
-        <section className="hz-split-list-pane">
-          <div style={{ padding: '1.5rem 1.25rem' }}>
-            <h1 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>
+        <section className="hz-split-list-pane" style={{ padding: '1.5rem 1.25rem' }}>
+          <h1 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>
             Verified Real Estate
           </h1>
           
@@ -193,7 +192,6 @@ export default function MapSearchPage() {
               ))}
             </div>
           )}
-          </div>
         </section>
 
         {/* Right Side: Interactive Map */}
