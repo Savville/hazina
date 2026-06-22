@@ -34,6 +34,7 @@ export default function HomePage() {
             Hazina
           </Link>
           <nav className="hz-nav__links">
+            <Link href="/" className="hz-nav__link">Home</Link>
             <Link href="/properties" className="hz-nav__link">Browse Properties</Link>
             <Link href="/map" className="hz-nav__link">View Map</Link>
             <Link href="/scout/login" className="hz-nav__cta btn-primary">
