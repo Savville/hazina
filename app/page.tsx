@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import FeaturedProperties from '@/components/features/FeaturedProperties';
 
 export const metadata: Metadata = {
   title: 'Hazina — Kenya Real Estate Intelligence',
@@ -33,7 +34,8 @@ export default function HomePage() {
             Hazina
           </Link>
           <nav className="hz-nav__links">
-            <Link href="/map" className="hz-nav__link">Cadastral Map</Link>
+            <Link href="/properties" className="hz-nav__link">Browse Properties</Link>
+            <Link href="/map" className="hz-nav__link">View Map</Link>
             <Link href="/scout/login" className="hz-nav__cta btn-primary">
               Scout Login
             </Link>
@@ -92,6 +94,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Featured Properties (Phase 3) ── */}
+      <FeaturedProperties />
 
       {/* ── Trust bar ── */}
       <section className="hz-trust">

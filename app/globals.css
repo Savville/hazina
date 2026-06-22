@@ -187,7 +187,7 @@ img {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  color: var(--color-primary);
+  color: #000000;
   border: none;
   border-radius: var(--radius-pill);
   padding: 0.75rem 1rem;
@@ -525,8 +525,17 @@ img {
     gap: 2rem;
   }
 
+  .hz-nav__links {
+    gap: 0.75rem;
+  }
+
   .hz-nav__link {
-    display: none;
+    font-size: 0.875rem;
+  }
+
+  .hz-nav__cta {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.8125rem;
   }
 }
 
@@ -1489,6 +1498,138 @@ img {
     padding: 0;
     margin: 0;
   }
+
+/* ============================================================
+   Public App — Split Map Search (Phase 3)
+   ============================================================ */
+
+.hz-split-layout {
+  display: flex;
+  height: calc(100vh - 60px); /* Assuming 60px navbar */
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.hz-split-list-pane {
+  width: 45%;
+  max-width: 600px;
+  height: 100%;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-border);
+  padding: 1.5rem;
+  background-color: var(--color-surface);
+}
+
+.hz-split-map-pane {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.hz-property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hz-property-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
+  cursor: pointer;
+}
+
+.hz-property-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.hz-property-card-image {
+  height: 200px;
+  background-color: var(--color-border);
+  position: relative;
+}
+
+.hz-property-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hz-property-card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hz-property-card-content {
+  padding: 1.25rem;
+}
+
+.hz-property-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.hz-property-card-meta {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hz-property-card-price {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Mobile responsive stacked layout */
+@media (max-width: 768px) {
+  .hz-split-layout {
+    flex-direction: column;
+  }
+
+  .hz-split-map-pane {
+    height: 50vh;
+    width: 100%;
+    flex: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hz-split-list-pane {
+    height: 50vh;
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+    padding: 1rem;
+  }
+}
   
   .hz-brief-document {
     width: 100%;
@@ -1496,4 +1637,58 @@ img {
     padding: 0;
     box-shadow: none;
   }
+}
+
+/* ============================================================
+   Public App — Full Grid Search (Browse Properties)
+   ============================================================ */
+.hz-page-container {
+  padding: 4rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hz-page-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  margin-bottom: 0.5rem;
+}
+
+.hz-page-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+}
+
+.hz-property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.hz-section-featured {
+  padding: 4rem 1.5rem;
+  background-color: var(--color-surface);
+}
+
+.hz-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hz-section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  margin-bottom: 0.5rem;
+}
+
+.hz-section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-muted);
 }

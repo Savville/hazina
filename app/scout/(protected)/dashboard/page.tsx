@@ -42,7 +42,12 @@ export default function ScoutDashboardPage() {
     <div style={styles.page}>
       {/* Greeting */}
       <section style={styles.greetingSection}>
-        <h1 style={styles.greeting}>Welcome back, scout.</h1>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem' }}>
+          <h1 style={styles.greeting}>Welcome back, scout.</h1>
+          <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.35rem 0.75rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-pill)', color: 'var(--color-text-muted)', fontSize: '0.8125rem', textDecoration: 'none', transition: 'background-color 150ms ease' }}>
+            <span style={{ fontSize: '1rem' }}>🏠</span> Main Site
+          </Link>
+        </div>
         <p style={styles.greetingSub}>Here is your field activity summary.</p>
       </section>
 
