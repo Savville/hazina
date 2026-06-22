@@ -21,15 +21,24 @@ export default function ScoutHeader({ userEmail }: ScoutHeaderProps) {
         Hazina
       </Link>
 
-      {/* Right side */}
-      <div style={styles.right}>
+      {/* Right side — Profile & Settings */}
+      <Link href="/scout/settings" style={styles.profileLink}>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          style={{ opacity: 0.8 }}
+        >
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
         <span style={styles.email}>{displayEmail}</span>
-        <form action="/api/scout/sign-out" method="POST">
-          <button type="submit" style={styles.signOutBtn}>
-            Sign out
-          </button>
-        </form>
-      </div>
+      </Link>
     </header>
   );
 }
@@ -55,27 +64,19 @@ const styles: Record<string, React.CSSProperties> = {
     letterSpacing: '-0.01em',
     textDecoration: 'none',
   },
-  right: {
+  profileLink: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.875rem',
+    gap: '0.5rem',
+    textDecoration: 'none',
+    color: 'var(--color-text-muted)',
+    padding: '0.4rem 0.6rem',
+    borderRadius: 'var(--radius-sm)',
+    transition: 'background-color 200ms ease, color 200ms ease',
   },
   email: {
     fontFamily: 'var(--font-body)',
-    fontSize: '0.8125rem',
-    color: 'var(--color-text-muted)',
-  },
-  signOutBtn: {
-    background: 'none',
-    border: 'none',
-    fontFamily: 'var(--font-body)',
-    fontSize: '0.8125rem',
-    color: 'var(--color-text-muted)',
-    cursor: 'pointer',
-    padding: '0.25rem 0.5rem',
-    borderRadius: 'var(--radius-sm)',
-    transition: 'color 200ms ease',
-    textDecoration: 'underline',
-    textUnderlineOffset: '3px',
+    fontSize: '0.875rem',
+    fontWeight: 500,
   },
 };
