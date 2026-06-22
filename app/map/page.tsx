@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { createBrowserClient } from '@/lib/supabase';
 
 // Dynamically import the map to avoid SSR window errors
-const PublicMapClient = dynamic(() => import('@/components/features/PublicMap'), { 
+const PublicMapClient = dynamic(() => import('@/components/features/PublicMap'), {
   ssr: false,
   loading: () => <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--color-surface)', color: 'var(--color-text-muted)' }}>Loading Map...</div>
 });
@@ -52,7 +52,7 @@ export default function MapSearchPage() {
   // Filter Logic
   useEffect(() => {
     let result = [...allProperties];
-    
+
     if (filters.category) {
       result = result.filter(p => p.category === filters.category);
     }
@@ -93,18 +93,18 @@ export default function MapSearchPage() {
 
       {/* Split Layout */}
       <main className="hz-split-layout">
-        
+
         {/* Floating Side Panel: Property List & Filters */}
         <section className="hz-split-list-pane" style={{ padding: '1.5rem 1.25rem' }}>
           <h1 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>
             Verified Real Estate
           </h1>
-          
+
           {/* ── INTELLIGENCE FILTERS ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem', padding: '1rem', backgroundColor: 'rgba(255,255,255,0.03)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
             <h3 style={{ margin: 0, fontSize: '0.875rem', color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Intelligence Filters</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.category} onChange={e => setFilters({...filters, category: e.target.value})}>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.category} onChange={e => setFilters({ ...filters, category: e.target.value })}>
                 <option value="">Any Category</option>
                 <option value="A_AGRICULTURAL">Agricultural</option>
                 <option value="B_COMMERCIAL">Commercial</option>
@@ -112,28 +112,28 @@ export default function MapSearchPage() {
                 <option value="D_RESIDENTIAL">Residential</option>
                 <option value="E_VACANT_LAND">Vacant Land</option>
               </select>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.road} onChange={e => setFilters({...filters, road: e.target.value})}>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.road} onChange={e => setFilters({ ...filters, road: e.target.value })}>
                 <option value="">Any Road Access</option>
                 <option value="Tarmac">Tarmac</option>
                 <option value="Murram">Murram</option>
               </select>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.water} onChange={e => setFilters({...filters, water: e.target.value})}>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.water} onChange={e => setFilters({ ...filters, water: e.target.value })}>
                 <option value="">Any Water Source</option>
                 <option value="borehole">Borehole</option>
                 <option value="council">Council Water</option>
               </select>
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.power} onChange={e => setFilters({...filters, power: e.target.value})}>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.power} onChange={e => setFilters({ ...filters, power: e.target.value })}>
                 <option value="">Any Power</option>
                 <option value="3-Phase">3-Phase</option>
                 <option value="Single">Single Phase</option>
               </select>
-              <input type="number" placeholder="Max Boda Fare (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', width: '160px' }} value={filters.maxBodaFare} onChange={e => setFilters({...filters, maxBodaFare: e.target.value})} />
-              <input type="number" placeholder="Max Unga (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', width: '140px' }} value={filters.maxUngaPrice} onChange={e => setFilters({...filters, maxUngaPrice: e.target.value})} />
+              <input type="number" placeholder="Max Boda Fare (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', width: '160px' }} value={filters.maxBodaFare} onChange={e => setFilters({ ...filters, maxBodaFare: e.target.value })} />
+              <input type="number" placeholder="Max Unga (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', width: '140px' }} value={filters.maxUngaPrice} onChange={e => setFilters({ ...filters, maxUngaPrice: e.target.value })} />
             </div>
           </div>
-          
+
           {isLoading ? (
             <p style={{ color: 'var(--color-text-muted)' }}>Loading verified listings...</p>
           ) : filteredProperties.length === 0 ? (
@@ -142,12 +142,12 @@ export default function MapSearchPage() {
               <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
                 We don't currently have any verified land matching those exact specifications in our database.
               </p>
-              
+
               {/* ── SCOUT SOURCING BOUNTY FORM ── */}
               <div style={{ backgroundColor: 'var(--color-dark-bg)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', textAlign: 'left', border: '1px solid var(--color-border)' }}>
                 <h4 style={{ margin: '0 0 0.5rem', fontSize: '1rem', color: 'var(--color-text-inverse)' }}>Request Sourcing (Bounty)</h4>
                 <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
-                  Can't find it? Dispatch a Hazina Scout to actively hunt for this exact land profile for you. 
+                  Can't find it? Dispatch a Hazina Scout to actively hunt for this exact land profile for you.
                 </p>
                 <form onSubmit={(e) => { e.preventDefault(); alert('Scout Dispatched! Your sourcing request is in the HQ queue.'); }}>
                   <textarea placeholder="Any additional requirements? (e.g. Budget, exact location)" className="hz-input w-full" rows={3} style={{ marginBottom: '0.75rem', padding: '0.75rem', fontSize: '0.875rem' }}></textarea>
@@ -158,8 +158,9 @@ export default function MapSearchPage() {
           ) : (
             <div className="hz-property-list">
               {filteredProperties.map((prop) => (
-                <article 
-                  key={prop.id} 
+                <Link
+                  href={`/property/${prop.id}`}
+                  key={prop.id}
                   className="hz-property-card"
                   onMouseEnter={() => setActivePropertyId(prop.id)}
                   onMouseLeave={() => setActivePropertyId(null)}
@@ -167,9 +168,9 @@ export default function MapSearchPage() {
                   <div className="hz-property-card-image">
                     {/* If photo_urls exists, use the first one. Otherwise placeholder */}
                     {prop.photo_urls && prop.photo_urls.length > 0 ? (
-                      <img 
-                        src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/scout_photos/${prop.photo_urls[0]}`} 
-                        alt={prop.property_name} 
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/scout_photos/${prop.photo_urls[0]}`}
+                        alt={prop.property_name}
                       />
                     ) : (
                       <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666', fontSize: '0.875rem' }}>
@@ -178,7 +179,7 @@ export default function MapSearchPage() {
                     )}
                     <span className="hz-property-card-badge">Verified</span>
                   </div>
-                  
+
                   <div className="hz-property-card-content">
                     <h2 className="hz-property-card-title">{prop.property_name}</h2>
                     <div className="hz-property-card-meta">
@@ -188,21 +189,21 @@ export default function MapSearchPage() {
                     </div>
                     <p className="hz-property-card-price">Price Upon Request</p>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           )}
         </section>
 
-        {/* Right Side: Interactive Map */}
-        <section className="hz-split-map-pane">
-          <PublicMapClient 
-            properties={filteredProperties} 
-            activePropertyId={activePropertyId} 
-          />
-        </section>
+      {/* Right Side: Interactive Map */}
+      <section className="hz-split-map-pane">
+        <PublicMapClient
+          properties={filteredProperties}
+          activePropertyId={activePropertyId}
+        />
+      </section>
 
-      </main>
-    </div>
+    </main>
+    </div >
   );
 }

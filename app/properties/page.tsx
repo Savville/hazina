@@ -58,7 +58,7 @@ export default function BrowsePropertiesPage() {
         ) : (
           <div className="hz-property-grid">
             {properties.map((prop) => (
-              <article key={prop.id} className="hz-property-card">
+              <Link href={`/property/${prop.id}`} key={prop.id} className="hz-property-card">
                 <div className="hz-property-card-image">
                   {prop.photo_urls && prop.photo_urls.length > 0 ? (
                     <img 
@@ -82,7 +82,7 @@ export default function BrowsePropertiesPage() {
                   </div>
                   <p className="hz-property-card-price">Price Upon Request</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         )}
