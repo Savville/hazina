@@ -10,6 +10,22 @@
  *   share the same type without being explicitly mapped.
  */
 
+// Added: Scout Profile (KYC-light gate — must be completed before submitting reports)
+export interface ScoutProfile {
+  id: string;               // matches auth.users.id
+  full_name: string;
+  national_id: string;
+  phone: string;            // M-Pesa / WhatsApp number
+  county: string;           // primary area of operation
+  sub_county: string;
+  motivation: string;       // why do you want to scout
+  status: 'pending' | 'active' | 'suspended';
+  submissions_count: number;
+  approved_count: number;
+  created_at: string;
+  updated_at: string;
+}
+
 // Filled in Feature 06: Dynamic Forms A/B/C/D
 export interface ScoutReport {
   id: string;

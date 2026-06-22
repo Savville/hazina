@@ -1,28 +1,21 @@
-import { createServerClient } from '@/lib/supabase-server';
 import ScoutHeader from '@/components/features/ScoutHeader';
 
 /**
  * Protected Scout Layout — wraps all authenticated scout routes.
- * Auth enforcement is handled by middleware.ts.
- * This layout fetches the real session user and passes their email
- * to the shared header.
+ * Auth enforcement is handled by proxy.ts (Next.js 16 edge middleware).
+ *
+ * The ScoutHeader receives a static placeholder here.
+ * Once the session API route is wired, we will pass the real user email.
+ * Do NOT make this layout async or call Supabase here — it blocks rendering.
  */
-export default async function ProtectedScoutLayout({
+export default function ProtectedScoutLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = await createServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  const displayEmail =
-    user?.user_metadata?.full_name ?? user?.email ?? 'Scout';
-
   return (
     <div style={styles.shell}>
-      <ScoutHeader userEmail={displayEmail} />
+      <ScoutHeader userEmail="Scout" />
       <main style={styles.main}>{children}</main>
     </div>
   );
