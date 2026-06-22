@@ -122,7 +122,8 @@ export default function ScoutProfilePage() {
     setLoading(false);
 
     if (insertError) {
-      setError('Failed to save your profile. Please try again.');
+      console.error('Supabase Insert Error:', insertError);
+      setError(`Failed to save your profile: ${insertError.message}`);
       return;
     }
 
