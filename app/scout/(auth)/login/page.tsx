@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { createBrowserClient } from '@/lib/supabase';
 
 export default function ScoutLoginPage() {
@@ -95,6 +96,13 @@ export default function ScoutLoginPage() {
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
+
+          <p style={styles.registerPrompt}>
+            Don&apos;t have an account?{' '}
+            <Link href="/scout/register" style={styles.registerLink}>
+              Create one
+            </Link>
+          </p>
         </form>
       </div>
     </div>
@@ -203,5 +211,17 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 600,
     transition: 'background-color 200ms ease, transform 150ms ease',
     marginTop: '0.25rem',
+  },
+  registerPrompt: {
+    fontFamily: 'var(--font-body)',
+    fontSize: '0.875rem',
+    color: 'var(--color-text-muted)',
+    textAlign: 'center' as const,
+    margin: 0,
+  },
+  registerLink: {
+    color: 'var(--color-primary)',
+    textDecoration: 'none',
+    fontWeight: 500,
   },
 };
