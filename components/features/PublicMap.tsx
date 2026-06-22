@@ -21,9 +21,11 @@ interface PublicMapProps {
   activePropertyId?: string | null;
 }
 
-// Helper to recenter map when a specific property is active
+// Helper to recenter map and fit bounds when properties change or card is hovered
 function MapRecenter({ properties, activeId }: { properties: any[], activeId?: string | null }) {
   const map = useMap();
+  
+  // 1. Zoom to specific property on hover
   useEffect(() => {
     if (activeId) {
       const activeProp = properties.find(p => p.id === activeId);
@@ -33,6 +35,22 @@ function MapRecenter({ properties, activeId }: { properties: any[], activeId?: s
       }
     }
   }, [activeId, properties, map]);
+
+  // 2. Zoom to fit all filtered properties when the list changes
+  useEffect(() => {
+    if (!activeId && properties.length > 0) {
+      const validPoints = properties
+        .filter(p => p.path_points && p.path_points.length > 0)
+        .map(p => p.path_points[0] as [number, number]);
+        
+      if (validPoints.length > 0) {
+        const bounds = L.latLngBounds(validPoints);
+        // Add a bit of padding so pins aren't cut off at the edge
+        map.flyToBounds(bounds, { padding: [50, 50], duration: 1.5 });
+      }
+    }
+  }, [properties, activeId, map]);
+
   return null;
 }
 
