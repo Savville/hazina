@@ -10,9 +10,12 @@ export default function ScoutAreaPage() {
     distanceToTarmac: '',
     publicTransport: '',
     waterReliability: '',
+    powerReliability: '',
     priceUnga: '',
     priceMilk: '',
     bodaFare: '',
+    priceCement: '',
+    priceIronSheet: '',
     generalAreaSafety: 'medium',
   });
 
@@ -100,6 +103,16 @@ export default function ScoutAreaPage() {
                 <option value="vendor">Water Vendors (Mkokoteni)</option>
               </select>
             </div>
+
+            <div className="hz-form-group">
+              <label>Power Grid Reliability</label>
+              <select name="powerReliability" required value={formData.powerReliability} onChange={handleChange}>
+                <option value="">Select reliability...</option>
+                <option value="stable">Highly Stable (Rare outages)</option>
+                <option value="frequent_blackouts">Frequent Blackouts</option>
+                <option value="off_grid">Off-Grid (Solar/Generator Needed)</option>
+              </select>
+            </div>
           </div>
 
           {/* ── COST OF LIVING BASKET ── */}
@@ -144,6 +157,32 @@ export default function ScoutAreaPage() {
                 placeholder="e.g. 50"
                 min="0" max="500"
                 value={formData.bodaFare} 
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="hz-form-group">
+              <label>Price of 50kg Cement Bag (Local Hardware) in KES</label>
+              <input 
+                type="number" 
+                name="priceCement" 
+                required 
+                placeholder="e.g. 850"
+                min="500" max="2000"
+                value={formData.priceCement} 
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="hz-form-group">
+              <label>Price of G30 Iron Sheet (Mabati) in KES</label>
+              <input 
+                type="number" 
+                name="priceIronSheet" 
+                required 
+                placeholder="e.g. 1200"
+                min="500" max="5000"
+                value={formData.priceIronSheet} 
                 onChange={handleChange}
               />
             </div>

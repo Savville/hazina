@@ -22,11 +22,11 @@ export default function MapSearchPage() {
   // Filter State
   const [filters, setFilters] = useState({
     category: '',
-    road: '',
+    tarmacDistance: '',
     water: '',
-    power: '',
-    maxBodaFare: '',
-    maxUngaPrice: '',
+    powerReliability: '',
+    commodityType: '',
+    maxCommodityPrice: '',
   });
 
   const supabase = createBrowserClient();
@@ -58,20 +58,20 @@ export default function MapSearchPage() {
     if (filters.category) {
       result = result.filter(p => p.category === filters.category);
     }
-    if (filters.road) {
-      result = result.filter(p => p.form_data?.roadFrontage?.toLowerCase().includes(filters.road.toLowerCase()));
+    if (filters.tarmacDistance) {
+      result = result.filter(p => p.area_data?.distanceToTarmac === filters.tarmacDistance);
     }
     if (filters.water) {
       result = result.filter(p => p.area_data?.waterReliability === filters.water);
     }
-    if (filters.power) {
-      result = result.filter(p => p.form_data?.infrastructure?.toLowerCase().includes(filters.power.toLowerCase()));
+    if (filters.powerReliability) {
+      result = result.filter(p => p.area_data?.powerReliability === filters.powerReliability);
     }
-    if (filters.maxBodaFare) {
-      result = result.filter(p => p.area_data?.bodaFare && Number(p.area_data.bodaFare) <= Number(filters.maxBodaFare));
-    }
-    if (filters.maxUngaPrice) {
-      result = result.filter(p => p.area_data?.priceUnga && Number(p.area_data.priceUnga) <= Number(filters.maxUngaPrice));
+    if (filters.commodityType && filters.maxCommodityPrice) {
+      result = result.filter(p => {
+        const val = p.area_data?.[filters.commodityType];
+        return val && Number(val) <= Number(filters.maxCommodityPrice);
+      });
     }
 
     setFilteredProperties(result);
@@ -138,23 +138,34 @@ export default function MapSearchPage() {
                 <option value="D_RESIDENTIAL">Residential</option>
                 <option value="E_VACANT_LAND">Vacant Land</option>
               </select>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.road} onChange={e => setFilters({ ...filters, road: e.target.value })}>
-                <option value="">Any Road Access</option>
-                <option value="Tarmac">Tarmac</option>
-                <option value="Murram">Murram</option>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.tarmacDistance} onChange={e => setFilters({ ...filters, tarmacDistance: e.target.value })}>
+                <option value="">Any Tarmac Distance</option>
+                <option value="under_100m">&lt; 100m to Tarmac</option>
+                <option value="under_500m">&lt; 500m to Tarmac</option>
+                <option value="under_1km">&lt; 1km to Tarmac</option>
+                <option value="over_1km">&gt; 1km to Tarmac</option>
               </select>
               <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.water} onChange={e => setFilters({ ...filters, water: e.target.value })}>
                 <option value="">Any Water Source</option>
                 <option value="borehole">Borehole</option>
                 <option value="council">Council Water</option>
               </select>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.power} onChange={e => setFilters({ ...filters, power: e.target.value })}>
-                <option value="">Any Power</option>
-                <option value="3-Phase">3-Phase</option>
-                <option value="Single">Single Phase</option>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', gridColumn: '1 / -1' }} value={filters.powerReliability} onChange={e => setFilters({ ...filters, powerReliability: e.target.value })}>
+                <option value="">Any Power Reliability</option>
+                <option value="stable">Highly Stable</option>
+                <option value="frequent_blackouts">Frequent Blackouts</option>
+                <option value="off_grid">Off-Grid (Solar/Generator)</option>
               </select>
-              <input type="number" placeholder="Max Boda (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.maxBodaFare} onChange={e => setFilters({ ...filters, maxBodaFare: e.target.value })} />
-              <input type="number" placeholder="Max Unga (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.maxUngaPrice} onChange={e => setFilters({ ...filters, maxUngaPrice: e.target.value })} />
+              <div style={{ gridColumn: '1 / -1', display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
+                <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', flex: 1 }} value={filters.commodityType} onChange={e => setFilters({ ...filters, commodityType: e.target.value })}>
+                  <option value="">Commodity Price Check...</option>
+                  <option value="priceCement">Cement (50kg Bag)</option>
+                  <option value="priceIronSheet">Iron Sheet (G30)</option>
+                  <option value="priceUnga">Maize Flour (2kg)</option>
+                  <option value="bodaFare">Boda-Boda Fare</option>
+                </select>
+                <input type="number" placeholder="Max (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', width: '100px' }} value={filters.maxCommodityPrice} onChange={e => setFilters({ ...filters, maxCommodityPrice: e.target.value })} disabled={!filters.commodityType} />
+              </div>
             </div>
 
             {isLoading ? (
