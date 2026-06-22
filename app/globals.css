@@ -537,7 +537,7 @@ img {
 .hz-scout-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height for mobile browsers */
   background-color: var(--color-dark-bg);
   color: var(--color-text-inverse);
   max-width: 600px;
@@ -545,7 +545,7 @@ img {
   position: relative;
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .hz-scout-map-header {

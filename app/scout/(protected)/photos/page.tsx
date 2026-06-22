@@ -181,13 +181,22 @@ export default function ScoutPhotosPage() {
           <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Context Saved</p>
           <p style={{ margin: 0, fontWeight: 600 }}>{photos.length} photo(s), {visionTags.length} tag(s)</p>
         </div>
-        <button 
-          className="btn-primary w-full" 
-          disabled={photos.length === 0 && visionTags.length === 0}
-          onClick={handleContinue}
-        >
-          Continue to Assessment
-        </button>
+        <div style={{ display: 'flex', gap: '0.75rem' }}>
+          <button 
+            className="w-full" 
+            style={{ backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'var(--color-text-inverse)', borderRadius: 'var(--radius-pill)', padding: '0.75rem 1rem', fontFamily: 'var(--font-body)', fontSize: '0.9375rem', fontWeight: 700, cursor: 'pointer' }}
+            onClick={() => router.push('/scout/map')}
+          >
+            Back to Map
+          </button>
+          <button 
+            className="btn-primary w-full" 
+            disabled={photos.length === 0 && visionTags.length === 0}
+            onClick={handleContinue}
+          >
+            Continue to Form
+          </button>
+        </div>
       </div>
     </div>
   );
