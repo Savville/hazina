@@ -1,105 +1,77 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { ScoutProfile } from '@/types';
 
-// MOCK DATA — replace with Supabase query once scout_profiles table is live
-const MOCK_PROFILES: ScoutProfile[] = [
-  {
-    id: 'usr-001',
-    full_name: 'William Otieno',
-    national_id: '34521098',
-    phone: '0712 345 678',
-    county: 'Kiambu',
-    sub_county: 'Ruaka',
-    motivation: 'I have lived in Ruaka for 12 years and know every plot boundary. I want to bring ground truth to property buyers.',
-    status: 'active',
-    submissions_count: 14,
-    approved_count: 11,
-    created_at: '2026-06-10T08:00:00Z',
-    updated_at: '2026-06-10T08:00:00Z',
-  },
-  {
-    id: 'usr-002',
-    full_name: 'Sarah Muthoni',
-    national_id: '29871234',
-    phone: '0734 567 890',
-    county: 'Machakos',
-    sub_county: 'Athi River',
-    motivation: 'I am a land surveyor by training and want to contribute accurate field data to help buyers avoid fraud.',
-    status: 'active',
-    submissions_count: 8,
-    approved_count: 8,
-    created_at: '2026-06-12T10:00:00Z',
-    updated_at: '2026-06-12T10:00:00Z',
-  },
-  {
-    id: 'usr-003',
-    full_name: 'James Kariuki',
-    national_id: '41234567',
-    phone: '0798 765 432',
-    county: 'Kajiado',
-    sub_county: 'Kitengela',
-    motivation: 'I have been selling land in Kitengela for 3 years and want to provide honest data to Hazina clients.',
-    status: 'pending',
-    submissions_count: 0,
-    approved_count: 0,
-    created_at: '2026-06-22T07:00:00Z',
-    updated_at: '2026-06-22T07:00:00Z',
-  },
-  {
-    id: 'usr-004',
-    full_name: 'Amina Hassan',
-    national_id: '38904512',
-    phone: '0711 234 567',
-    county: 'Mombasa',
-    sub_county: 'Likoni',
-    motivation: 'I want to help investors understand the real ground situation in coastal land before they buy.',
-    status: 'pending',
-    submissions_count: 0,
-    approved_count: 0,
-    created_at: '2026-06-22T09:30:00Z',
-    updated_at: '2026-06-22T09:30:00Z',
-  },
-];
+import { createBrowserClient } from '@/lib/supabase';
 
 type Tab = 'applicants' | 'active';
 
 export default function ManageScoutsPage() {
   const [tab, setTab] = useState<Tab>('applicants');
-  const [profiles, setProfiles] = useState<ScoutProfile[]>(MOCK_PROFILES);
+  const [profiles, setProfiles] = useState<ScoutProfile[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Initialize Supabase Client
+  const supabase = createBrowserClient();
+
+  // Fetch data on mount
+  useEffect(() => {
+    const fetchProfiles = async () => {
+      const { data, error } = await supabase
+        .from('scout_profiles')
+        .select('*')
+        .order('created_at', { ascending: false });
+        
+      if (error) {
+        console.error('Error fetching scout profiles:', error);
+      } else if (data) {
+        setProfiles(data as ScoutProfile[]);
+      }
+      setIsLoading(false);
+    };
+    fetchProfiles();
+  });
 
   const pending = profiles.filter(p => p.status === 'pending');
   const active = profiles.filter(p => p.status === 'active');
   const suspended = profiles.filter(p => p.status === 'suspended');
   const selectedProfile = profiles.find(p => p.id === selectedId) ?? null;
 
-  function handleApprove(id: string) {
-    setProfiles(prev =>
-      prev.map(p => p.id === id ? { ...p, status: 'active' } : p),
-    );
-    setSelectedId(null);
+  async function handleApprove(id: string) {
+    const { error } = await supabase.from('scout_profiles').update({ status: 'active' }).eq('id', id);
+    if (!error) {
+      setProfiles(prev => prev.map(p => p.id === id ? { ...p, status: 'active' } : p));
+      setSelectedId(null);
+    } else {
+      alert('Failed to approve scout.');
+    }
   }
 
-  function handleReject(id: string) {
+  async function handleReject(id: string) {
     if (!confirm('Reject and remove this applicant? This cannot be undone.')) return;
-    setProfiles(prev => prev.filter(p => p.id !== id));
-    setSelectedId(null);
+    const { error } = await supabase.from('scout_profiles').delete().eq('id', id);
+    if (!error) {
+      setProfiles(prev => prev.filter(p => p.id !== id));
+      setSelectedId(null);
+    }
   }
 
-  function handleSuspend(id: string) {
+  async function handleSuspend(id: string) {
     if (!confirm('Suspend this scout? They will lose access to the app immediately.')) return;
-    setProfiles(prev =>
-      prev.map(p => p.id === id ? { ...p, status: 'suspended' } : p),
-    );
-    setSelectedId(null);
+    const { error } = await supabase.from('scout_profiles').update({ status: 'suspended' }).eq('id', id);
+    if (!error) {
+      setProfiles(prev => prev.map(p => p.id === id ? { ...p, status: 'suspended' } : p));
+      setSelectedId(null);
+    }
   }
 
-  function handleReinstate(id: string) {
-    setProfiles(prev =>
-      prev.map(p => p.id === id ? { ...p, status: 'active' } : p),
-    );
+  async function handleReinstate(id: string) {
+    const { error } = await supabase.from('scout_profiles').update({ status: 'active' }).eq('id', id);
+    if (!error) {
+      setProfiles(prev => prev.map(p => p.id === id ? { ...p, status: 'active' } : p));
+    }
   }
 
   const approvalRate = (s: ScoutProfile) =>
@@ -163,7 +135,11 @@ export default function ManageScoutsPage() {
       <div className="hz-admin-content">
         {/* TABLE */}
         <div className="hz-admin-table-container">
-          {tab === 'applicants' && (
+          {isLoading ? (
+            <div style={{ padding: '3rem', textAlign: 'center', color: 'var(--color-text-muted)' }}>
+              Loading scouts from database...
+            </div>
+          ) : tab === 'applicants' && (
             <>
               {pending.length === 0 ? (
                 <div style={styles.emptyState}>

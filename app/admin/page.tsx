@@ -1,49 +1,50 @@
 'use client';
 
-import { useState } from 'react';
-
-// MOCK DATA: In a real app this comes from Supabase 'assessments' table
-const MOCK_SUBMISSIONS = [
-  {
-    id: 'ASMT-001',
-    date: '2026-06-21',
-    scout: 'William O.',
-    property_name: 'Ruaka Bypass Plot',
-    category: 'LAND',
-    lr_number: 'Kiambu/Ruaka/5432',
-    visual_dispute: false,
-    status: 'pending'
-  },
-  {
-    id: 'ASMT-002',
-    date: '2026-06-21',
-    scout: 'William O.',
-    property_name: 'Kitengela Highway Commercial',
-    category: 'COMMERCIAL',
-    lr_number: 'Kajiado/Kitengela/881',
-    visual_dispute: true,
-    status: 'pending'
-  },
-  {
-    id: 'ASMT-003',
-    date: '2026-06-20',
-    scout: 'Sarah M.',
-    property_name: 'Juja Farm 5 Acres',
-    category: 'LAND',
-    lr_number: '',
-    visual_dispute: false,
-    status: 'pending'
-  }
-];
+import { useState, useEffect } from 'react';
+import { createBrowserClient } from '@/lib/supabase';
 
 export default function AdminDashboardPage() {
-  const [submissions, setSubmissions] = useState(MOCK_SUBMISSIONS);
+  const [submissions, setSubmissions] = useState<any[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleApprove = (id: string) => {
-    setSubmissions(prev => prev.filter(s => s.id !== id));
-    alert(`Assessment ${id} approved and published to public site.`);
-    setSelectedId(null);
+  const supabase = createBrowserClient();
+
+  useEffect(() => {
+    const fetchAssessments = async () => {
+      const { data, error } = await supabase
+        .from('scout_assessments')
+        .select(`
+          *,
+          scout_profiles (full_name)
+        `)
+        .eq('status', 'pending_review')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching assessments:', error);
+      } else if (data) {
+        setSubmissions(data);
+      }
+      setIsLoading(false);
+    };
+
+    fetchAssessments();
+  }, []);
+
+  const handleApprove = async (id: string) => {
+    const { error } = await supabase
+      .from('scout_assessments')
+      .update({ status: 'verified' })
+      .eq('id', id);
+
+    if (!error) {
+      setSubmissions(prev => prev.filter(s => s.id !== id));
+      alert(`Assessment approved and moved to Verified queue.`);
+      setSelectedId(null);
+    } else {
+      alert('Failed to approve assessment.');
+    }
   };
 
   const selectedItem = submissions.find(s => s.id === selectedId);
@@ -71,23 +72,28 @@ export default function AdminDashboardPage() {
               </tr>
             </thead>
             <tbody>
-              {submissions.length === 0 && (
+              {isLoading && (
+                <tr>
+                  <td colSpan={7} style={{ textAlign: 'center', padding: '2rem', color: 'var(--color-text-muted)' }}>Loading live assessments...</td>
+                </tr>
+              )}
+              {!isLoading && submissions.length === 0 && (
                 <tr>
                   <td colSpan={7} style={{ textAlign: 'center', padding: '2rem' }}>No pending submissions.</td>
                 </tr>
               )}
-              {submissions.map((sub) => (
+              {!isLoading && submissions.map((sub) => (
                 <tr key={sub.id} className={selectedId === sub.id ? 'active-row' : ''}>
-                  <td>{sub.id}</td>
-                  <td>{sub.date}</td>
-                  <td>{sub.scout}</td>
+                  <td><span style={{ fontSize: '0.75rem', fontFamily: 'monospace' }}>{sub.id.substring(0, 8)}...</span></td>
+                  <td>{new Date(sub.created_at).toLocaleDateString('en-KE')}</td>
+                  <td>{sub.scout_profiles?.full_name || 'Unknown Scout'}</td>
                   <td>
                     <strong>{sub.property_name}</strong>
                     <span className="badge-category">{sub.category}</span>
                   </td>
                   <td>{sub.lr_number || <span className="hz-text-warning">Missing</span>}</td>
                   <td>
-                    {sub.visual_dispute ? <span className="badge-danger">Visual Dispute</span> : <span className="badge-safe">Clear</span>}
+                    {sub.form_data?.has_visual_dispute ? <span className="badge-danger">Visual Dispute</span> : <span className="badge-safe">Clear</span>}
                   </td>
                   <td>
                     <button 
@@ -114,31 +120,31 @@ export default function AdminDashboardPage() {
             <div className="hz-panel-body" style={{ overflowY: 'auto', flexGrow: 1 }}>
               <div className="hz-panel-section">
                 <h4>Scout Identity</h4>
-                <p>Submitted by: <strong>{selectedItem.scout}</strong></p>
-                <p>Date: {selectedItem.date}</p>
+                <p>Submitted by: <strong>{selectedItem.scout_profiles?.full_name || 'Unknown Scout'}</strong></p>
+                <p>Date: {new Date(selectedItem.created_at).toLocaleString('en-KE')}</p>
               </div>
 
               <div className="hz-panel-section">
                 <h4>Physical Data (Layer 1)</h4>
                 <p>Category: <strong>{selectedItem.category}</strong></p>
-                <p>GPS Perimeter: <strong>{selectedItem.category === 'LAND' ? '820 meters' : '450 meters'}</strong></p>
+                <p>GPS Perimeter Logged: <strong>{parseFloat(selectedItem.distance_meters).toFixed(0)} meters</strong></p>
                 <p style={{ marginTop: '0.5rem', color: 'var(--color-text-muted)' }}>
-                  📸 <em>[View 4 Geo-tagged Photos]</em>
+                  📸 <em>[View {selectedItem.photo_urls?.length || 0} Geo-tagged Photos]</em>
                 </p>
               </div>
 
               <div className="hz-panel-section">
                 <h4>Neighborhood Economics</h4>
-                <p>Unga (2KG): <strong>KES 210</strong></p>
-                <p>Milk (500ml): <strong>KES 60</strong></p>
-                <p>Boda Fare: <strong>KES 50</strong></p>
-                <p>Transport Access: <strong>Fair</strong></p>
+                <p>Unga (2KG): <strong>KES {selectedItem.area_data?.priceUnga || 'N/A'}</strong></p>
+                <p>Milk (500ml): <strong>KES {selectedItem.area_data?.priceMilk || 'N/A'}</strong></p>
+                <p>Boda Fare: <strong>KES {selectedItem.area_data?.bodaFare || 'N/A'}</strong></p>
+                <p>Transport Access: <strong>{selectedItem.area_data?.publicTransport || 'N/A'}</strong></p>
               </div>
 
               <div className="hz-panel-section">
                 <h4>Legal Verification Data</h4>
                 <p>LR Number: <strong>{selectedItem.lr_number || 'NOT PROVIDED'}</strong></p>
-                {selectedItem.visual_dispute && (
+                {selectedItem.form_data?.has_visual_dispute && (
                   <div className="hz-alert hz-alert-danger">
                     <strong>High Risk:</strong> Scout logged visual signs of dispute on the ground. DO NOT PUBLISH without legal cross-check.
                   </div>

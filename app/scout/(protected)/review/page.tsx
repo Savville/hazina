@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { getPhotosFromIndexedDB, clearPhotosFromIndexedDB, saveToOutbox, type OutboxItem } from '@/lib/offlineStorage';
 
 export default function ScoutReviewPage() {
   const router = useRouter();
@@ -56,31 +57,75 @@ export default function ScoutReviewPage() {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     
-    // Simulate API network delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // In a real app, we would send this to Supabase:
-    // await supabase.from('assessments').insert([{
-    //   boundary_polygon: data.path,
-    //   distance_meters: data.dist,
-    //   property_details: data.form,
-    //   area_intelligence: data.area,
-    //   scout_id: user.id
-    // }]);
+    try {
+      // 1. Gather all data
+      const visionTagsRaw = sessionStorage.getItem('hz_scout_vision_tags');
+      const visionTags = visionTagsRaw ? JSON.parse(visionTagsRaw) : [];
+      const photos = await getPhotosFromIndexedDB();
 
-    alert(isOffline 
-      ? 'Saved to Local Outbox! Data will sync when you regain connection.' 
-      : 'Assessment Submitted Successfully to Hazina HQ!'
-    );
+      const payloadObj = {
+        path: data.path,
+        dist: data.dist,
+        form: data.form,
+        area: data.area,
+        visionTags
+      };
 
-    // Clean up session
-    sessionStorage.removeItem('hz_scout_path');
-    sessionStorage.removeItem('hz_scout_dist');
-    sessionStorage.removeItem('hz_scout_form');
-    sessionStorage.removeItem('hz_scout_area');
-    sessionStorage.removeItem('hz_seen_terms'); // Reset onboarding for the next parcel
-    
-    router.push('/scout/dashboard');
+      if (isOffline) {
+        // ── OFFLINE: SAVE TO OUTBOX ──
+        const outboxItem: OutboxItem = {
+          id: crypto.randomUUID(),
+          createdAt: Date.now(),
+          pathPoints: data.path as [number, number][],
+          distance: data.dist ? parseFloat(data.dist) : 0,
+          visionTags,
+          formAnswers: data.form,
+          photos,
+          status: 'pending'
+        };
+        
+        await saveToOutbox(outboxItem);
+        alert('Saved to Local Outbox! Data will sync automatically when you regain connection.');
+      } else {
+        // ── ONLINE: SUBMIT TO API ──
+        const formData = new FormData();
+        formData.append('payload', JSON.stringify(payloadObj));
+        
+        photos.forEach((photo) => {
+          formData.append('photos', photo);
+        });
+
+        const res = await fetch('/api/scout/submit', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const result = await res.json();
+
+        if (!res.ok) {
+          throw new Error(result.error || 'Failed to submit assessment');
+        }
+
+        alert('Assessment Submitted Successfully to Hazina HQ!');
+      }
+
+      // 2. Clean up session & storage upon successful queue/submit
+      sessionStorage.removeItem('hz_scout_path');
+      sessionStorage.removeItem('hz_scout_dist');
+      sessionStorage.removeItem('hz_scout_form');
+      sessionStorage.removeItem('hz_scout_area');
+      sessionStorage.removeItem('hz_scout_vision_tags');
+      sessionStorage.removeItem('hz_seen_terms');
+      await clearPhotosFromIndexedDB();
+      
+      router.push('/scout/dashboard');
+
+    } catch (error: any) {
+      console.error('Submission failed:', error);
+      alert('Error submitting: ' + error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!data.form) {

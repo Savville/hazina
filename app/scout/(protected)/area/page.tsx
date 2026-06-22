@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -16,9 +16,24 @@ export default function ScoutAreaPage() {
     generalAreaSafety: 'medium',
   });
 
+  useEffect(() => {
+    const savedArea = sessionStorage.getItem('hz_scout_area');
+    if (savedArea) {
+      try {
+        setFormData(JSON.parse(savedArea));
+      } catch (e) {
+        console.error("Failed to restore area data", e);
+      }
+    }
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => {
+      const newState = { ...prev, [name]: value };
+      sessionStorage.setItem('hz_scout_area', JSON.stringify(newState));
+      return newState;
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {

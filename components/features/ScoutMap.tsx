@@ -34,10 +34,12 @@ function calculateDistance(points: L.LatLng[]): number {
 
 export default function ScoutMap({ 
   isTracking,
-  onPathUpdate 
+  onPathUpdate,
+  onAccuracyUpdate
 }: { 
   isTracking: boolean;
   onPathUpdate: (points: [number, number][], distanceMeters: number) => void;
+  onAccuracyUpdate?: (accuracy: number) => void;
 }) {
   const [path, setPath] = useState<L.LatLng[]>([]);
   const watchIdRef = useRef<number | null>(null);
@@ -66,6 +68,9 @@ export default function ScoutMap({
     if ('geolocation' in navigator) {
       watchIdRef.current = navigator.geolocation.watchPosition(
         (position) => {
+          const acc = position.coords.accuracy;
+          if (onAccuracyUpdate) onAccuracyUpdate(acc);
+
           const newPoint = L.latLng(position.coords.latitude, position.coords.longitude);
           
           setPath((prevPath) => {

@@ -23,8 +23,8 @@ export default function ScoutFormPage() {
     <div className="hz-scout-page">
       <header className="hz-scout-header">
         <div className="hz-scout-header-inner">
-          <Link href="/scout/map" className="hz-back-btn">
-            ← Back to Map
+          <Link href="/scout/photos" className="hz-back-btn">
+            ← Back to Photos
           </Link>
           <div className="hz-scout-profile">
             <div className="hz-scout-avatar">S</div>

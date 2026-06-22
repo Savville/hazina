@@ -1,40 +1,52 @@
 'use client';
 
-import { use } from 'react';
+import { use, useState, useEffect } from 'react';
 import Link from 'next/link';
+import { createBrowserClient } from '@/lib/supabase';
 
 export default function IntelligenceBriefPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
-  
-  // MOCK DATA based on the ID. In a real app, fetch from Supabase by ID.
-  const isRisky = resolvedParams.id === 'ASMT-002';
-  
-  const mockData = {
-    id: resolvedParams.id,
-    date: '2026-06-21',
-    property_name: isRisky ? 'Kitengela Highway Commercial' : 'Ruaka Bypass Plot',
-    lr_number: isRisky ? 'Kajiado/Kitengela/881' : 'Kiambu/Ruaka/5432',
-    category: isRisky ? 'COMMERCIAL' : 'LAND',
-    scout: 'William O.',
-    distance_logged: isRisky ? '450' : '820',
-    visual_dispute: isRisky,
-    
-    // Area Data
-    priceUnga: '215',
-    priceMilk: '65',
-    bodaFare: '100',
-    transportAccess: 'fair',
-    waterSource: 'borehole',
+  const [data, setData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-    // Analyst context (Layer 3)
-    analyst_notes: isRisky 
-      ? 'High risk of litigation. Visual dispute flags present. Adjacent parcels have a history of double-allocation by the defunct county council.'
-      : 'Prime development opportunity. Directly adjacent to the proposed bypass expansion. Ground truth verifies clean boundaries.'
-  };
+  useEffect(() => {
+    const fetchBrief = async () => {
+      const supabase = createBrowserClient();
+      const { data: dbData, error } = await supabase
+        .from('scout_assessments')
+        .select(`
+          *,
+          scout_profiles (full_name)
+        `)
+        .eq('id', resolvedParams.id)
+        .single();
+        
+      if (error) {
+        console.error('Error fetching brief data:', error);
+      } else {
+        setData(dbData);
+      }
+      setIsLoading(false);
+    };
+    fetchBrief();
+  }, [resolvedParams.id]);
 
   const handlePrint = () => {
     window.print();
   };
+
+  if (isLoading) {
+    return <div style={{ padding: '4rem', textAlign: 'center', fontFamily: 'var(--font-body)' }}>Loading Intelligence Brief...</div>;
+  }
+
+  if (!data) {
+    return <div style={{ padding: '4rem', textAlign: 'center', fontFamily: 'var(--font-body)' }}>Assessment not found or failed to load.</div>;
+  }
+
+  const isRisky = data.form_data?.has_visual_dispute || false;
+  const analystNotes = isRisky 
+      ? 'High risk of litigation. Visual dispute flags present. DO NOT PROCEED WITH ACQUISITION WITHOUT EXTENSIVE ELC VERIFICATION.'
+      : 'Ground truth verifies physical existence. Awaiting manual title cross-check by legal team.';
 
   return (
     <div className="hz-admin-page hz-brief-container">
@@ -55,8 +67,8 @@ export default function IntelligenceBriefPage({ params }: { params: Promise<{ id
         <div className="hz-brief-header">
           <div className="hz-brief-logo">Hazina <span>Intelligence</span></div>
           <div className="hz-brief-meta">
-            <p><strong>REPORT ID:</strong> {mockData.id}</p>
-            <p><strong>DATE:</strong> {mockData.date}</p>
+            <p><strong>REPORT ID:</strong> {data.id}</p>
+            <p><strong>DATE:</strong> {new Date(data.created_at).toLocaleDateString('en-KE')}</p>
             <p className="hz-brief-confidential">CONFIDENTIAL</p>
           </div>
         </div>
@@ -70,16 +82,16 @@ export default function IntelligenceBriefPage({ params }: { params: Promise<{ id
             <tbody>
               <tr>
                 <td width="30%"><strong>Property Name</strong></td>
-                <td>{mockData.property_name}</td>
+                <td>{data.property_name}</td>
               </tr>
               <tr>
                 <td><strong>LR Number</strong></td>
-                <td>{mockData.lr_number}</td>
+                <td>{data.lr_number || 'N/A (Unverified)'}</td>
               </tr>
               <tr>
                 <td><strong>Risk Status</strong></td>
                 <td>
-                  {mockData.visual_dispute 
+                  {isRisky 
                     ? <span style={{ color: '#d6001c', fontWeight: 'bold' }}>HIGH RISK - ACTIVE DISPUTE FLAGGED</span> 
                     : <span style={{ color: '#10b981', fontWeight: 'bold' }}>CLEAN - NO VISUAL DISPUTES</span>}
                 </td>
@@ -89,7 +101,7 @@ export default function IntelligenceBriefPage({ params }: { params: Promise<{ id
           
           <div className="hz-brief-analyst-box">
             <h4>Analyst Context (Layer 3)</h4>
-            <p>{mockData.analyst_notes}</p>
+            <p>{analystNotes}</p>
           </div>
         </div>
 
@@ -100,15 +112,15 @@ export default function IntelligenceBriefPage({ params }: { params: Promise<{ id
             <tbody>
               <tr>
                 <td width="30%"><strong>Category</strong></td>
-                <td>{mockData.category}</td>
+                <td>{data.category}</td>
               </tr>
               <tr>
                 <td><strong>Perimeter Logged</strong></td>
-                <td>{mockData.distance_logged} meters mapped by Scout GPS</td>
+                <td>{parseFloat(data.distance_meters).toFixed(0)} meters mapped by Scout GPS</td>
               </tr>
               <tr>
                 <td><strong>Verified By</strong></td>
-                <td>Scout {mockData.scout}</td>
+                <td>Scout {data.scout_profiles?.full_name || 'Unknown'}</td>
               </tr>
             </tbody>
           </table>
@@ -121,23 +133,23 @@ export default function IntelligenceBriefPage({ params }: { params: Promise<{ id
             <tbody>
               <tr>
                 <td width="30%"><strong>Transport Access</strong></td>
-                <td style={{ textTransform: 'capitalize' }}>{mockData.transportAccess}</td>
+                <td style={{ textTransform: 'capitalize' }}>{data.area_data?.publicTransport || 'N/A'}</td>
               </tr>
               <tr>
                 <td><strong>Primary Water</strong></td>
-                <td style={{ textTransform: 'capitalize' }}>{mockData.waterSource}</td>
+                <td style={{ textTransform: 'capitalize' }}>{data.area_data?.waterSource || 'N/A'}</td>
               </tr>
               <tr>
                 <td><strong>Boda-Boda Fare (from main road)</strong></td>
-                <td>KES {mockData.bodaFare}</td>
+                <td>KES {data.area_data?.bodaFare || 'N/A'}</td>
               </tr>
               <tr>
                 <td><strong>Maize Flour (2KG)</strong></td>
-                <td>KES {mockData.priceUnga}</td>
+                <td>KES {data.area_data?.priceUnga || 'N/A'}</td>
               </tr>
               <tr>
                 <td><strong>Fresh Milk (500ml)</strong></td>
-                <td>KES {mockData.priceMilk}</td>
+                <td>KES {data.area_data?.priceMilk || 'N/A'}</td>
               </tr>
             </tbody>
           </table>
