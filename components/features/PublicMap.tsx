@@ -43,10 +43,13 @@ function MapRecenter({ properties, activeId }: { properties: any[], activeId?: s
         .filter(p => p.path_points && p.path_points.length > 0)
         .map(p => p.path_points[0] as [number, number]);
         
-      if (validPoints.length > 0) {
+      if (validPoints.length > 1) {
         const bounds = L.latLngBounds(validPoints);
-        // Add a bit of padding so pins aren't cut off at the edge
-        map.flyToBounds(bounds, { padding: [50, 50], duration: 1.5 });
+        // Add padding and limit maxZoom so it doesn't zoom in too close
+        map.flyToBounds(bounds, { padding: [50, 50], duration: 1.5, maxZoom: 16 });
+      } else if (validPoints.length === 1) {
+        // If there's exactly 1 property, just center on it at zoom 16
+        map.flyTo(validPoints[0], 16, { duration: 1.5 });
       }
     }
   }, [properties, activeId, map]);
