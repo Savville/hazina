@@ -27,6 +27,8 @@ export default function MapSearchPage() {
     powerReliability: '',
     commodityType: '',
     maxCommodityPrice: '',
+    maxPlotPrice: '',
+    maxBuildPriceSqm: '',
   });
 
   const supabase = createBrowserClient();
@@ -66,6 +68,12 @@ export default function MapSearchPage() {
     }
     if (filters.powerReliability) {
       result = result.filter(p => p.area_data?.powerReliability === filters.powerReliability);
+    }
+    if (filters.maxPlotPrice) {
+      result = result.filter(p => p.area_data?.pricePlot && Number(p.area_data.pricePlot) <= Number(filters.maxPlotPrice));
+    }
+    if (filters.maxBuildPriceSqm) {
+      result = result.filter(p => p.area_data?.priceBuildSqm && Number(p.area_data.priceBuildSqm) <= Number(filters.maxBuildPriceSqm));
     }
     if (filters.commodityType && filters.maxCommodityPrice) {
       result = result.filter(p => {
@@ -150,12 +158,14 @@ export default function MapSearchPage() {
                 <option value="borehole">Borehole</option>
                 <option value="council">Council Water</option>
               </select>
-              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', gridColumn: '1 / -1' }} value={filters.powerReliability} onChange={e => setFilters({ ...filters, powerReliability: e.target.value })}>
-                <option value="">Any Power Reliability</option>
+              <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.powerReliability} onChange={e => setFilters({ ...filters, powerReliability: e.target.value })}>
+                <option value="">Any Power</option>
                 <option value="stable">Highly Stable</option>
                 <option value="frequent_blackouts">Frequent Blackouts</option>
-                <option value="off_grid">Off-Grid (Solar/Generator)</option>
+                <option value="off_grid">Off-Grid</option>
               </select>
+              <input type="number" placeholder="Max 50x100 Plot (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.maxPlotPrice} onChange={e => setFilters({ ...filters, maxPlotPrice: e.target.value })} />
+              <input type="number" placeholder="Max Build/Sqm (KES)" className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem' }} value={filters.maxBuildPriceSqm} onChange={e => setFilters({ ...filters, maxBuildPriceSqm: e.target.value })} />
               <div style={{ gridColumn: '1 / -1', display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
                 <select className="hz-input" style={{ padding: '0.25rem 0.5rem', fontSize: '0.8125rem', flex: 1 }} value={filters.commodityType} onChange={e => setFilters({ ...filters, commodityType: e.target.value })}>
                   <option value="">Commodity Price Check...</option>

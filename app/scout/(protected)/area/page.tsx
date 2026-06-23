@@ -11,6 +11,8 @@ export default function ScoutAreaPage() {
     publicTransport: '',
     waterReliability: '',
     powerReliability: '',
+    pricePlot: '',
+    priceBuildSqm: '',
     priceUnga: '',
     priceMilk: '',
     bodaFare: '',
@@ -112,6 +114,40 @@ export default function ScoutAreaPage() {
                 <option value="frequent_blackouts">Frequent Blackouts</option>
                 <option value="off_grid">Off-Grid (Solar/Generator Needed)</option>
               </select>
+            </div>
+          </div>
+
+          {/* ── REAL ESTATE VALUATION DATA ── */}
+          <div className="hz-form-section">
+            <h3>Local Real Estate Valuation</h3>
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+              Ask local brokers or residents for the current going rates in this immediate vicinity.
+            </p>
+
+            <div className="hz-form-group">
+              <label>Estimated Price of a 50x100 Plot in KES</label>
+              <input 
+                type="number" 
+                name="pricePlot" 
+                required 
+                placeholder="e.g. 1500000"
+                min="50000"
+                value={formData.pricePlot} 
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="hz-form-group">
+              <label>Estimated Local Construction Cost (Per Sqm) in KES</label>
+              <input 
+                type="number" 
+                name="priceBuildSqm" 
+                required 
+                placeholder="e.g. 35000"
+                min="10000" max="100000"
+                value={formData.priceBuildSqm} 
+                onChange={handleChange}
+              />
             </div>
           </div>
 

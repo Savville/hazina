@@ -1527,10 +1527,11 @@ img {
   width: 420px;
   max-width: calc(100vw - 2rem);
   z-index: 10; /* Float over map */
-  background-color: var(--color-surface);
+  background-color: var(--color-dark-bg); /* Dark container */
+  color: var(--color-text-inverse);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1543,11 +1544,11 @@ img {
 
 .hz-drawer-header {
   padding: 1.5rem 1.25rem 1rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-surface);
+  background-color: var(--color-dark-bg);
   z-index: 2;
 }
 
@@ -1558,9 +1559,9 @@ img {
 }
 
 .hz-drawer-toggle-btn {
-  background: none;
-  border: none;
-  color: var(--color-text-muted);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
   font-size: 0.875rem;
   cursor: pointer;
   display: flex;
@@ -1572,8 +1573,8 @@ img {
 }
 
 .hz-drawer-toggle-btn:hover {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
 }
 
 .hz-drawer-reopen-btn {
@@ -1606,9 +1607,9 @@ img {
   gap: 0.75rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background-color: var(--color-bg);
+  background-color: rgba(255,255,255,0.03);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .hz-property-list {
@@ -1620,16 +1621,17 @@ img {
 .hz-property-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
   cursor: pointer;
+  color: #fff;
 }
 
 .hz-property-card:hover {
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   transform: translateY(-2px);
   border-color: var(--color-primary);
 }
@@ -1669,7 +1671,7 @@ img {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: #fff;
   margin: 0 0 0.5rem;
   line-height: 1.3;
 }
@@ -1688,7 +1690,7 @@ img {
   font-family: var(--font-heading);
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-text);
+  color: #fff;
   margin: 0;
 }
 
