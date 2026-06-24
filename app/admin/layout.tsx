@@ -23,6 +23,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           <Link href="/admin/legal" className="hz-admin-nav-item">
             ELC Crosscheck (Beta)
           </Link>
+          <Link href="/admin/kmz-import" className="hz-admin-nav-item">
+            KMZ Locus Import
+          </Link>
         </nav>
         <div className="hz-admin-user">
           <div className="avatar">A</div>

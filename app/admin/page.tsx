@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { createBrowserClient } from '@/lib/supabase';
+import dynamic from 'next/dynamic';
+
+const AdminMapPreview = dynamic(() => import('@/components/features/AdminMapPreview'), { 
+  ssr: false,
+  loading: () => <div style={{ height: '300px', width: '100%', backgroundColor: 'var(--color-dark-surface)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading Map...</div>
+});
 
 export default function AdminDashboardPage() {
   const [submissions, setSubmissions] = useState<any[]>([]);
@@ -125,12 +131,16 @@ export default function AdminDashboardPage() {
               </div>
 
               <div className="hz-panel-section">
-                <h4>Physical Data (Layer 1)</h4>
+                <h4>Physical Data & Spatial Track</h4>
                 <p>Category: <strong>{selectedItem.category}</strong></p>
-                <p>GPS Perimeter Logged: <strong>{parseFloat(selectedItem.distance_meters).toFixed(0)} meters</strong></p>
-                <p style={{ marginTop: '0.5rem', color: 'var(--color-text-muted)' }}>
-                  📸 <em>[View {selectedItem.photo_urls?.length || 0} Geo-tagged Photos]</em>
+                <p>GPS Perimeter Logged: <strong>{selectedItem.path_points?.length || 0} track points</strong></p>
+                <p style={{ marginTop: '0.5rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                  📸 <em>[Contains {selectedItem.photo_urls?.length || 0} Geo-tagged Photos]</em>
                 </p>
+                
+                {selectedItem.path_points && selectedItem.path_points.length > 0 && (
+                  <AdminMapPreview property={selectedItem} />
+                )}
               </div>
 
               <div className="hz-panel-section">

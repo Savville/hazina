@@ -45,42 +45,52 @@ export async function POST(req: NextRequest) {
 
     const payload = JSON.parse(payloadStr);
     
-    // Extract photos
-    const photos: File[] = [];
+    // Extract photos with their original names (needed to map to POIs)
+    const photos: { file: File, originalName: string }[] = [];
     for (const [key, value] of formData.entries()) {
       if (key === 'photos' && value instanceof Blob) {
-        photos.push(value as File);
+        photos.push({ file: value as File, originalName: (value as File).name });
       }
     }
 
     // 3. Upload photos to Supabase Storage
-    const uploadedPaths: string[] = [];
-    const assessmentId = crypto.randomUUID(); // generate an ID for the folder
+    const uploadedPhotoMap: Record<string, string> = {};
+    const assessmentId = crypto.randomUUID();
 
-    for (const photo of photos) {
-      const fileExt = photo.name.split('.').pop() || 'jpg';
+    for (const { file, originalName } of photos) {
+      const fileExt = originalName.split('.').pop() || 'jpg';
       const fileName = `${crypto.randomUUID()}.${fileExt}`;
       const filePath = `${user.id}/${assessmentId}/${fileName}`;
 
       const { error: uploadError } = await supabase.storage
         .from('scout_photos')
-        .upload(filePath, photo, {
-          contentType: photo.type,
+        .upload(filePath, file, {
+          contentType: file.type,
           upsert: false
         });
 
       if (uploadError) {
         console.error('Error uploading photo:', uploadError);
       } else {
-        uploadedPaths.push(filePath);
+        uploadedPhotoMap[originalName] = filePath;
       }
     }
 
+    // Update POIs with the new uploaded image paths
+    const updatedPOIs = (payload.pois || []).map((poi: any) => {
+      if (poi.photoFile && uploadedPhotoMap[poi.photoFile]) {
+        return {
+          ...poi,
+          photoUrl: uploadedPhotoMap[poi.photoFile]
+        };
+      }
+      return poi;
+    });
+
     // 4. Insert data into database
-    const form = payload.form || {};
-    const category = form.category || 'UNKNOWN';
-    const property_name = form.name || 'Unnamed Property';
-    const lr_number = form.lr_number || null;
+    const category = payload.category || 'UNKNOWN';
+    const property_name = payload.name || 'Unnamed Property';
+    const lr_number = payload.formData?.lr_number || null;
 
     const { error: dbError } = await supabase
       .from('scout_assessments')
@@ -89,12 +99,13 @@ export async function POST(req: NextRequest) {
         property_name,
         lr_number,
         category,
-        distance_meters: payload.dist ? parseFloat(payload.dist) : 0,
-        path_points: payload.path || [],
-        form_data: form,
-        area_data: payload.area || {},
-        vision_tags: payload.visionTags || [],
-        photo_urls: uploadedPaths
+        distance_meters: 0,
+        path_points: payload.track || [],
+        form_data: payload.formData || {},
+        area_data: {},
+        vision_tags: updatedPOIs, // POIs go into vision_tags
+        photo_urls: Object.values(uploadedPhotoMap),
+        status: 'pending_review' // Awaits admin approval
       });
 
     if (dbError) {

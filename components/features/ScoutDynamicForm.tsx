@@ -6,7 +6,7 @@ import imageCompression from 'browser-image-compression';
 type CategoryType = 'A_AGRICULTURAL' | 'B_COMMERCIAL' | 'C_INDUSTRIAL' | 'D_RESIDENTIAL' | 'E_VACANT_LAND' | null;
 
 interface ScoutDynamicFormProps {
-  onSubmit: (data: any) => void;
+  onSubmit: (data: any, kmzFile: File | null) => void;
 }
 
 function InlineCameraBtn({ label, value, onChange }: { label: string, value: string, onChange: (base64: string) => void }) {
@@ -73,6 +73,7 @@ function InlineCameraBtn({ label, value, onChange }: { label: string, value: str
 export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
   const [category, setCategory] = useState<CategoryType>(null);
   const [formData, setFormData] = useState<Record<string, any>>({});
+  const [kmzFile, setKmzFile] = useState<File | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Restore state from sessionStorage on mount
@@ -118,9 +119,13 @@ export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!category) return;
+    if (!kmzFile) {
+      alert('Please upload a KMZ file before submitting.');
+      return;
+    }
     const finalData = { category, ...formData };
     sessionStorage.setItem('hz_scout_form', JSON.stringify(finalData));
-    onSubmit(finalData);
+    onSubmit(finalData, kmzFile);
   };
 
   if (!isLoaded) return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading form...</div>;
@@ -185,6 +190,26 @@ export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
           placeholder="e.g. Ruaka Corner Plot"
           value={formData.name || ''}
           onChange={(e) => handleInputChange('name', e.target.value)}
+        />
+      </div>
+
+      {/* ── KMZ UPLOAD FIELD ── */}
+      <div className="hz-form-group" style={{ marginBottom: '1.5rem', backgroundColor: 'var(--color-dark-surface)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,255,255,0.1)' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1rem', color: 'var(--color-primary)' }}>
+          📍 Upload KMZ File (Required)
+        </label>
+        <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+          Attach the exported .kmz file from Locus Map containing your track and photo points.
+        </p>
+        <input 
+          type="file" 
+          accept=".kmz"
+          required
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) setKmzFile(file);
+          }}
+          style={{ width: '100%', padding: '0.75rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-sm)', color: '#fff', border: '1px dashed rgba(255,255,255,0.2)' }}
         />
       </div>
 
@@ -448,7 +473,7 @@ export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
       </div>
 
       <button type="submit" className="btn-primary w-full mt-6">
-        Save & Continue to Area Data
+        Submit Assessment & KMZ
       </button>
     </form>
   );

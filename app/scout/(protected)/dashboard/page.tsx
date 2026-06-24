@@ -81,7 +81,7 @@ export default function ScoutDashboardPage() {
                 <span style={styles.areaCounty}>{area.county} County</span>
               </div>
               <Link
-                href={`/scout/map?area=${area.id}`}
+                href={`/scout/form?area=${area.id}`}
                 style={styles.startBtn}
               >
                 Start Assessment
@@ -111,7 +111,7 @@ export default function ScoutDashboardPage() {
       </section>
 
       {/* Floating CTA */}
-      <Link href="/scout/map" style={styles.fab}>
+      <Link href="/scout/form" style={styles.fab}>
         New Assessment
       </Link>
     </div>
