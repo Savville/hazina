@@ -80,6 +80,14 @@ export async function POST(req: NextRequest) {
 
     // 3. Insert data into database
     // We use a special category 'E_KMZ_TRACK' so the map knows how to render it
+    // Calculate center for Bounding Box (BBox) filtering
+    let centerLat = null;
+    let centerLng = null;
+    if (payload.track && payload.track.length > 0) {
+      centerLat = payload.track[0][0];
+      centerLng = payload.track[0][1];
+    }
+
     const { error: dbError } = await supabaseAdmin
       .from('scout_assessments')
       .insert({
@@ -88,6 +96,8 @@ export async function POST(req: NextRequest) {
         category: 'E_KMZ_TRACK',
         status: 'verified', // Immediately verified for the public map
         path_points: payload.track || [],
+        center_lat: centerLat,
+        center_lng: centerLng,
         vision_tags: updatedPOIs, // We store POIs in vision_tags
         form_data: { source: 'KMZ Import', originalFile: payload.originalFileName },
         photo_urls: Object.values(uploadedPhotoMap)

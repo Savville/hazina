@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { createBrowserClient } from '@/lib/supabase';
 import Link from 'next/link';
+import PublicNavbar from '@/components/layout/PublicNavbar';
+import PropertyGridCard from '@/components/ui/PropertyGridCard';
 
 export default function BrowsePropertiesPage() {
   const [properties, setProperties] = useState<any[]>([]);
@@ -11,18 +13,19 @@ export default function BrowsePropertiesPage() {
 
   useEffect(() => {
     const fetchAllVerified = async () => {
-      const { data, error } = await supabase
-        .from('scout_assessments')
-        .select('*')
-        .eq('status', 'verified')
-        .order('created_at', { ascending: false });
-
-      if (error) {
+      try {
+        const res = await fetch('/api/public/properties');
+        if (res.ok) {
+          const data = await res.json();
+          setProperties(data);
+        } else {
+          console.error('Failed to fetch properties');
+        }
+      } catch (error) {
         console.error('Error fetching properties:', error);
-      } else if (data) {
-        setProperties(data);
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
 
     fetchAllVerified();
@@ -31,21 +34,7 @@ export default function BrowsePropertiesPage() {
   return (
     <div className="hz-home" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* ── Navbar ── */}
-      <header className="hz-nav" style={{ borderBottom: '1px solid var(--color-border)' }}>
-        <div className="hz-nav__inner container">
-          <Link href="/" className="hz-nav__wordmark">
-            Hazina
-          </Link>
-          <nav className="hz-nav__links">
-            <Link href="/" className="hz-nav__link">Home</Link>
-            <Link href="/properties" className="hz-nav__link">Browse Properties</Link>
-            <Link href="/map" className="hz-nav__link">View Map</Link>
-            <Link href="/scout/login" className="hz-nav__cta btn-primary">
-              Scout Login
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <PublicNavbar />
 
       <main className="hz-page-container" style={{ flexGrow: 1, width: '100%' }}>
         <h1 className="hz-page-title">Kenya Real Estate</h1>
@@ -56,33 +45,9 @@ export default function BrowsePropertiesPage() {
         ) : properties.length === 0 ? (
           <p style={{ color: 'var(--color-text-muted)' }}>No verified properties found at this time.</p>
         ) : (
-          <div className="hz-property-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 pb-16">
             {properties.map((prop) => (
-              <Link href={`/property/${prop.id}`} key={prop.id} className="hz-property-card">
-                <div className="hz-property-card-image">
-                  {prop.photo_urls && prop.photo_urls.length > 0 ? (
-                    <img 
-                      src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/scout_photos/${prop.photo_urls[0]}`} 
-                      alt={prop.property_name} 
-                    />
-                  ) : (
-                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666', fontSize: '0.875rem' }}>
-                      Awaiting Field Photos
-                    </div>
-                  )}
-                  <span className="hz-property-card-badge">Verified</span>
-                </div>
-                
-                <div className="hz-property-card-content">
-                  <h3 className="hz-property-card-title">{prop.property_name}</h3>
-                  <div className="hz-property-card-meta">
-                    <span>{prop.category.replace('A_', '').replace('B_', '').replace('C_', '').replace('D_', '').replace('E_', '').replace('_', ' ')}</span>
-                    <span>•</span>
-                    <span>{parseFloat(prop.distance_meters || 0).toFixed(0)}m perimeter</span>
-                  </div>
-                  <p className="hz-property-card-price">Price Upon Request</p>
-                </div>
-              </Link>
+              <PropertyGridCard key={prop.id} prop={prop} />
             ))}
           </div>
         )}

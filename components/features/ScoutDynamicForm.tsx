@@ -3,8 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import imageCompression from 'browser-image-compression';
 
-type CategoryType = 'A_AGRICULTURAL' | 'B_COMMERCIAL' | 'C_INDUSTRIAL' | 'D_RESIDENTIAL' | 'E_VACANT_LAND' | null;
-
 interface ScoutDynamicFormProps {
   onSubmit: (data: any, kmzFile: File | null) => void;
 }
@@ -20,7 +18,7 @@ function InlineCameraBtn({ label, value, onChange }: { label: string, value: str
     setIsProcessing(true);
     try {
       const options = {
-        maxSizeMB: 0.1, // extremely aggressive compression for form JSON
+        maxSizeMB: 0.1,
         maxWidthOrHeight: 800,
         useWebWorker: true,
       };
@@ -71,21 +69,21 @@ function InlineCameraBtn({ label, value, onChange }: { label: string, value: str
 }
 
 export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
-  const [category, setCategory] = useState<CategoryType>(null);
-  const [formData, setFormData] = useState<Record<string, any>>({});
+  const [formData, setFormData] = useState<Record<string, any>>({
+    part1_macro: {},
+    part2_construction: {},
+    part3_land: {},
+    part4_viability: {},
+    part5_crm: {}
+  });
   const [kmzFile, setKmzFile] = useState<File | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Restore state from sessionStorage on mount
   useEffect(() => {
-    const savedData = sessionStorage.getItem('hz_scout_form');
+    const savedData = localStorage.getItem('hz_scout_pipeline_v2');
     if (savedData) {
       try {
-        const parsed = JSON.parse(savedData);
-        if (parsed.category) {
-          setCategory(parsed.category as CategoryType);
-        }
-        setFormData(parsed);
+        setFormData(JSON.parse(savedData));
       } catch (e) {
         console.error("Failed to parse saved form data", e);
       }
@@ -93,387 +91,227 @@ export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
     setIsLoaded(true);
   }, []);
 
-  // Save to sessionStorage whenever form data changes
   useEffect(() => {
-    if (isLoaded && category) {
-      const dataToSave = { category, ...formData };
-      sessionStorage.setItem('hz_scout_form', JSON.stringify(dataToSave));
+    if (isLoaded) {
+      localStorage.setItem('hz_scout_pipeline_v2', JSON.stringify(formData));
     }
-  }, [category, formData, isLoaded]);
+  }, [formData, isLoaded]);
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleRootChange = (field: string, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleCategorySelect = (cat: CategoryType) => {
-    setCategory(cat);
-    // Reset specific fields when category changes to keep data clean
+  const handlePartChange = (part: string, field: string, value: any) => {
     setFormData(prev => ({
-      name: prev.name || '',
-      lr_number: prev.lr_number || '',
-      has_visual_dispute: prev.has_visual_dispute || false,
-      notes: prev.notes || ''
+      ...prev,
+      [part]: {
+        ...(prev[part] || {}),
+        [field]: value
+      }
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!category) return;
     if (!kmzFile) {
       alert('Please upload a KMZ file before submitting.');
       return;
     }
-    const finalData = { category, ...formData };
-    sessionStorage.setItem('hz_scout_form', JSON.stringify(finalData));
-    onSubmit(finalData, kmzFile);
+    onSubmit(formData, kmzFile);
   };
 
-  if (!isLoaded) return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading form...</div>;
-
-  if (!category) {
-    return (
-      <div className="hz-form-category-selector">
-        <h2 className="hz-form-title">Select Property Type</h2>
-        <p className="hz-form-subtitle">Choose the category that best describes this parcel to load the correct assessment form.</p>
-        
-        <div className="hz-category-grid">
-          <button className="hz-category-card" onClick={() => handleCategorySelect('A_AGRICULTURAL')} type="button">
-            <div className="hz-category-icon">🌾</div>
-            <h3>Form A: Agricultural</h3>
-            <p>Farms, ranches, vacant rural land.</p>
-          </button>
-          <button className="hz-category-card" onClick={() => handleCategorySelect('B_COMMERCIAL')} type="button">
-            <div className="hz-category-icon">🏪</div>
-            <h3>Form B: Commercial</h3>
-            <p>Retail, offices, mixed-use plots.</p>
-          </button>
-          <button className="hz-category-card" onClick={() => handleCategorySelect('C_INDUSTRIAL')} type="button">
-            <div className="hz-category-icon">🏭</div>
-            <h3>Form C: Industrial</h3>
-            <p>Warehouses, godowns, logistics.</p>
-          </button>
-          <button className="hz-category-card" onClick={() => handleCategorySelect('D_RESIDENTIAL')} type="button">
-            <div className="hz-category-icon">🏘️</div>
-            <h3>Form D: Residential</h3>
-            <p>Villas, apartments, gated estates.</p>
-          </button>
-          <button className="hz-category-card" onClick={() => handleCategorySelect('E_VACANT_LAND')} type="button">
-            <div className="hz-category-icon">🗺️</div>
-            <h3>Form E: Vacant Land</h3>
-            <p>Empty plots, undeveloped land (non-agricultural).</p>
-          </button>
-        </div>
-      </div>
-    );
-  }
+  if (!isLoaded) return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading Form...</div>;
 
   return (
-    <form className="hz-dynamic-form" onSubmit={handleSubmit}>
-      <div className="hz-form-header-flex">
-        <h2 className="hz-form-title">
-          {category === 'A_AGRICULTURAL' && 'Form A: Agricultural'}
-          {category === 'B_COMMERCIAL' && 'Form B: Commercial'}
-          {category === 'C_INDUSTRIAL' && 'Form C: Industrial'}
-          {category === 'D_RESIDENTIAL' && 'Form D: Residential'}
-          {category === 'E_VACANT_LAND' && 'Form E: Vacant Land'}
-        </h2>
-        <button type="button" className="hz-btn-text" onClick={() => handleCategorySelect(null)}>
-          Change Category
-        </button>
-      </div>
-
-      <div className="hz-form-group">
-        <label>Property Name / Identifier</label>
-        <input 
-          type="text" 
-          required 
-          placeholder="e.g. Ruaka Corner Plot"
-          value={formData.name || ''}
-          onChange={(e) => handleInputChange('name', e.target.value)}
-        />
-      </div>
-
-      {/* ── KMZ UPLOAD FIELD ── */}
-      <div className="hz-form-group" style={{ marginBottom: '1.5rem', backgroundColor: 'var(--color-dark-surface)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,255,255,0.1)' }}>
-        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1rem', color: 'var(--color-primary)' }}>
-          📍 Upload KMZ File (Required)
-        </label>
-        <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
-          Attach the exported .kmz file from Locus Map containing your track and photo points.
-        </p>
-        <input 
-          type="file" 
-          accept=".kmz"
-          required
-          onChange={(e) => {
-            const file = e.target.files?.[0];
-            if (file) setKmzFile(file);
-          }}
-          style={{ width: '100%', padding: '0.75rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-sm)', color: '#fff', border: '1px dashed rgba(255,255,255,0.2)' }}
-        />
-      </div>
-
-      <div className="hz-form-group">
-        <label>LR Number / Block Number (If Known)</label>
-        <input 
-          type="text" 
-          placeholder="e.g. Kajiado/Kaputiei/1234"
-          value={formData.lr_number || ''}
-          onChange={(e) => handleInputChange('lr_number', e.target.value)}
-        />
-      </div>
-
-      <div className="hz-form-group hz-checkbox-group" style={{ marginBottom: '1.5rem', backgroundColor: 'rgba(214, 0, 28, 0.05)', padding: '1rem', borderRadius: 'var(--radius-md)', border: '1px dashed var(--color-primary)' }}>
-        <input 
-          type="checkbox" 
-          id="visual_dispute" 
-          checked={formData.has_visual_dispute || false}
-          onChange={(e) => handleInputChange('has_visual_dispute', e.target.checked)}
-        />
-        <label htmlFor="visual_dispute" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-          Are there visual signs of dispute? (e.g. "Not for sale" graffiti, squatters)
-        </label>
-        {formData.has_visual_dispute && (
-          <div style={{ marginTop: '0.5rem' }}>
-            <InlineCameraBtn 
-              label="Dispute Evidence" 
-              value={formData.photo_dispute || ''} 
-              onChange={(val) => handleInputChange('photo_dispute', val)} 
-            />
-          </div>
-        )}
-      </div>
-
-      {/* ── CONDITIONAL RENDER: A_AGRICULTURAL ── */}
-      {category === 'A_AGRICULTURAL' && (
-        <div className="hz-form-section">
-          <h3>Agricultural Details</h3>
-          
-          <div className="hz-form-group">
-            <label>Current Land Use / Crops</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Maize, grazing, idle..." 
-              value={formData.currentCrops || ''}
-              onChange={(e) => handleInputChange('currentCrops', e.target.value)}
-            />
-            <InlineCameraBtn 
-              label="Crops / Use" 
-              value={formData.photo_crops || ''} 
-              onChange={(val) => handleInputChange('photo_crops', val)} 
-            />
-          </div>
-
-          <div className="hz-form-group">
-            <label>Water Access / Irrigation</label>
-            <select value={formData.waterAccess || ''} onChange={(e) => handleInputChange('waterAccess', e.target.value)}>
-              <option value="">Select option...</option>
-              <option value="Borehole">On-site Borehole</option>
-              <option value="River/Stream">Adjacent River/Stream</option>
-              <option value="Piped">Piped County Water</option>
-              <option value="None">None / Rain-fed only</option>
-            </select>
-          </div>
-
-          <div className="hz-form-group">
-            <label>Topography & Soil (Visual)</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Flat, black cotton soil..." 
-              value={formData.soilType || ''}
-              onChange={(e) => handleInputChange('soilType', e.target.value)}
-            />
-            <InlineCameraBtn 
-              label="Soil / Terrain" 
-              value={formData.photo_soil || ''} 
-              onChange={(val) => handleInputChange('photo_soil', val)} 
-            />
-          </div>
+    <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6 bg-black text-white p-4 rounded-xl">
+      
+      {/* ── HEADER & KMZ UPLOAD ── */}
+      <div className="bg-[#0a0a0a] p-6 rounded-xl border border-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-white">Area Intelligence Brief</h2>
+        
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">General Area Name / Identifier</label>
+          <input 
+            type="text" 
+            required 
+            placeholder="e.g. Ruaka Ridge Area"
+            value={formData.name || ''}
+            onChange={(e) => handleRootChange('name', e.target.value)}
+            className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"
+          />
         </div>
-      )}
 
-      {/* ── CONDITIONAL RENDER: B_COMMERCIAL ── */}
-      {category === 'B_COMMERCIAL' && (
-        <div className="hz-form-section">
-          <h3>Commercial Details</h3>
-          
-          <div className="hz-form-group">
-            <label>Road Frontage & Condition</label>
-            <input 
-              type="text" 
-              placeholder="e.g. ~50m frontage, Tarmac highway..." 
-              value={formData.roadFrontage || ''}
-              onChange={(e) => handleInputChange('roadFrontage', e.target.value)}
-            />
-            <InlineCameraBtn 
-              label="Road / Access" 
-              value={formData.photo_road || ''} 
-              onChange={(val) => handleInputChange('photo_road', val)} 
-            />
-          </div>
-
-          <div className="hz-form-group">
-            <label>Footfall / Traffic Density</label>
-            <select value={formData.trafficDensity || ''} onChange={(e) => handleInputChange('trafficDensity', e.target.value)}>
-              <option value="">Select Level...</option>
-              <option value="High">High (Main highway/CBD)</option>
-              <option value="Medium">Medium (Secondary road)</option>
-              <option value="Low">Low (Off-road / upcoming)</option>
-            </select>
-          </div>
-          
-          <div className="hz-form-group">
-            <label>Neighbouring Anchor Businesses</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Total Petrol Station, Naivas..." 
-              value={formData.anchorBusinesses || ''}
-              onChange={(e) => handleInputChange('anchorBusinesses', e.target.value)}
-            />
-          </div>
+        <div className="mt-4">
+          <label className="flex items-center gap-2 text-red-500 font-semibold mb-1">
+            📍 Upload KMZ File (Required)
+          </label>
+          <p className="text-gray-500 text-sm mb-4">
+            Attach the exported .kmz route and pins from Locus Map.
+          </p>
+          <input 
+            type="file" 
+            accept=".kmz"
+            required
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) setKmzFile(file);
+            }}
+            className="w-full p-3 bg-[#111] rounded-md text-white border border-dashed border-gray-700"
+          />
         </div>
-      )}
-
-      {/* ── CONDITIONAL RENDER: C_INDUSTRIAL ── */}
-      {category === 'C_INDUSTRIAL' && (
-        <div className="hz-form-section">
-          <h3>Industrial Details</h3>
-          
-          <div className="hz-form-group">
-            <label>Heavy Truck Accessibility</label>
-            <select value={formData.truckAccess || ''} onChange={(e) => handleInputChange('truckAccess', e.target.value)}>
-              <option value="">Select Accessibility...</option>
-              <option value="Excellent">Excellent (Trailer turning space)</option>
-              <option value="Fair">Fair (Canters only)</option>
-              <option value="Poor">Poor (Narrow/rough access)</option>
-            </select>
-          </div>
-
-          <div className="hz-form-group">
-            <label>Power & Infrastructure</label>
-            <input 
-              type="text" 
-              placeholder="e.g. 3-Phase power visible, sewer line..." 
-              value={formData.infrastructure || ''}
-              onChange={(e) => handleInputChange('infrastructure', e.target.value)}
-            />
-            <InlineCameraBtn 
-              label="Infrastructure" 
-              value={formData.photo_infrastructure || ''} 
-              onChange={(val) => handleInputChange('photo_infrastructure', val)} 
-            />
-          </div>
-          
-          <div className="hz-form-group">
-            <label>Environmental Factors (Drainage)</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Prone to flooding, well drained..." 
-              value={formData.environment || ''}
-              onChange={(e) => handleInputChange('environment', e.target.value)}
-            />
-          </div>
-        </div>
-      )}
-
-      {/* ── CONDITIONAL RENDER: D_RESIDENTIAL ── */}
-      {category === 'D_RESIDENTIAL' && (
-        <div className="hz-form-section">
-          <h3>Residential Details</h3>
-          
-          <div className="hz-form-group">
-            <label>Neighbourhood Density</label>
-            <select value={formData.density || ''} onChange={(e) => handleInputChange('density', e.target.value)}>
-              <option value="">Select Density...</option>
-              <option value="High">High (Apartments/Flats)</option>
-              <option value="Medium">Medium (Maisonettes/Townhouses)</option>
-              <option value="Low">Low (Bungalows/1-Acre plots)</option>
-              <option value="Empty">Undeveloped/Empty</option>
-            </select>
-          </div>
-
-          <div className="hz-form-group">
-            <label>Basic Amenities</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Electricity on site, septic required..." 
-              value={formData.amenities || ''}
-              onChange={(e) => handleInputChange('amenities', e.target.value)}
-            />
-          </div>
-          
-          <div className="hz-form-group">
-            <label>Security & Boundary Status</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Chainlink fence, open..." 
-              value={formData.boundary || ''}
-              onChange={(e) => handleInputChange('boundary', e.target.value)}
-            />
-            <InlineCameraBtn 
-              label="Boundary Fence" 
-              value={formData.photo_boundary || ''} 
-              onChange={(val) => handleInputChange('photo_boundary', val)} 
-            />
-          </div>
-        </div>
-      )}
-
-      {/* ── CONDITIONAL RENDER: E_VACANT_LAND ── */}
-      {category === 'E_VACANT_LAND' && (
-        <div className="hz-form-section">
-          <h3>Vacant Land Details</h3>
-          
-          <div className="hz-form-group">
-            <label>Topography & Terrain</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Flat, gently sloping, rocky..." 
-              value={formData.topography || ''}
-              onChange={(e) => handleInputChange('topography', e.target.value)}
-            />
-          </div>
-
-          <div className="hz-form-group">
-            <label>Vegetation Cover</label>
-            <input 
-              type="text" 
-              placeholder="e.g. Thick bush, cleared, mature trees..." 
-              value={formData.vegetation || ''}
-              onChange={(e) => handleInputChange('vegetation', e.target.value)}
-            />
-            <InlineCameraBtn 
-              label="Vegetation" 
-              value={formData.photo_vegetation || ''} 
-              onChange={(val) => handleInputChange('photo_vegetation', val)} 
-            />
-          </div>
-          
-          <div className="hz-form-group">
-            <label>Observed Potential Use / Zoning</label>
-            <select value={formData.potentialUse || ''} onChange={(e) => handleInputChange('potentialUse', e.target.value)}>
-              <option value="">Select Potential...</option>
-              <option value="Residential">Residential (Surrounded by homes)</option>
-              <option value="Commercial">Commercial (Along main road)</option>
-              <option value="Mixed">Mixed Use</option>
-              <option value="Unknown">Unknown / Remote</option>
-            </select>
-          </div>
-        </div>
-      )}
-
-      <div className="hz-form-group mt-4">
-        <label>General Scout Notes</label>
-        <textarea 
-          rows={4} 
-          placeholder="Any other observations not covered above..."
-          value={formData.notes || ''}
-          onChange={(e) => handleInputChange('notes', e.target.value)}
-        ></textarea>
       </div>
 
-      <button type="submit" className="btn-primary w-full mt-6">
-        Submit Assessment & KMZ
+      {/* ── FORM 1: MACRO-ECONOMICS ── */}
+      <div className="bg-[#0a0a0a] p-6 rounded-xl border border-gray-800 border-l-4 border-l-red-600">
+        <h3 className="text-xl font-bold text-white mb-1">Form 1: Area Macro-Economics</h3>
+        <p className="text-gray-500 text-sm mb-6">Prices of standard daily goods in this specific village/area.</p>
+        
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Maize Flour (2kg packet) [KES]</label><input type="number" placeholder="e.g. 210" value={formData.part1_macro?.maize_flour || ''} onChange={(e) => handlePartChange('part1_macro', 'maize_flour', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Cooking Oil (1 Litre) [KES]</label><input type="number" placeholder="e.g. 350" value={formData.part1_macro?.cooking_oil || ''} onChange={(e) => handlePartChange('part1_macro', 'cooking_oil', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Sugar (1 kg) [KES]</label><input type="number" placeholder="e.g. 180" value={formData.part1_macro?.sugar || ''} onChange={(e) => handlePartChange('part1_macro', 'sugar', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Milk (500ml fresh) [KES]</label><input type="number" placeholder="e.g. 60" value={formData.part1_macro?.milk || ''} onChange={(e) => handlePartChange('part1_macro', 'milk', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Casual Labor Wage (Per Day) [KES]</label><input type="number" placeholder="e.g. 800" value={formData.part1_macro?.labor_wage || ''} onChange={(e) => handlePartChange('part1_macro', 'labor_wage', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Boda-Boda Fare (To Highway) [KES]</label><input type="number" placeholder="e.g. 50" value={formData.part1_macro?.boda_fare || ''} onChange={(e) => handlePartChange('part1_macro', 'boda_fare', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+      </div>
+
+      {/* ── FORM 2: CONSTRUCTION ECONOMICS ── */}
+      <div className="bg-[#0a0a0a] p-6 rounded-xl border border-gray-800 border-l-4 border-l-yellow-500">
+        <h3 className="text-xl font-bold text-white mb-1">Form 2: Construction Economics</h3>
+        <p className="text-gray-500 text-sm mb-6">Local costs of building materials if sourced in this area.</p>
+        
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Building Stones (per foot) [KES]</label><input type="number" placeholder="e.g. 45" value={formData.part2_construction?.building_stones || ''} onChange={(e) => handlePartChange('part2_construction', 'building_stones', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">River Sand (per lorry) [KES]</label><input type="number" placeholder="e.g. 15000" value={formData.part2_construction?.river_sand || ''} onChange={(e) => handlePartChange('part2_construction', 'river_sand', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Cement (50kg bag) [KES]</label><input type="number" placeholder="e.g. 850" value={formData.part2_construction?.cement || ''} onChange={(e) => handlePartChange('part2_construction', 'cement', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Water Bowser (10,000L Truck) [KES]</label><input type="number" placeholder="e.g. 4000" value={formData.part2_construction?.water_bowser || ''} onChange={(e) => handlePartChange('part2_construction', 'water_bowser', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+      </div>
+
+      {/* ── FORM 3: LAND & AGRI ── */}
+      <div className="bg-[#0a0a0a] p-6 rounded-xl border border-gray-800 border-l-4 border-l-green-500">
+        <h3 className="text-xl font-bold text-white mb-6">Form 3: Land & Agricultural Data</h3>
+        
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Topography (Slope)</label>
+          <select value={formData.part3_land?.topography || ''} onChange={(e) => handlePartChange('part3_land', 'topography', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Flat">Flat</option>
+            <option value="Gentle Slope">Gentle Slope</option>
+            <option value="Steep/Hilly">Steep / Hilly</option>
+            <option value="Rocky">Rocky / Uneven</option>
+          </select>
+        </div>
+
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Soil Type & Appearance</label><input type="text" placeholder="e.g. Deep red volcanic, Black cotton..." value={formData.part3_land?.soil_type || ''} onChange={(e) => handlePartChange('part3_land', 'soil_type', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Visible Fertility (Crops)</label><input type="text" placeholder="e.g. Healthy maize, stunted coffee..." value={formData.part3_land?.visible_fertility || ''} onChange={(e) => handlePartChange('part3_land', 'visible_fertility', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Water Accessibility</label>
+          <select value={formData.part3_land?.water_access || ''} onChange={(e) => handlePartChange('part3_land', 'water_access', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Active Borehole">Active Borehole</option>
+            <option value="Piped County Water">Piped County Water</option>
+            <option value="Seasonal River">Seasonal River</option>
+            <option value="None">None (Rain fed only)</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Flood Risk Indicators</label>
+          <select value={formData.part3_land?.flood_risk || ''} onChange={(e) => handlePartChange('part3_land', 'flood_risk', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Safe">Safe (Well drained)</option>
+            <option value="Valley Bottom">Valley Bottom</option>
+            <option value="Drainage Trenches">Drainage trenches present</option>
+            <option value="Watermarks">Watermarks on trees/buildings</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Road Passability (Wet Season)</label>
+          <select value={formData.part3_land?.road_passability || ''} onChange={(e) => handlePartChange('part3_land', 'road_passability', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="All-weather/Tarmac">All-weather / Tarmac</option>
+            <option value="Passable">Passable when wet</option>
+            <option value="Impassable">Impassable during heavy rains</option>
+          </select>
+        </div>
+
+        <div className="flex gap-4 mt-6">
+          <InlineCameraBtn label="Soil Photo" value={formData.part3_land?.photo_soil || ''} onChange={(val) => handlePartChange('part3_land', 'photo_soil', val)} />
+          <InlineCameraBtn label="Slope Photo" value={formData.part3_land?.photo_slope || ''} onChange={(val) => handlePartChange('part3_land', 'photo_slope', val)} />
+        </div>
+      </div>
+
+      {/* ── FORM 4: RESIDENTIAL & COMMERCIAL ── */}
+      <div className="bg-[#0a0a0a] p-6 rounded-xl border border-gray-800 border-l-4 border-l-blue-500">
+        <h3 className="text-xl font-bold text-white mb-6">Form 4: Viability & Infrastructure</h3>
+        
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Infrastructure Proximity</label><input type="text" placeholder="e.g. 500m to tarmac, 100m to transformer..." value={formData.part4_viability?.infrastructure || ''} onChange={(e) => handlePartChange('part4_viability', 'infrastructure', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Grid Reliability (Power)</label>
+          <select value={formData.part4_viability?.grid_reliability || ''} onChange={(e) => handlePartChange('part4_viability', 'grid_reliability', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Very Reliable">Very Reliable</option>
+            <option value="Frequent Blackouts">Frequent Blackouts / Rationing</option>
+            <option value="No Grid">No Grid Connection</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Mobile Network Signal</label>
+          <select value={formData.part4_viability?.network_signal || ''} onChange={(e) => handlePartChange('part4_viability', 'network_signal', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Strong">Strong 4G/5G</option>
+            <option value="Weak">Weak Signal</option>
+            <option value="Deadzone">Deadzone (No Network)</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Surrounding Land Use (Zoning)</label>
+          <select value={formData.part4_viability?.zoning || ''} onChange={(e) => handlePartChange('part4_viability', 'zoning', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Strictly Residential">Strictly Residential</option>
+            <option value="Mixed Commercial">Mixed Commercial</option>
+            <option value="Farming">Farming</option>
+            <option value="Industrial">Industrial</option>
+          </select>
+        </div>
+      </div>
+
+      {/* ── FORM 5: PRIVATE CRM ── */}
+      <div className="bg-[#1a0505] p-6 rounded-xl border border-red-900 border-l-4 border-l-red-600">
+        <h3 className="text-xl font-bold text-red-500 mb-1">Form 5: Private CRM & Legal (CONFIDENTIAL)</h3>
+        <p className="text-red-300/60 text-sm mb-6">This data is locked to Hazina HQ and never published to the public investor map.</p>
+        
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Landowner Name</label><input type="text" placeholder="Name of owner..." value={formData.part5_crm?.landowner_name || ''} onChange={(e) => handlePartChange('part5_crm', 'landowner_name', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Landowner Phone Number</label><input type="text" placeholder="Phone number..." value={formData.part5_crm?.landowner_phone || ''} onChange={(e) => handlePartChange('part5_crm', 'landowner_phone', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/></div>
+        
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Title Deed Status</label>
+          <select value={formData.part5_crm?.title_status || ''} onChange={(e) => handlePartChange('part5_crm', 'title_status', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Ready Freehold">Ready Freehold</option>
+            <option value="Share Certificate">Share Certificate</option>
+            <option value="Ongoing Adjudication">Ongoing Adjudication</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Scout's Assessment of Urgency</label>
+          <select value={formData.part5_crm?.urgency || ''} onChange={(e) => handlePartChange('part5_crm', 'urgency', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Highly motivated">Highly motivated to sell (Discount possible)</option>
+            <option value="Firm on price">Firm on price</option>
+            <option value="Not selling">Not selling</option>
+          </select>
+        </div>
+
+        <div className="mb-4"><label className="block text-gray-400 text-sm font-medium mb-2">Private Scout Notes</label><textarea rows={3} placeholder="Anything suspicious, highly lucrative, or off-the-record..." value={formData.part5_crm?.private_notes || ''} onChange={(e) => handlePartChange('part5_crm', 'private_notes', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"></textarea></div>
+      </div>
+
+      <button type="submit" className="w-full py-4 mt-4 bg-red-600 hover:bg-red-700 text-white font-bold text-lg rounded-xl transition-colors">
+        Submit Complete Intelligence Brief
       </button>
     </form>
   );

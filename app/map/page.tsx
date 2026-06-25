@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import 'leaflet/dist/leaflet.css';
+import { createBrowserClient } from '@/lib/supabase';
+import PublicNavbar from '@/components/layout/PublicNavbar';
 
 // Dynamically import the map to avoid SSR window errors
 const PublicMapClient = dynamic(() => import('@/components/features/PublicMap'), {
@@ -11,6 +14,7 @@ const PublicMapClient = dynamic(() => import('@/components/features/PublicMap'),
 });
 
 export default function MapSearchPage() {
+  const supabase = createBrowserClient();
   const [properties, setProperties] = useState<any[]>([]);
   const [activePropertyId, setActivePropertyId] = useState<string | null>(null);
   const [activePoi, setActivePoi] = useState<any>(null);
@@ -29,12 +33,19 @@ export default function MapSearchPage() {
   const [areaIntelligence, setAreaIntelligence] = useState<any>(null);
   const [marketIntelligence, setMarketIntelligence] = useState<any>(null);
   const [isFetchingIntelligence, setIsFetchingIntelligence] = useState(false);
+  const [activePoiLayer, setActivePoiLayer] = useState<string | null>(null);
 
-  const fetchProperties = async () => {
+  const fetchProperties = async (bounds?: { n: number, s: number, e: number, w: number }) => {
     try {
-      const response = await fetch('/api/public/properties');
+      let url = '/api/public/properties';
+      if (bounds) {
+        url += `?n=${bounds.n}&s=${bounds.s}&e=${bounds.e}&w=${bounds.w}`;
+      }
+      const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
+        // Since we are filtering locally, replace completely. 
+        // A more advanced approach would merge, but this is simpler for BBox filtering.
         setProperties(data);
       } else {
         console.error('Failed to fetch properties from API');
@@ -52,8 +63,8 @@ export default function MapSearchPage() {
     setSearchedLocation(null);
 
     try {
-      // Nominatim Geocoding API
-      const res = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(globalSearchQuery + ', Kenya')}&format=json&limit=1`);
+      // Nominatim Geocoding API (via secure backend proxy to prevent CORS/User-Agent blocks)
+      const res = await fetch(`/api/public/geocode?q=${encodeURIComponent(globalSearchQuery + ', Kenya')}`);
       const data = await res.json();
 
       if (data && data.length > 0) {
@@ -141,59 +152,32 @@ export default function MapSearchPage() {
   });
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden', backgroundColor: 'var(--color-dark-bg)' }}>
-      {/* Mini Navbar (Stays on top) */}
-      <header className="hz-nav" style={{ height: '60px', flexShrink: 0, position: 'relative', zIndex: 1000, backgroundColor: 'var(--color-dark-surface)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-        <div className="hz-nav__inner container" style={{ width: '100%', padding: '0 1.5rem', maxWidth: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-            <Link href="/" className="hz-nav__wordmark" style={{ color: 'var(--color-text-inverse)' }}>
-              Hazina
-            </Link>
-            
-            {/* Global Geocoding Search Bar */}
-            <form onSubmit={handleGlobalSearch} style={{ display: 'flex', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '99px', padding: '4px 4px 4px 16px', width: '350px' }}>
-              <input 
-                type="text" 
-                placeholder="Search any town or region (e.g. Thika)..." 
-                value={globalSearchQuery}
-                onChange={(e) => setGlobalSearchQuery(e.target.value)}
-                style={{ flex: 1, background: 'transparent', border: 'none', color: 'white', outline: 'none', fontSize: '0.875rem' }}
-              />
-              <button type="submit" disabled={isSearchingLocation} style={{ backgroundColor: 'var(--color-primary)', color: 'white', border: 'none', borderRadius: '99px', padding: '6px 16px', cursor: 'pointer', fontSize: '0.8125rem', fontWeight: 600 }}>
-                {isSearchingLocation ? '...' : 'Search'}
-              </button>
-            </form>
-          </div>
-
-          <nav className="hz-nav__links" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <Link href="/" className="hz-nav__link" style={{ color: 'var(--color-text-inverse)' }}>Home</Link>
-          </nav>
-        </div>
-      </header>
+    <div className="flex flex-col h-screen overflow-hidden bg-gray-100">
+      <PublicNavbar />
 
       {/* Main App Wrapper */}
       <main style={{ flex: 1, position: 'relative' }}>
         
         {/* Floating Filter UI */}
-        <div style={{
-          position: 'absolute',
-          top: '20px',
-          left: '20px',
-          zIndex: 1000,
-          backgroundColor: 'rgba(23, 23, 23, 0.85)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          padding: '1.25rem',
-          borderRadius: 'var(--radius-md)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          width: '320px',
-          maxHeight: 'calc(100vh - 100px)',
-          overflowY: 'auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1rem'
-        }}>
-          <h3 style={{ margin: '0', fontSize: '1rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-inverse)' }}>
+        <div className="absolute top-4 left-4 z-[1000] bg-black/85 backdrop-blur-md p-5 rounded-xl border border-white/10 w-[90%] max-w-[340px] max-h-[calc(100vh-100px)] overflow-y-auto flex flex-col gap-4">
+          
+          {/* Global Geocoding Search Bar Moved Here */}
+          <form onSubmit={handleGlobalSearch} className="flex items-center bg-white/10 rounded-full p-1 pl-4 w-full">
+            <input 
+              type="text" 
+              placeholder="Search any town (e.g. Thika)..." 
+              value={globalSearchQuery}
+              onChange={(e) => setGlobalSearchQuery(e.target.value)}
+              className="flex-1 bg-transparent border-none text-white outline-none text-sm placeholder-gray-400"
+            />
+            <button type="submit" disabled={isSearchingLocation} className="bg-red-600 text-white border-none rounded-full px-4 py-1.5 cursor-pointer text-xs font-bold hover:bg-red-700 transition-colors">
+              {isSearchingLocation ? '...' : 'Go'}
+            </button>
+          </form>
+
+          <div className="h-px bg-white/10 my-2"></div>
+
+          <h3 className="m-0 text-base font-bold text-white tracking-wide">
             Filter Verified Land
           </h3>
           
@@ -272,8 +256,10 @@ export default function MapSearchPage() {
           <PublicMapClient
             properties={filteredProperties}
             activePropertyId={activePropertyId}
+            onPropertyClick={setActivePropertyId}
             onPoiClick={setActivePoi}
             searchedLocation={searchedLocation}
+            onBoundsChange={fetchProperties}
           />
         </div>
 
@@ -347,21 +333,27 @@ export default function MapSearchPage() {
                     <summary>🏗️ Infrastructure & Services</summary>
                     <div className="details-content">
                       <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.8125rem', color: 'var(--color-text-inverse)', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                        <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <li 
+                          onClick={() => setActivePoiLayer(activePoiLayer === 'hospitals' ? null : 'hospitals')}
+                          style={{ display: 'flex', justifyContent: 'space-between', cursor: 'pointer', padding: '4px', borderRadius: '4px', backgroundColor: activePoiLayer === 'hospitals' ? 'rgba(255,255,255,0.1)' : 'transparent' }}
+                        >
                           <span>🏥 Hospitals/Clinics</span>
-                          <strong>{areaIntelligence.infrastructure?.hospitals}</strong>
+                          <strong>{areaIntelligence.infrastructure?.hospitals?.count || 0}</strong>
                         </li>
-                        <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <li 
+                          onClick={() => setActivePoiLayer(activePoiLayer === 'schools' ? null : 'schools')}
+                          style={{ display: 'flex', justifyContent: 'space-between', cursor: 'pointer', padding: '4px', borderRadius: '4px', backgroundColor: activePoiLayer === 'schools' ? 'rgba(255,255,255,0.1)' : 'transparent' }}
+                        >
                           <span>🏫 Schools/Colleges</span>
-                          <strong>{areaIntelligence.infrastructure?.schools}</strong>
+                          <strong>{areaIntelligence.infrastructure?.schools?.count || 0}</strong>
                         </li>
-                        <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <li style={{ display: 'flex', justifyContent: 'space-between', padding: '4px' }}>
                           <span>🛣️ Major Highways</span>
-                          <strong>{areaIntelligence.infrastructure?.highways}</strong>
+                          <strong>{areaIntelligence.infrastructure?.highways?.count || 0}</strong>
                         </li>
-                        <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <li style={{ display: 'flex', justifyContent: 'space-between', padding: '4px' }}>
                           <span>⚡ Power Grid (Substations)</span>
-                          <strong>{areaIntelligence.infrastructure?.power}</strong>
+                          <strong>{areaIntelligence.infrastructure?.power?.count || 0}</strong>
                         </li>
                       </ul>
                     </div>
@@ -393,9 +385,12 @@ export default function MapSearchPage() {
                     <summary>🏪 Commercial & Agriculture</summary>
                     <div className="details-content">
                       <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.8125rem', color: 'var(--color-text-inverse)', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                        <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <li 
+                          onClick={() => setActivePoiLayer(activePoiLayer === 'commercial' ? null : 'commercial')}
+                          style={{ display: 'flex', justifyContent: 'space-between', cursor: 'pointer', padding: '4px', borderRadius: '4px', backgroundColor: activePoiLayer === 'commercial' ? 'rgba(255,255,255,0.1)' : 'transparent' }}
+                        >
                           <span>🛍️ Commercial Nodes</span>
-                          <strong>{areaIntelligence.infrastructure?.commercial}</strong>
+                          <strong>{areaIntelligence.infrastructure?.commercial?.count || 0}</strong>
                         </li>
                         <li style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px', paddingTop: '4px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                           <span>🌽 Maize (90kg bag)</span>
@@ -416,7 +411,7 @@ export default function MapSearchPage() {
                       <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.8125rem', color: 'var(--color-text-inverse)', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                         <li style={{ display: 'flex', justifyContent: 'space-between' }}>
                           <span>🏭 Major Industrial Zones</span>
-                          <strong>{areaIntelligence.infrastructure?.industrial}</strong>
+                          <strong>{areaIntelligence.infrastructure?.industrial?.count || 0}</strong>
                         </li>
                         <li style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px', paddingTop: '4px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                           <span>🚚 Raw Material Access</span>
@@ -454,20 +449,21 @@ export default function MapSearchPage() {
           </div>
         )}
 
-        {/* Floating POI Glassmorphism Side Panel */}
+        {/* Bottom-Sliding POI Glassmorphism Panel (Google Maps Style) */}
         <div style={{
           position: 'absolute',
-          top: 0,
-          right: activePoi ? 0 : '-400px', // Slide in/out animation
-          width: '400px',
-          height: '100%',
-          backgroundColor: 'rgba(23, 23, 23, 0.85)',
-          backdropFilter: 'blur(16px)',
-          WebkitBackdropFilter: 'blur(16px)',
-          borderLeft: '1px solid rgba(255, 255, 255, 0.1)',
-          boxShadow: '-10px 0 30px rgba(0,0,0,0.5)',
+          bottom: activePoi ? '20px' : '-100%', // Slide up/down animation
+          left: '20px',
+          width: '380px',
+          maxHeight: '75vh',
+          backgroundColor: 'rgba(23, 23, 23, 0.95)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          borderRadius: '16px',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
           zIndex: 1001,
-          transition: 'right 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          transition: 'bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
           display: 'flex',
           flexDirection: 'column',
           overflowY: 'auto'
@@ -491,9 +487,9 @@ export default function MapSearchPage() {
               <div style={{ width: '100%', minHeight: '250px', backgroundColor: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 {activePoi.photoUrl ? (
                   <img 
-                    src={activePoi.photoUrl} 
+                    src={activePoi.photoUrl.startsWith('http') ? activePoi.photoUrl : supabase.storage.from('scout_photos').getPublicUrl(activePoi.photoUrl).data.publicUrl} 
                     alt={activePoi.name}
-                    style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                    style={{ width: '100%', height: 'auto', maxHeight: '300px', objectFit: 'contain' }}
                   />
                 ) : (
                   <span style={{ color: '#666', fontSize: '0.875rem' }}>No photo available</span>
@@ -515,7 +511,19 @@ export default function MapSearchPage() {
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid rgba(255,255,255,0.05)'
                   }}>
-                    {activePoi.description}
+                    {(() => {
+                      // Attempt to parse raw JSON from KMZ files (e.g. {"@type":"html","value":"..."})
+                      try {
+                        const parsed = JSON.parse(activePoi.description);
+                        if (parsed && parsed.value) {
+                          // Clean up extra backslashes and newlines if they are literal \n strings
+                          return parsed.value.replace(/\\n/g, '\n').trim();
+                        }
+                      } catch (e) {
+                        // Not JSON, just render the text
+                      }
+                      return activePoi.description.replace(/\\n/g, '\n').trim();
+                    })()}
                   </div>
                 ) : (
                   <p style={{ margin: 0, fontStyle: 'italic', opacity: 0.7 }}>No field notes recorded for this location.</p>
@@ -532,6 +540,83 @@ export default function MapSearchPage() {
           )}
         </div>
         
+        {/* Bottom-Sliding Property Card Overlay (Zillow/Redfin Style) */}
+        {activePropertyId && !activePoi && (
+          <div className="absolute bottom-5 right-5 z-[1001] w-[90%] max-w-[400px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:right-5 md:left-auto left-1/2 -translate-x-1/2 md:translate-x-0 transition-all duration-300">
+            {(() => {
+              const prop = properties.find(p => p.id === activePropertyId);
+              if (!prop) return null;
+              
+              // Get image from vision_tags if available, otherwise fallback to photo_urls
+              const imageUrl = prop.vision_tags?.[0]?.photoUrl 
+                ? (prop.vision_tags[0].photoUrl.startsWith('http') ? prop.vision_tags[0].photoUrl : supabase.storage.from('scout_photos').getPublicUrl(prop.vision_tags[0].photoUrl).data.publicUrl)
+                : (prop.photo_urls?.[0] ? `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/scout_photos/${prop.photo_urls[0]}` : null);
+
+              return (
+                <>
+                  <button 
+                    onClick={() => setActivePropertyId(null)}
+                    className="absolute top-3 right-3 bg-black/50 hover:bg-black/80 text-white rounded-full p-1.5 z-10 transition-colors"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </button>
+
+                  {/* Half Image */}
+                  <div className="w-full h-48 bg-gray-200 relative">
+                    {imageUrl ? (
+                      <img src={imageUrl} alt={prop.property_name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">No Image Available</div>
+                    )}
+                    <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-black px-2 py-1 rounded text-xs font-bold uppercase shadow-sm">
+                      For Sale
+                    </div>
+                  </div>
+
+                  {/* Half Text Description */}
+                  <div className="p-5 flex flex-col gap-3">
+                    <div>
+                      <h2 className="text-xl font-bold text-gray-900 m-0 leading-tight">{prop.property_name}</h2>
+                      <p className="text-gray-500 text-sm m-0 mt-1 flex items-center gap-1">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        {prop.location || prop.region || 'Kenya'}
+                      </p>
+                    </div>
+
+                    <div className="flex justify-between items-center bg-gray-50 p-2 rounded-lg border border-gray-100">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-xs">
+                          {prop.agent?.charAt(0) || 'A'}
+                        </div>
+                        <span className="text-sm font-semibold text-gray-800">{prop.agent || 'Listed Agent'}</span>
+                      </div>
+                      <span className="text-xs text-gray-500 font-medium">{prop.category?.replace(/^[A-Z]_/, '').replace('_', ' ')}</span>
+                    </div>
+
+                    <p className="text-gray-600 text-sm line-clamp-2 m-0 leading-snug">
+                      {prop.description || 'Verified property ready for viewing.'}
+                    </p>
+
+                    {prop.intelligence && (
+                      <div className="bg-red-50 border-l-4 border-red-600 p-3 mt-1 rounded-r-lg">
+                        <h4 className="text-red-800 text-xs font-bold uppercase tracking-wider m-0 mb-1">Hazina Intelligence</h4>
+                        <p className="text-red-900 text-xs m-0 leading-relaxed">{prop.intelligence}</p>
+                      </div>
+                    )}
+
+                    <Link 
+                      href={`/property/${prop.id}`} 
+                      className="mt-2 w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-md shadow-red-600/20"
+                    >
+                      View Full Details
+                    </Link>
+                  </div>
+                </>
+              );
+            })()}
+          </div>
+        )}
+
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes spin {
             to { transform: rotate(360deg); }

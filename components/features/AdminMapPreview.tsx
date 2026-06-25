@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -32,26 +32,88 @@ function MapRecenter({ trackPoints }: { trackPoints: [number, number][] }) {
 }
 
 export default function AdminMapPreview({ property }: { property: any }) {
+  const [mapType, setMapType] = useState<'satellite' | 'osm'>('satellite');
   const hasTrack = property?.path_points && property.path_points.length > 0;
   const track = hasTrack ? property.path_points : [[-1.2921, 36.8219]]; // default Nairobi
 
   return (
-    <div style={{ height: '300px', width: '100%', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--color-border)', marginBottom: '1.5rem' }}>
+    <div style={{ height: '300px', width: '100%', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--color-border)', marginBottom: '1.5rem', position: 'relative' }}>
+      
+      {/* Map Type Toggle Control */}
+      <div style={{
+        position: 'absolute',
+        top: '10px',
+        right: '10px',
+        zIndex: 1000,
+        backgroundColor: 'rgba(23, 23, 23, 0.9)',
+        backdropFilter: 'blur(10px)',
+        padding: '0.25rem',
+        borderRadius: '8px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        display: 'flex',
+        gap: '4px',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.5)'
+      }}>
+        <button
+          onClick={() => setMapType('satellite')}
+          style={{
+            padding: '0.5rem 0.75rem',
+            backgroundColor: mapType === 'satellite' ? 'var(--color-primary)' : 'transparent',
+            color: mapType === 'satellite' ? '#fff' : 'var(--color-text-muted)',
+            border: 'none',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            fontSize: '0.75rem',
+            fontWeight: 600,
+            transition: 'all 0.2s ease'
+          }}
+        >
+          🛰️ Satellite
+        </button>
+        <button
+          onClick={() => setMapType('osm')}
+          style={{
+            padding: '0.5rem 0.75rem',
+            backgroundColor: mapType === 'osm' ? '#333' : 'transparent',
+            color: mapType === 'osm' ? '#fff' : 'var(--color-text-muted)',
+            border: 'none',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            fontSize: '0.75rem',
+            fontWeight: 600,
+            transition: 'all 0.2s ease'
+          }}
+        >
+          🗺️ Street
+        </button>
+      </div>
+
       <MapContainer 
         center={track[0] as [number, number]} 
         zoom={14} 
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom={false}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          className="map-tiles-dark"
-        />
+        {mapType === 'satellite' ? (
+          <TileLayer
+            attribution='&copy; <a href="https://www.google.com/intl/en_us/help/terms_maps.html">Google Maps</a>'
+            url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+            maxZoom={20}
+          />
+        ) : (
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            className="map-tiles-dark"
+          />
+        )}
         
         {hasTrack && (
           <>
-            <Polyline positions={track} color="#D6001C" weight={4} opacity={0.8} />
+            {/* Draw the track line - Google Maps Style (Outer Glow) */}
+            <Polyline positions={track} pathOptions={{ color: '#0055ff', weight: 8, opacity: 0.3, lineCap: 'round', lineJoin: 'round' }} />
+            {/* Draw the track line - Google Maps Style (Inner Core) */}
+            <Polyline positions={track} pathOptions={{ color: '#2176ff', weight: 4, opacity: 1, lineCap: 'round', lineJoin: 'round' }} />
             <MapRecenter trackPoints={track} />
           </>
         )}

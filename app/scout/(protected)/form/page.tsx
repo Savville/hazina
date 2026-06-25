@@ -104,17 +104,6 @@ export default function ScoutFormPage() {
 
   return (
     <div className="hz-scout-page">
-      <header className="hz-scout-header">
-        <div className="hz-scout-header-inner">
-          <Link href="/scout/photos" className="hz-back-btn">
-            ← Back to Photos
-          </Link>
-          <div className="hz-scout-profile">
-            <div className="hz-scout-avatar">S</div>
-          </div>
-        </div>
-      </header>
-
       <main className="hz-scout-main">
         <p className="hz-scout-instruction">
           Please categorize this property to load the appropriate assessment form. 

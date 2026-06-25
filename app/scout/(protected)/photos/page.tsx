@@ -89,14 +89,8 @@ export default function ScoutPhotosPage() {
 
   return (
     <div className="hz-scout-page">
-      <header className="hz-scout-header-bar">
-        <Link href="/scout/map" className="hz-back-btn">
-          ← Back
-        </Link>
-        <h1>Attach Photos & Context</h1>
-      </header>
-
       <main className="hz-scout-main" style={{ paddingBottom: '140px' }}>
+        <h1 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--color-text-inverse)' }}>Attach Photos & Context</h1>
         <p className="hz-scout-instruction">
           Review the live ground-truth photos. Below the photos, you can add contextual "Vision Tags" to explain what is visible in the images (e.g., graffiti, squatters).
         </p>

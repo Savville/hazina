@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import FeaturedProperties from '@/components/features/FeaturedProperties';
+import PublicNavbar from '@/components/layout/PublicNavbar';
 
 export const metadata: Metadata = {
   title: 'Hazina — Kenya Real Estate Intelligence',
@@ -28,34 +29,19 @@ export default function HomePage() {
     <div className="hz-home">
 
       {/* ── Navbar ── */}
-      <header className="hz-nav">
-        <div className="hz-nav__inner container">
-          <Link href="/" className="hz-nav__wordmark">
-            Hazina
-          </Link>
-          <nav className="hz-nav__links">
-            <Link href="/" className="hz-nav__link">Home</Link>
-            <Link href="/properties" className="hz-nav__link">Browse Properties</Link>
-            <Link href="/map" className="hz-nav__link">View Map</Link>
-            <Link href="/scout/login" className="hz-nav__cta btn-primary">
-              Scout Login
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <PublicNavbar />
 
       {/* ── Hero ── */}
       <section className="hz-hero">
         <div className="hz-hero__inner container">
-          <p className="hz-hero__eyebrow">Kenya Real Estate Intelligence</p>
+          <p className="hz-hero__eyebrow">Kenya's Land Intelligence System</p>
           <h1 className="hz-hero__heading">
-            Find property with<br />
-            <span className="hz-hero__heading--accent">ground truth</span><br />
-            behind every listing.
+            Independent <br />
+            <span className="hz-hero__heading--accent">physical verification</span><br />
+            for every property.
           </h1>
           <p className="hz-hero__sub">
-            Every parcel on Hazina has been physically visited and documented by a trained scout.
-            No guesswork. No inflated asking prices.
+            Hazina is an independent intelligence body dedicated to digitizing Kenya's real estate. We make critical land data—from exact physical boundaries to ongoing disputes—public, transparent, and verifiable for everyone.
           </p>
 
           {/* Search bar */}

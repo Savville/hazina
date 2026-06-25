@@ -88,9 +88,12 @@ export async function POST(req: NextRequest) {
     });
 
     // 4. Insert data into database
-    const category = payload.category || 'UNKNOWN';
-    const property_name = payload.name || 'Unnamed Property';
+    const category = payload.category || 'INTELLIGENCE_BRIEF';
+    const property_name = payload.name || 'Unnamed Area Assessment';
     const lr_number = payload.formData?.lr_number || null;
+
+    // Segregate Private CRM data from public form data for security
+    const { part5_crm, ...publicFormData } = payload.formData || {};
 
     const { error: dbError } = await supabase
       .from('scout_assessments')
@@ -101,7 +104,8 @@ export async function POST(req: NextRequest) {
         category,
         distance_meters: 0,
         path_points: payload.track || [],
-        form_data: payload.formData || {},
+        form_data: publicFormData, // Parts 1 to 4
+        private_crm: part5_crm || null, // Part 5 (Confidential)
         area_data: {},
         vision_tags: updatedPOIs, // POIs go into vision_tags
         photo_urls: Object.values(uploadedPhotoMap),
