@@ -267,7 +267,7 @@ export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
           </select>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-8">
           <label className="block text-gray-400 text-sm font-medium mb-2">Surrounding Land Use (Zoning)</label>
           <select value={formData.part4_viability?.zoning || ''} onChange={(e) => handlePartChange('part4_viability', 'zoning', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
             <option value="">Select...</option>
@@ -275,6 +275,42 @@ export default function ScoutDynamicForm({ onSubmit }: ScoutDynamicFormProps) {
             <option value="Mixed Commercial">Mixed Commercial</option>
             <option value="Farming">Farming</option>
             <option value="Industrial">Industrial</option>
+          </select>
+        </div>
+
+        {/* Existing Structures Sub-Section */}
+        <h4 className="text-lg font-bold text-white mb-4 border-t border-gray-800 pt-6">Existing Structures (If Applicable)</h4>
+        
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label className="block text-gray-400 text-sm font-medium mb-2">Bedrooms</label>
+            <input type="number" placeholder="e.g. 3" value={formData.part4_viability?.bedrooms || ''} onChange={(e) => handlePartChange('part4_viability', 'bedrooms', e.target.value ? parseInt(e.target.value) : '')} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/>
+          </div>
+          <div>
+            <label className="block text-gray-400 text-sm font-medium mb-2">Bathrooms</label>
+            <input type="number" placeholder="e.g. 2" value={formData.part4_viability?.bathrooms || ''} onChange={(e) => handlePartChange('part4_viability', 'bathrooms', e.target.value ? parseInt(e.target.value) : '')} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none"/>
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Interior Condition</label>
+          <select value={formData.part4_viability?.interior_condition || ''} onChange={(e) => handlePartChange('part4_viability', 'interior_condition', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Move-in Ready">Move-in Ready (Excellent)</option>
+            <option value="Needs Minor Renovation">Needs Minor Renovation</option>
+            <option value="Requires Major Repair">Requires Major Repair</option>
+            <option value="Unfinished Shell">Unfinished Shell</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-400 text-sm font-medium mb-2">Indoor Plumbing / Water Connectivity</label>
+          <select value={formData.part4_viability?.indoor_plumbing || ''} onChange={(e) => handlePartChange('part4_viability', 'indoor_plumbing', e.target.value)} className="w-full bg-[#111] text-white border border-gray-700 rounded-md p-3 focus:border-red-600 outline-none">
+            <option value="">Select...</option>
+            <option value="Fully Connected (Hot & Cold)">Fully Connected (Hot & Cold)</option>
+            <option value="Cold Water Only">Cold Water Only</option>
+            <option value="Outside Tap Only">Outside Tap Only</option>
+            <option value="No Plumbing">No Plumbing</option>
           </select>
         </div>
       </div>

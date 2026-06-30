@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap, Polyline, useMapEvents, Tooltip } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap, Polyline, useMapEvents, Tooltip, Circle } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -369,6 +369,47 @@ export default function PublicMap({ properties, activePropertyId, onPoiClick, se
           }
 
           // Standard rendering for single point properties or mock properties
+          
+          if (prop.isScraped) {
+            const lat = prop.location?.latitude;
+            const lng = prop.location?.longitude;
+            if (typeof lat !== 'number' || typeof lng !== 'number') return null;
+
+            if (prop.location?.location_accuracy === 'Exact_Pin') {
+               return (
+                 <Marker 
+                   key={prop.id} 
+                   position={[lat, lng]} 
+                   icon={unverifiedIcon}
+                   eventHandlers={{ click: () => onPropertyClick?.(prop.id) }}
+                 >
+                 </Marker>
+               );
+            } else {
+               const radius = prop.location?.location_accuracy === 'City_Level_Only' ? 5000 : 800; // 5km for city, 800m for neighborhood
+               return (
+                 <Circle
+                   key={prop.id}
+                   center={[lat, lng]}
+                   radius={radius}
+                   pathOptions={{
+                     color: '#ef4444',
+                     fillColor: '#ef4444',
+                     fillOpacity: prop.location?.location_accuracy === 'City_Level_Only' ? 0.05 : 0.2,
+                     weight: 2,
+                     dashArray: '5, 8'
+                   }}
+                   eventHandlers={{ click: () => onPropertyClick?.(prop.id) }}
+                 >
+                   <Tooltip sticky direction="top">
+                     <strong>{prop.title}</strong><br/>
+                     <span style={{ fontSize: '11px' }}>Approximate Location ({radius}m radius)</span>
+                   </Tooltip>
+                 </Circle>
+               );
+            }
+          }
+
           let lat, lng;
           if (prop.path_points && Array.isArray(prop.path_points[0])) {
             lat = prop.path_points[0][0];

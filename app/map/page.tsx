@@ -25,6 +25,10 @@ export default function MapSearchPage() {
   const [waterFilter, setWaterFilter] = useState('');
   const [soilFilter, setSoilFilter] = useState('');
   const [envFilter, setEnvFilter] = useState('');
+  
+  // Scraped Market Data State
+  const [scrapedProperties, setScrapedProperties] = useState<any[]>([]);
+  const [showScrapedData, setShowScrapedData] = useState(false);
 
   // Global Area Intelligence State
   const [globalSearchQuery, setGlobalSearchQuery] = useState('');
@@ -41,17 +45,25 @@ export default function MapSearchPage() {
       if (bounds) {
         url += `?n=${bounds.n}&s=${bounds.s}&e=${bounds.e}&w=${bounds.w}`;
       }
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        // Since we are filtering locally, replace completely. 
-        // A more advanced approach would merge, but this is simpler for BBox filtering.
+      
+      const [verifiedRes, scrapedRes] = await Promise.all([
+        fetch(url),
+        fetch('/geocoded_map_data.json')
+      ]);
+
+      if (verifiedRes.ok) {
+        const data = await verifiedRes.json();
         setProperties(data);
-      } else {
-        console.error('Failed to fetch properties from API');
+      }
+      
+      if (scrapedRes.ok) {
+        const scrapedData = await scrapedRes.json();
+        // Tag them as scraped so the map knows how to render them
+        const taggedScraped = scrapedData.map((p: any) => ({ ...p, isScraped: true, id: p.url || Math.random().toString() }));
+        setScrapedProperties(taggedScraped);
       }
     } catch (err) {
-      console.error('Error fetching verified properties:', err);
+      console.error('Error fetching properties:', err);
     }
   };
 
@@ -205,6 +217,19 @@ export default function MapSearchPage() {
             </select>
 
             <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', margin: '0.5rem 0' }}></div>
+            
+            {/* Scraped Market Data Toggle */}
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'white', cursor: 'pointer', padding: '0.5rem', backgroundColor: 'rgba(255,0,0,0.1)', borderRadius: '4px', border: '1px solid rgba(255,0,0,0.3)' }}>
+              <input 
+                type="checkbox" 
+                checked={showScrapedData} 
+                onChange={(e) => setShowScrapedData(e.target.checked)}
+                style={{ cursor: 'pointer' }}
+              />
+              Show Market Comparables ({scrapedProperties.length})
+            </label>
+
+            <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', margin: '0.5rem 0' }}></div>
             <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', letterSpacing: '0.05em' }}>Scout Intelligence Filters</p>
 
             <select 
@@ -254,7 +279,7 @@ export default function MapSearchPage() {
         {/* Background Canvas: Interactive Map */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
           <PublicMapClient
-            properties={filteredProperties}
+            properties={showScrapedData ? [...filteredProperties, ...scrapedProperties] : filteredProperties}
             activePropertyId={activePropertyId}
             onPropertyClick={setActivePropertyId}
             onPoiClick={setActivePoi}
@@ -544,14 +569,72 @@ export default function MapSearchPage() {
         {activePropertyId && !activePoi && (
           <div className="absolute bottom-5 right-5 z-[1001] w-[90%] max-w-[400px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:right-5 md:left-auto left-1/2 -translate-x-1/2 md:translate-x-0 transition-all duration-300">
             {(() => {
-              const prop = properties.find(p => p.id === activePropertyId);
+              const allProps = [...properties, ...scrapedProperties];
+              const prop = allProps.find(p => p.id === activePropertyId);
               if (!prop) return null;
+              
+              if (prop.isScraped) {
+                // Render card for scraped market data
+                return (
+                  <>
+                    <button 
+                      onClick={() => setActivePropertyId(null)}
+                      className="absolute top-3 right-3 bg-black/50 hover:bg-black/80 text-white rounded-full p-1.5 z-10 transition-colors"
+                    >
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+  
+                    <div className="w-full h-48 bg-gray-200 relative">
+                      {prop.images && prop.images[0] ? (
+                        <img src={prop.images[0]} alt={prop.title} className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">No Image</div>
+                      )}
+                      <div className="absolute bottom-3 left-3 bg-red-600/90 backdrop-blur text-white px-2 py-1 rounded text-xs font-bold uppercase shadow-sm">
+                        Market Comparable
+                      </div>
+                    </div>
+  
+                    <div className="p-5 flex flex-col gap-3">
+                      <div>
+                        <h2 className="text-xl font-bold text-gray-900 m-0 leading-tight">{prop.title}</h2>
+                        <p className="text-gray-500 text-sm m-0 mt-1 flex items-center gap-1">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                          {prop.location?.raw_text_location || 'Kenya'}
+                        </p>
+                      </div>
+  
+                      <div className="flex justify-between items-center bg-red-50 p-2 rounded-lg border border-red-100">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-semibold text-red-800">Source: {prop.provider}</span>
+                        </div>
+                        <span className="text-sm font-bold text-red-700">
+                          {prop.price?.currency} {prop.price?.amount?.toLocaleString()}
+                        </span>
+                      </div>
+  
+                      <p className="text-gray-600 text-sm line-clamp-3 m-0 leading-snug">
+                        {prop.description}
+                      </p>
+  
+                      <a 
+                        href={prop.url} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-md shadow-red-600/20 block"
+                      >
+                        View Original Listing
+                      </a>
+                    </div>
+                  </>
+                );
+              }
               
               // Get image from vision_tags if available, otherwise fallback to photo_urls
               const imageUrl = prop.vision_tags?.[0]?.photoUrl 
                 ? (prop.vision_tags[0].photoUrl.startsWith('http') ? prop.vision_tags[0].photoUrl : supabase.storage.from('scout_photos').getPublicUrl(prop.vision_tags[0].photoUrl).data.publicUrl)
                 : (prop.photo_urls?.[0] ? `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/scout_photos/${prop.photo_urls[0]}` : null);
-
+  
               return (
                 <>
                   <button 
@@ -560,7 +643,7 @@ export default function MapSearchPage() {
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                   </button>
-
+  
                   {/* Half Image */}
                   <div className="w-full h-48 bg-gray-200 relative">
                     {imageUrl ? (
@@ -572,7 +655,7 @@ export default function MapSearchPage() {
                       For Sale
                     </div>
                   </div>
-
+  
                   {/* Half Text Description */}
                   <div className="p-5 flex flex-col gap-3">
                     <div>
@@ -582,7 +665,7 @@ export default function MapSearchPage() {
                         {prop.location || prop.region || 'Kenya'}
                       </p>
                     </div>
-
+  
                     <div className="flex justify-between items-center bg-gray-50 p-2 rounded-lg border border-gray-100">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-xs">
@@ -592,18 +675,18 @@ export default function MapSearchPage() {
                       </div>
                       <span className="text-xs text-gray-500 font-medium">{prop.category?.replace(/^[A-Z]_/, '').replace('_', ' ')}</span>
                     </div>
-
+  
                     <p className="text-gray-600 text-sm line-clamp-2 m-0 leading-snug">
                       {prop.description || 'Verified property ready for viewing.'}
                     </p>
-
+  
                     {prop.intelligence && (
                       <div className="bg-red-50 border-l-4 border-red-600 p-3 mt-1 rounded-r-lg">
                         <h4 className="text-red-800 text-xs font-bold uppercase tracking-wider m-0 mb-1">Hazina Intelligence</h4>
                         <p className="text-red-900 text-xs m-0 leading-relaxed">{prop.intelligence}</p>
                       </div>
                     )}
-
+  
                     <Link 
                       href={`/property/${prop.id}`} 
                       className="mt-2 w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-md shadow-red-600/20"

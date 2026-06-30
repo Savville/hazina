@@ -1,0 +1,3678 @@
+[
+    {
+        "title": "Nawiri Court Phase 2 – Ruiru Kamakis",
+        "provider": "Fanaka",
+        "url": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 1650000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Are you looking for land for sale in Kenya in a fast-growing and highly sought-after location? Introducing Nawiri Court Phase 2, premium plots for sale in Ruiru Kamakis located approximately 8.5km off the Eastern Bypass in a rapidly developing residential neighborhood.",
+        "images": [
+            "https://storage.googleapis.com/fanaka/website/projects/nawiri-court-phase-2-ruiru-kamakis/nawiri-8x5-4nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya-mon-mar-2-2026-535-pm.jpeg",
+            "https://storage.googleapis.com/fanaka/website/projects/nawiri-court-phase-2-ruiru-kamakis/01KJQFJW0D55EK4FTW74KD965M.jpeg",
+            "https://storage.googleapis.com/fanaka/website/projects/nawiri-court-phase-2-ruiru-kamakis/01KJQFJW0GY95944VJZREKKMV5.jpeg"
+        ],
+        "contact_details": {
+            "agency_name": "Fanaka",
+            "phone_numbers": [
+                "0700 006 009",
+                "0759 000 444",
+                "0799 000 111"
+            ],
+            "emails": [
+                "info@fanaka.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": [
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/maiyan-court-ngong-kimuka",
+                "conflicting_value": "899000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/beverly-court",
+                "conflicting_value": "1550000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/sage-court",
+                "conflicting_value": "2700000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/azure-ridge",
+                "conflicting_value": "2300000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/josks-plains",
+                "conflicting_value": "1200000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/arena-court-phase-2-kamakis-prime-plots-for-sale-in-ruiru-kamakis",
+                "conflicting_value": "1250000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/avana-court-ruiru-kamakis",
+                "conflicting_value": "1500000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/sunrise-gardens-phase-2",
+                "conflicting_value": "1450000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            },
+            {
+                "field": "price.amount",
+                "source_url": "https://fanaka.co.ke/property/emerald-court-ngong",
+                "conflicting_value": "1900000",
+                "original_value_source": "https://fanaka.co.ke/property/nawiri-court-phase-2-prime-plots-for-sale-in-ruiru-kamakis-land-for-sale-in-kenya"
+            }
+        ],
+        "providers_merged": [
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka",
+            "Fanaka"
+        ]
+    },
+    {
+        "title": "Enchanting Oaks | Luxury Family Homes for Sale in Westlands.",
+        "provider": "HassConsult",
+        "url": "https://www.hassconsult.com/enchantingoaks",
+        "listingType": "For Sale",
+        "propertyType": "Villa",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Westlands",
+            "neighborhood": "Westlands",
+            "city": "Nairobi",
+            "latitude": -1.2465281,
+            "longitude": 36.7860759,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 8631.95
+        },
+        "amenities": [
+            "Garden"
+        ],
+        "description": "Spanning 5,392 sq.ft. across three levels, each off-plan villa is thoughtfully designed to balance elegance, comfort, and functionality. A grand foyer leads into a double-height lounge with floor-to-ceiling windows that flood the interiors with natural light and open onto an expansive garden terrace, creating a seamless indoor-outdoor living experience.",
+        "images": [
+            "https://static.wixstatic.com/media/4a7193_caa659a9b0df44e886e0439b0da6158ff000.jpg/v1/fill/w_1280,h_636,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/4a7193_caa659a9b0df44e886e0439b0da6158ff000.jpg",
+            "https://static.wixstatic.com/media/1bb245_34882c4787ce45388f8beab29b0fa63a~mv2.png/v1/fill/w_47,h_47,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/beds.png",
+            "https://static.wixstatic.com/media/1bb245_f1d160ad1cf941e98400fae16a853eb5~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1bb245_f1d160ad1cf941e98400fae16a853eb5~mv2.png",
+            "https://static.wixstatic.com/media/4a7193_407d34e0c0b9439684b13a59a08c94db~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/building%20icon.png",
+            "https://static.wixstatic.com/media/1bb245_64b7d404ff2d4b0dab4f09da207c5faf~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/floorplan.png"
+        ],
+        "contact_details": {
+            "agency_name": "HassConsult",
+            "phone_numbers": [
+                "+254 709 479 000"
+            ],
+            "emails": [
+                "HELLO@HASSCONSULT.COM"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": [],
+        "providers_merged": [
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult",
+            "HassConsult"
+        ]
+    },
+    {
+        "title": "To access the facilities, please log in",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/crm/account/listings/create",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "",
+        "images": [],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1 Bed Apartment with Swimming Pool at Lower Kabete",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/1-bedroom-apartment-for-sale-lower-kabete-4019913",
+        "listingType": "For Rent",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 4800000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "parkingSpaces": null,
+            "sizeSqm": 48.0
+        },
+        "amenities": [
+            "Borehole",
+            "Backup Generator",
+            "Balcony",
+            "Elevator / Lifts",
+            "Security",
+            "Parking"
+        ],
+        "description": "1 bedroom apartment for sale in lower Kabete with proximity to Nairobi’s key commercial and social hubs. Perfect for small families, young professionals, or investors seeking reliable rental income.\n\n🌆 Property Overview\n\n Location: Lower Kabete, Nairobi\n\n Type: 2 Bedroom Apartment for Sale\n\n Payment Plan: Flexible terms available\n\n✨ Key Features\n\n Spacious living and dining area with natural light\n\n Modern open-plan kitchen fitted with cabinets and granite counters\n\n Two well-sized bedrooms with in-built wardrobes (Master ensuite)\n\n Elegant tiled bathrooms with quality fittings\n\n Balcony with beautiful views\n\n High-quality finishes throughout\n\n\n🏢 Amenities\n\n 24-hour manned security with CCTV coverage\n\n Ample parking for residents and guests\n\n Borehole and reliable water supply\n\n Backup generator for common areas\n\n Lift access\n\n📍 Location & Accessibility\n\nStrategically situated in Lower Kabete, the property offers easy access to Westlands, Kangemi, and Spring Valley.\nClose to top schools, hospitals, shopping centers, and public transport — providing both convenience and excellent rental potential.\n\nNearby landmarks include:\n\n Junction Mall (10 mins)\n\n Lavington Mall (12 mins)\n\n UN Avenue / Gigiri (15 mins)\n\n💰 Why Buy This Apartment\n\n Located in a rapidly appreciating area\n\n Affordable pricing compared to neighboring estates\n\n High rental demand from professionals working in Westlands and Gigiri\n\n Suitable for both homeowners and investors\n\n Flexible payment options available\n\n📞 Secure your unit today and experience premium living lavington.\n\nvisit our office a long Galana Road\nor call us",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/ztLq9i_bzSNTAVnE0rFquw/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1s7AEAA/7cf71719-8360-4c4e-af8f-83f36046fcf3.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/ztLq9i_bzSNTAVnE0rFquw/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1s7AEAA/7cf71719-8360-4c4e-af8f-83f36046fcf3.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/S3vDY62n4JKbPlHPbR7fXA/-/_1I6ruNDSwNDM1s7AEAA/7cf71719-8360-4c4e-af8f-83f36046fcf3.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/y7aIv1CnveuNtNLzTyDpVg/-/_1I6ruNDSwNDM1szABAA/e6ba53dc-059b-431e-85ca-3c66d0679997.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/tgCp-rkH8BgEPzjkHLV0XQ/-/_1I6ruNDSwNDM1szAFAA/2711bf2c-800e-4cba-b81e-d1563ef4a358.jpeg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Townhouse with En Suite at Embakasi",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/4-bedroom-townhouse-for-sale-embakasi-4019418",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 26000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": 13.0
+        },
+        "amenities": [
+            "Gym",
+            "Swimming Pool",
+            "DSQ",
+            "Parking",
+            "Garden"
+        ],
+        "description": "4 BEDROOM TOWNHOUSE + DSQ FOR SALE (OFF-PLAN) —EMBAKASI\nKsh 26,000,000 | Embakasi, Nairobi |\nPrivate Lawn | Utility Terrace | DSQ | Off-Plan Investment Opportunity\n\nProperty Overview\n________________________________________\nLandmark development in Embakasi, positioned.\nThis four-bedroom townhouse offers the ultimate choice for space and privacy, configured generously.\nA private lawn and utility terrace extend the living environment outdoors naturally.\nA dedicated DSQ accommodates domestic staff independently and conveniently.\nDedicated private parking is allocated to each townhouse exclusively.\nThe townhouse is available off-plan at Ksh 26,000,000, competitively.\n\nInterior Features\n________________________________________\nModern interiors and high-quality finishes are applied throughout the residence, immaculately.\nFour spacious bedrooms accommodate growing families comfortably and generously.\nThe utility terrace supports practical household operations and laundry needs efficiently.\nThe private lawn offers a personal outdoor space for family relaxation naturally.\nThe layout balances privacy and openness across living and sleeping zones intelligently.\nThe DSQ is self-contained, supporting discreet domestic staff accommodation conveniently.\n\nBuilt & Design Quality\n________________________________________\nDevelopers brings proven construction expertise to this landmark development, reliably.\nThe townhouse format is designed for space, privacy, and family functionality, intelligently.\nHigh-quality finishes and modern architectural design distinguish this development, distinctively.\nPrivate parking and the DSQ reflect a thoughtfully comprehensive townhouse specification, comprehensively.\nLandscaped gardens and walking paths surround the residence, beautifully.\nThe development is constructed to support a vibrant, secure community atmosphere consistently.\n\nAmenities\n________________________________________\nA fully equipped gymnasium serves all residents conveniently.\nA spa",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/CE7gnxAQleAGGUWb127lXw/-_1q4ZkIcfkVGCxl5hTkl9UrOCTmQtsXqco1QIA/_1I6ruNDSwNLU0MDUEAA/e32c7ac7-4c96-4a3d-a6da-6ad199733a3e.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/CE7gnxAQleAGGUWb127lXw/-_1q4ZkIcfkVGCxl5hTkl9UrOCTmQtsXqco1QIA/_1I6ruNDSwNLU0MDUEAA/e32c7ac7-4c96-4a3d-a6da-6ad199733a3e.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/_3zQedFZvFLD5kSm8QJFtw/-/_1I6ruNDSwNLU0MDUEAA/e32c7ac7-4c96-4a3d-a6da-6ad199733a3e.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/0VkV0_8tGw64vBWENzl6Kg/-/_1I6ruNDSwNLU0NDAAAA/947e67d3-be92-43b3-b748-8030b486103f.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/680krEX9jF2eYqvyy_Xj7A/-/_1I6ruNDSwNLU0NDACAA/364a495b-3d59-4318-8ed6-0332896f32ba.jpeg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1 Bed Apartment with Swimming Pool at General Mathenge",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/1-bedroom-apartment-for-sale-westlands-area-4019899",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 8600000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "parkingSpaces": null,
+            "sizeSqm": 68.0
+        },
+        "amenities": [
+            "Borehole",
+            "Elevator / Lifts"
+        ],
+        "description": "(ongoing project)\n1-bedroom apartment for sale in westlands Located just minutes from Sarit centre, With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nPremium Lifestyle Amenities:\nResidents will enjoy a vibrant, upscale lifestyle supported by an array of amenities designed to enrich daily living:\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅BoreholeFlexible Payment Plan\nInvest on your own terms with our structured payment plan:\n• 20% deposit to reserve your unit\n• Balance payable in installments over the construction period\nThis allows for greater financial flexibility while your property appreciates in value.\n\n📞 Secure your unit today and experience premium living westlands.\n\nvisit our office a long Galana Road",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/BxQCRaRRYTjtfTpCvQIOLQ/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1MTYDAA/35ab0ed7-c9ce-4775-90f2-11169dbf3f3d.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/BxQCRaRRYTjtfTpCvQIOLQ/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1MTYDAA/35ab0ed7-c9ce-4775-90f2-11169dbf3f3d.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/UNsXSpwI9tuFZLo62-rQJQ/-/_1I6ruNDSwNDM1MTYDAA/35ab0ed7-c9ce-4775-90f2-11169dbf3f3d.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/J6Bf8TeGM8lJiiy7reKdjA/-/_1I6ruNDSwNDM1MTQCAA/2c803f2d-1327-44b3-95c5-8c1163502bcc.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/c3rAkdzqLNBF_uigo0xpTw/-/_1I6ruNDSwNDM1MTQGAA/ec5fa3ff-ddd4-4ec9-9f41-f3f317647ec9.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "3 Bed Apartment with En Suite in Kileleshwa",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/3-bedroom-apartment-for-sale-kileleshwa-4019737",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 10500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "parkingSpaces": null,
+            "sizeSqm": 95.0
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "3 BEDROOM APARTMENT FOR SALE IN KILELESHWA With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking\n✅Fully equipped Gym",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/apoUGIh63mGnU6-QJ-rNRA/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2NjEGAA/93e81e70-800a-41df-aeef-f56db27bec79.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/apoUGIh63mGnU6-QJ-rNRA/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2NjEGAA/93e81e70-800a-41df-aeef-f56db27bec79.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/6IyOtktQE-84D7LMnjcLnA/-/_1I6ruNDSwNDM2NjEGAA/93e81e70-800a-41df-aeef-f56db27bec79.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/vuQ05evvgNjDrw8DK25NyA/-/_1I6ruNDSwNDM2NjEFAA/1019e572-9d55-487b-b8bd-cb5f727cc6ee.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/-87mxylLzqMhQQt3uFiIZw/-/_1I6ruNDSwNDM2NjEHAA/b6f5e8ba-2e58-4648-8af1-5f0ab4726691.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1 Bed Apartment with En Suite in Westlands Area",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/1-bedroom-apartment-for-sale-westlands-area-4019923",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 4000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts"
+        ],
+        "description": "1 BEDROOM APARTMENT FOR SALE IN WESTLANDS With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/IUEO1vn4rrqT0DUtdeFl3g/-_1q4ZkoeAgd4UAiPcygabXAgA/_1I6ruNDSwNDO1sDAGAA/45433434-b739-4318-a41d-69239400a5bb.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/IUEO1vn4rrqT0DUtdeFl3g/-_1q4ZkoeAgd4UAiPcygabXAgA/_1I6ruNDSwNDO1sDAGAA/45433434-b739-4318-a41d-69239400a5bb.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/cjdVbdVHcaqzXuSeNaxW9g/-/_1I6ruNDSwNDO1sDAGAA/45433434-b739-4318-a41d-69239400a5bb.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/lnkQC06PI14IeHrjgfem1g/-/_1I6ruNDSwNDO1sDABAA/4da53e94-74cf-4cac-bddd-4ad6def8ca5d.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/rcQTk7P-7t_KLuvZrEr9Rw/-/_1I6ruNDSwNDO1sDAFAA/54d7a29f-a267-40f9-804c-cf28e37ff784.JPG"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Apartment with En Suite at Riverside Drive",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/4-bedroom-apartment-for-sale-riverside-4011133",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 58000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Gym",
+            "Swimming Pool",
+            "DSQ",
+            "Parking",
+            "Garden"
+        ],
+        "description": "4 Bedroom Duplex Apartments For Sale In Riverside\n\nA modern, bright, and elegantly designed 4-bedroom duplex apartment on Riverside Drive, featuring unobstructed views and the soothing sound of the Nairobi River. A striking floor-to-ceiling 6-meter window floods the space with natural light.\n\nThe apartment includes spacious open and private living areas, 4 en suite bedrooms, 3 balconies, a laundry room, and a DSQ with a separate entrance. Located on a high floor, it offers 3 dedicated parking spaces.\n\nResidents enjoy a communal rooftop with a unique swimming pool, event facilities, steam and sauna rooms, and breathtaking 360-degree views of Nairobi. The complex provides 24-hour security.\n\nNew developments nearby offer easy access to dining, grocery stores, coffee shops, and more.\n\n\nUnit size & price:\n\n4 Bedroom Duplex + DSQ\n\nSize: Approx. 3,500 Sq. Ft.\nPrice:\nUnfurnished: 58,000,000 Ksh\n\n\nInterior finishes:\n\n• Spacious duplex layouts designed with space, light, and a high level of comfort and detail in mind\n\n• Expansive open-plan living and dining areas\n\n• Double-volume entrance spaces creating a grand sense of arrival\n\n• Floor-to-ceiling windows maximizing natural light and city views\n\n• Large private balconies and terraces overlooking the Westlands skyline\n\n• All bedrooms are en-suite\n\n• Upper-level family lounge/family room\n\n• Self-contained DSQ with separate entrance\n\n• Walk-in closets in the master suites\n\n• Designer kitchens fitted with premium European finishes\n\n• Italian marble countertops and premium stone surfaces\n\n• German-engineered cabinetry\n\n• High-end imported kitchen appliances\n\n• Venetian marble-finished bathrooms\n\n• Designer sanitary ware and premium European fittings\n\n• Frameless glass shower enclosures\n\n• Elegant wood and marble flooring options\n\n• Bespoke lighting features\n\n• Custom joinery and integrated storage solutions\n\n• Feature walls and media walls\n\n• Crown mouldings and refined architectural detailing\n\n• Intelligent home automation pre-w",
+        "images": [],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Apartment with En Suite in Kileleshwa",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/4-bedroom-apartment-for-sale-kileleshwa-4019738",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 20000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "4 BEDROOM APARTMENT FOR SALE IN KILELESHWA With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking\n✅Fully equipped Gym",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/NvFbAtQEoD0wdbiM4f6YLw/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2NjEAAA/62e10580-88ec-4d29-aad9-7be33a54f2ee.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/NvFbAtQEoD0wdbiM4f6YLw/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2NjEAAA/62e10580-88ec-4d29-aad9-7be33a54f2ee.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/VHfW_F-asE2Y7Qei5w7eLg/-/_1I6ruNDSwNDM2NjEAAA/62e10580-88ec-4d29-aad9-7be33a54f2ee.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/1mWYOwzdf-criO7vrEixFw/-/_1I6ruNDSwNDM2NjEEAA/a3979ad6-1a33-4aae-9f51-a16f15551a8b.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/Y_gwCA98ZQrTHOk3UDUQHA/-/_1I6ruNDSwNDM2NjECAA/c77662cb-b89d-44fa-bd3b-69aa94dff3f1.jpeg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "2 Bed Apartment with En Suite in Kileleshwa",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/2-bedroom-apartment-for-sale-kileleshwa-4019735",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 7000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "2 BEDROOM APARTMENT FOR SALE IN KILELESHWA With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking\n✅Fully equipped Gym",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/0RdLCoyxOElvXFuxYqPJYw/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2NjUGAA/3fad6b52-dc09-4c2c-b4e3-370fdd0d1d78.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/0RdLCoyxOElvXFuxYqPJYw/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2NjUGAA/3fad6b52-dc09-4c2c-b4e3-370fdd0d1d78.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/KKwNEQkBJBDEYEjRGnsuwA/-/_1I6ruNDSwNDM2NjUGAA/3fad6b52-dc09-4c2c-b4e3-370fdd0d1d78.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/s01b-z0ktUUOXPwJxXJ0Ng/-/_1I6ruNDSwNDM2NjMEAA/2ebd1faa-0942-42d0-8300-82c62af6c609.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/YPri1DnkRqpZMieOhwjqkQ/-/_1I6ruNDSwNDM2NjcEAA/9d0d5413-bd03-4860-96bb-657de5a3c07f.JPG"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "3 Bed Apartment with En Suite in Lavington",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/3-bedroom-apartment-for-sale-lavington-4019658",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 9000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "3 BEDROOM APARTMENT FOR SALE IN LAVINGTON With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking\n✅Fully equipped Gym",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/rxqm0qLHJFDbS9j6RFDw3g/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDOytDAEAA/bc6f8d05-efa7-4690-a6a9-df1373ca8f1f.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/rxqm0qLHJFDbS9j6RFDw3g/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDOytDAEAA/bc6f8d05-efa7-4690-a6a9-df1373ca8f1f.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/CwsOUxG87gx3jjupj9UKqw/-/_1I6ruNDSwNDOytDAEAA/bc6f8d05-efa7-4690-a6a9-df1373ca8f1f.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/KqS3AXjtyoMSEIj4Ng8_4Q/-/_1I6ruNDSwNDM2MDQGAA/2fe2afd2-250f-4867-bc1a-98f748b3ea47.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/gHcPeo3pUSrD_DKljKJmbw/-/_1I6ruNDSwNDM2MDAGAA/5a7e4a8b-b313-45d7-9bd4-0d19824e5d21.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "2 Bed Apartment with Swimming Pool in Kitisuru",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/2-bedroom-apartment-for-sale-kitisuru-4019955",
+        "listingType": "For Rent",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 5350000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "parkingSpaces": null,
+            "sizeSqm": 27.5
+        },
+        "amenities": [
+            "Gym",
+            "Swimming Pool",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts"
+        ],
+        "description": "2-bedroom Apartments for Sale in Kitisuru from KES 5.35M (Rental:- Kes 55,000/month)\n\nDiscover contemporary apartments in the serene and prestigious Kitisuru neighborhood, thoughtfully designed for modern living and smart investment. Enjoy stylish finishes, premium amenities, excellent connectivity, and attractive rental returns in one of Nairobi's most sought-after residential addresses.\n\n✨ Amenities\n✔ Rooftop swimming pool\n✔ Fully equipped gym\n✔ High-speed lifts\n✔ Borehole & water storage\n✔ Backup generator\n✔ On-site mini market\n✔ Professional property management\n\n💰 Unit Types & Prices\n🏠 Studio Apartment (27.5 sqm) – From KES 2.25M (Expected Rental Income: KES 20,000/month)\n\n🏠 Premium Studio (28 sqm) – From KES 2.55M (Expected Rental Income: KES 22,500/month)\n\n🏠 1 Bedroom (46.5 sqm) – From KES 3.64M (Expected Rental Income: KES 35,000/month)\n\n🏠 2 Bedroom (67.8 sqm) – From KES 5.35M (Expected Rental Income: KES 55,000/month)\n\n📍 Nearby\nKitisuru Centre\nInternational School of Kenya (ISK)\nVillage Market\nWestgate Mall\nSarit Centre\nABC Place\nUN Offices, Gigiri\n\n🏗 Construction Timeline\nConstruction Start: May 2025\nExpected Completion: December 2026\n\n✅ Flexible payment plan available until completion.\n\n📞📞 Call (+254) 705507369 or WhatsApp wa.me**** Send email/ 25470**** View Number for viewing or more details.",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/u7gR2GdyI86nsXCp_sV1Kw/-_1q4ZkId_MIqCxwJIvMUfBFdSMSFXwKUlRqgUA/_1I6ruNDSwNDMzNjQFAA/48624527-9dc0-488d-90ce-e9b99d465afc.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/u7gR2GdyI86nsXCp_sV1Kw/-_1q4ZkId_MIqCxwJIvMUfBFdSMSFXwKUlRqgUA/_1I6ruNDSwNDMzNjQFAA/48624527-9dc0-488d-90ce-e9b99d465afc.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/VyIlLzqbJAHI2NNv-ohLpg/-/_1I6ruNDSwNDMzNjQFAA/48624527-9dc0-488d-90ce-e9b99d465afc.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/gqjAKBNzq6JiJpb80wx9mw/-/_1I6ruNDSwNDMzNjQCAA/6d0f5bf0-f3b3-4e35-adf0-88c36fc5d502.png",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/3Y5q1csu6o2i_O_7aTkD1w/-/_1I6ruNDSwNDMzNjQDAA/406d562e-354b-49e5-b0fd-9d7260ee905c.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Villa with En Suite at Jacaranda Avenue",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/4-bedroom-villa-for-sale-lavington-4019559",
+        "listingType": "For Rent",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 160000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": 594.0
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "DSQ",
+            "Elevator / Lifts",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Property Overview\n________________________________________\n This prestigious collection of only eight luxurious smart townhouses is situated on Jacaranda Avenue in Lavington, superbly.\n Each residence spans approximately 594 square metres across three thoughtfully designed levels, generously.\n Five spacious all-ensuite bedrooms, two DSQs, a private lift per unit, and ample parking are provided, comprehensively.\n Smart home features include a programmable thermostat, automated lighting, automated curtains, and automated toilets, intelligently.\n Soundproof doors, double-glazed windows, and eco-friendly construction materials define the building's quality, distinctively.\n Solar panels, geothermal heat pumps, a water borehole, and energy-efficient appliances reflect sustainable living, responsibly.\n These exceptional residences are offered at Ksh 160,000,000 with completion scheduled for this year, exclusively.\n\nInterior Features\n________________________________________\n The ground floor features a display kitchen, chef's kitchen, dining area, family lounge, and guest bedroom, comprehensively.\n A braai area, veranda, garden, two DSQs, and ample parking complete the ground floor outdoor living, graciously.\n The first floor houses bedrooms two, three, and four — all ensuite — a family room, gym, and three terraces, elegantly.\n A lift lobby on both the first and second floors ensures seamless vertical circulation throughout, efficiently.\n The second floor master suite features a lavish private terrace, ensuite master bathroom, and private study, magnificently.\n Formaldehyde-free cabinets and energy-efficient fixtures are applied consistently across kitchens and bathrooms, immaculately.\n Automated curtains, programmable thermostat, and smart lighting create an intuitive daily living environment, seamlessly.\n\nBuilt & Design Quality\n________________________________________\n Each townhouse is constructed with eco-friendly materials to a cutting-edge sustainable ",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/xt1VG5SJakwM1Tooa19oxg/-_1q4ZkIcfkVGCxl5hTkl9UrOCTmQtsXqco1QIA/_1I6ruNDSwNDMwMzcAAA/ec3fa6a8-cce2-4802-bf7d-caa087d4f729.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/xt1VG5SJakwM1Tooa19oxg/-_1q4ZkIcfkVGCxl5hTkl9UrOCTmQtsXqco1QIA/_1I6ruNDSwNDMwMzcAAA/ec3fa6a8-cce2-4802-bf7d-caa087d4f729.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/0FOI4KdgPgBXHvXdapTw2w/-/_1I6ruNDSwNDMwMzcAAA/ec3fa6a8-cce2-4802-bf7d-caa087d4f729.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/BiSDyW65qYbjynjaflqIOw/-/_1I6ruNDSwNDMwM7EEAA/16d49b0b-2cd9-4313-9c13-06691bd6e950.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/JiGmnYGGHWSQNchDrFISeg/-/_1I6ruNDSwNDMwMzUEAA/b3a09fe0-6f3d-40f6-b4a6-2994af938aae.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Apartment with En Suite in Lavington",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/4-bedroom-apartment-for-sale-lavington-4019660",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 13000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": 109.0
+        },
+        "amenities": [
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "4 BEDROOM APARTMENT FOR SALE IN LAVINGTON With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking",
+        "images": [],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "To access the facilities, please log in",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/studio-apartment-for-sale-kitisuru-4019950",
+        "listingType": "For Sale",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "",
+        "images": [],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "2 Bed Apartment with En Suite at Eldama Ravine Rd",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/2-bedroom-apartment-for-sale-westlands-area-4019915",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 13800000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "parkingSpaces": null,
+            "sizeSqm": 138.0
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "(ongoing project)\n2-bedroom apartment for sale in Westlands with modern finishes, open-plan living and easy access to shopping, restaurants and transport links.Perfect for families or investors seeking quality urban living in Nairobi’s vibrant Westlands district.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking\n✅Fully equipped Gym\n\nFlexible Payment Plan\nInvest on your own terms with our structured payment plan:\n• 20% deposit to reserve your unit\n• Balance payable in installments over the construction period\n\n\nThis allows for greater financial flexibility while your property appreciates in value.\n📞 Secure your unit today and experience premium living westlands.\n\nvisit our office a long Galana Road\nor call us :",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/KMx7xFJgETJPJyVOhGtK3A/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1t7AAAA/8b321ae0-f128-43f3-9cb0-51bf2d4f97e2.png",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/KMx7xFJgETJPJyVOhGtK3A/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1t7AAAA/8b321ae0-f128-43f3-9cb0-51bf2d4f97e2.png",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/L45qQ2hOQxWK9J3Kftm3ig/-/_1I6ruNDSwNDM1t7AAAA/8b321ae0-f128-43f3-9cb0-51bf2d4f97e2.png",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/uQrGUupFui_QmanQUyQM4A/-/_1I6ruNDSwNDM1tzABAA/22a0e007-8639-4653-9ba5-d41b0d1fba9d.png",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/XvPbZfHTMhrqKoNC-ymq0g/-/_1I6ruNDSwNDM1tzAFAA/a9d3c0b9-cbe0-40e3-b3a9-37609fb4b8e5.png"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Apartment with En Suite in Lavington",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/4-bedroom-apartment-for-sale-lavington-4018579",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 13000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "4 BEDROOM APARTMENT FOR SALE IN LAVINGTON With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/-KnZW3mac8n3tJvBVdaR1A/-_1q4ZkoeAgd4UAiPcygabXAgA/_1I6ruNDSwNDEztTQAAA/d9b7e2a5-742c-487d-a922-dbc557ae3946.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/-KnZW3mac8n3tJvBVdaR1A/-_1q4ZkoeAgd4UAiPcygabXAgA/_1I6ruNDSwNDEztTQAAA/d9b7e2a5-742c-487d-a922-dbc557ae3946.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/lkJIevYgtzz4Yvr9vE7KaA/-/_1I6ruNDSwNDEztTQAAA/d9b7e2a5-742c-487d-a922-dbc557ae3946.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/TSmSiOPMdEQzavFj2pacBA/-/_1I6ruNDSwNDEztTQEAA/bbf0bb43-6f2e-4f67-afc4-186e5b62eeaa.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/yPjeJTF2Q-LtyWjQIl8HxQ/-/_1I6ruNDSwNDEztTQCAA/0ac0f851-bca0-4e86-b131-b9864821f1ca.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1 Bed Apartment with Swimming Pool at General Mathenge",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/1-bedroom-apartment-for-sale-westlands-area-4019879",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 8100000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "parkingSpaces": null,
+            "sizeSqm": 64.0
+        },
+        "amenities": [
+            "Borehole",
+            "Elevator / Lifts"
+        ],
+        "description": "(ongoing project)\n1-bedroom apartment for sale in westlands Located just minutes from Sarit centre, With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nPremium Lifestyle Amenities:\nResidents will enjoy a vibrant, upscale lifestyle supported by an array of amenities designed to enrich daily living:\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅BoreholeFlexible Payment Plan\nInvest on your own terms with our structured payment plan:\n• 20% deposit to reserve your unit\n• Balance payable in installments over the construction period\nThis allows for greater financial flexibility while your property appreciates in value.\n\n📞 Secure your unit today and experience premium living westlands.\n\nvisit our office a long Galana Road",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/o1IHBty2HJA6AVqmoGgB0Q/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1MLAAAA/1033f591-3059-43b8-87b9-850b649f8c06.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/o1IHBty2HJA6AVqmoGgB0Q/-_1q4ZkoaDEskwFj_zc1GJg6ZeYo-AKakqkKtUCAA/_1I6ruNDSwNDM1MLAAAA/1033f591-3059-43b8-87b9-850b649f8c06.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/RrMIgeqBtgAXWbEP5EJ6tQ/-/_1I6ruNDSwNDM1MLAAAA/1033f591-3059-43b8-87b9-850b649f8c06.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/NCw1e0dWodPiN-6MXz4Y_A/-/_1I6ruNDSwNDM1MDACAA/0d1d74bf-3f81-48eb-bc22-5156835248d0.jpeg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/Xq0BrR30SyupKPXhAqtBtQ/-/_1I6ruNDSwNDM1MDAGAA/774625fa-d42e-46ea-aa24-1f738e7175b4.jpeg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1 Bed Apartment with En Suite in Lavington",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/1-bedroom-apartment-for-sale-lavington-4019720",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 4000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Gym",
+            "Borehole",
+            "Backup Generator",
+            "Elevator / Lifts",
+            "Parking"
+        ],
+        "description": "1 BEDROOM APARTMENT FOR SALE IN LAVINGTON With proximity to commercial hubs, shopping malls, medical and education centers. The property is premium for both investors and residents.\n\nFeatures And Amenities\n✅DSTV and internet connection\n✅Luxurious decoration\n✅Kid’s playground\n✅Airy balconies\n✅High speed lifts\n✅Borehole\n✅Standby generator\n✅Adequate parking\n✅Fully equipped Gym",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/TW7pJIkPuJSBppj_eakcWQ/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2sjQAAA/be271fc1-51c1-400a-9d7f-d59e442c769b.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/TW7pJIkPuJSBppj_eakcWQ/-_1q4ZkoeDEokRgweYDrNxBBYlSLQA/_1I6ruNDSwNDM2sjQAAA/be271fc1-51c1-400a-9d7f-d59e442c769b.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/99A_10HkHi84UHL5EHM36A/-/_1I6ruNDSwNDM2sjQAAA/be271fc1-51c1-400a-9d7f-d59e442c769b.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/j83f6q0Wa1PBBrpq83r62w/-/_1I6ruNDSwNDM2MjcFAA/414e7556-4e98-4608-8fff-5d17d213150e.JPG",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/8b1a8YKovRi1plXiWV6z-A/-/_1I6ruNDSwNDM2sjAAAA/6c54ccbc-3bab-4248-9706-f744570f0963.JPG"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1,530 ft² Commercial Property with Fibre Internet at Crescent Road",
+        "provider": "BuyRentKenya",
+        "url": "https://www.buyrentkenya.com/listings/1530-ft2-commercial-property-for-sale-westlands-area-3843679",
+        "listingType": "For Sale",
+        "propertyType": "Commercial",
+        "price": {
+            "amount": 18360000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "CRESCENT HEIGHTS offers an exceptional address within Nairobi’s most vibrant business and lifestyle district. The building has been thoughtfully designed with a focus on flexibility, efficiency, and contemporary comfort. Each floor plate is optimized for open-plan layouts, bespoke office configurations, and collaborative work environments. From dynamic start-ups to established multinationals, the spaces are crafted to support productivity and foster innovation.",
+        "images": [
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/VP9H7mzDgQdnRLVI-kbm2g/-_1q4ZkIZfEzHRQsZiYU5JfVKzg4xOgVAsA/_1I6rutDAztjA2MwcA/0e927913-a4f0-433e-9e74-ac1862b9bf18.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-main-900w-watermark/VP9H7mzDgQdnRLVI-kbm2g/-_1q4ZkIZfEzHRQsZiYU5JfVKzg4xOgVAsA/_1I6rutDAztjA2MwcA/0e927913-a4f0-433e-9e74-ac1862b9bf18.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/WjfqWzcpqSF3ZZY8BZzDSw/-/_1I6rutDAztjA2MwcA/0e927913-a4f0-433e-9e74-ac1862b9bf18.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/Whmp_5ZfSMaopNSo5_bkyw/-/_1I6rutDAztjAxNAYA/d5ef449e-1634-49a5-b6f0-a0556eb15fdf.jpg",
+            "https://i.roamcdn.net/prop/brk/gallery-thumb-140w/FRQa1-0g4HNCP99ifdZKiw/-/_1I6rutDAztjAxNAEA/c2ec2af2-1b10-450c-9f48-e42ff8a82c59.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "BuyRentKenya",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4bdrm Maisonette in Nyali for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/nyali/houses-apartments-for-sale/4bdrm-maisonette-in-nyali-for-sale-fr7iIwfVidPqC0ucoUYOSZdG.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 27000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nyali",
+            "neighborhood": "Nyali",
+            "city": "Nairobi",
+            "latitude": -1.2738048,
+            "longitude": 36.782768,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Nyali House, Mandera Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Nairobi, 54102, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Freehold 4-bedroom maisonette\n old nyali, mombasa\n`\n• freehold property\n• clean title deed\n• ready...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/81486107_MzAwLTIyNS1jMjBhMjc3NWU2.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "4bdrm Apartment in Parklands/Highridge for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/parklands-highridge/houses-apartments-for-sale/4bdrm-apartment-in-parklands-highridge-for-sale-d6KKvSZAEPSUXrJ4HHCwtLUw.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 22000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Parklands/Highridge",
+            "neighborhood": "Parklands/Highridge",
+            "city": "Nairobi",
+            "latitude": -1.251796,
+            "longitude": 36.8185479,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Embassy of Ukraine in Kenya, 674, Limuru Road, Muthaiga sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 48648, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "A well-maintained 4 bedroom house located in 1st parklands Avenue, ideal for family living or...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/82275641_MzAwLTE2OS04MWE2NTU4OTll.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm House in High Ridge Estate, Kiamunyi for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/kiamunyi/houses-apartments-for-sale/3bdrm-house-in-high-ridge-estate-kiamunyi-for-sale-4UNqfp0127FgQCxbEFwNcH4W.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 5200000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kiamunyi",
+            "neighborhood": "Kiamunyi",
+            "city": "Nairobi",
+            "latitude": -0.2589804,
+            "longitude": 36.0122873,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kiamunyi, Forest, Menengai West ward, Rongai, Nakuru, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "NAKURU \n* *3 bedroom*\n*Kiamunyi (midas/edmar) before Olive Inn \n*Own Compound\n*In a serene Highridge...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85869373_MzAwLTM5NC1iYjdjYWYwOWRl.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Apartment in Hurlingham for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/hurlingham/houses-apartments-for-sale/3bdrm-apartment-in-hurlingham-for-sale-locfOSAGDowJHxO3Mcj8nbXR.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 14800000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Hurlingham",
+            "neighborhood": "Hurlingham",
+            "city": "Nairobi",
+            "latitude": -1.2914062,
+            "longitude": 36.7953128,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Hurlingham, Kilimani division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 29526, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Ready for Occupation 3 Bedroom Apartments for Sale\nA modern development comprising 357 apartments in...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85880725_MzAwLTQwMC1hMTVlZTM0MDUx.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "5bdrm House in Gitaru for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/gitaru/houses-apartments-for-sale/5bdrm-house-in-gitaru-for-sale-BhqyVHHQp4ypvafIcuDaCT7A.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 18500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Gitaru",
+            "neighborhood": "Gitaru",
+            "city": "Nairobi",
+            "latitude": -1.2345159,
+            "longitude": 36.6707129,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Gitaru, Nairobi-Nakuru Road, Gitaru, Gitaru ward, Kabete, Kiambu, 12345, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Property Features\n5 all-ensuite bedrooms with His & Hers closets in the Master bedroom\nFamily room...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85280290_MzAwLTIyNS02Yjg0MzBlMWU5.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Apartment in Kileleshwa for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/kileleshwa/houses-apartments-for-sale/3bdrm-apartment-in-kileleshwa-for-sale-mOAxNFqaxbhB2NwjPyJpO5NI.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 19000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kileleshwa",
+            "neighborhood": "Kileleshwa",
+            "city": "Nairobi",
+            "latitude": -1.2767338,
+            "longitude": 36.7879011,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kileleshwa, Kilimani division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 29526, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "KILELESHWA\nElegant 3 Bedroom Apartment For Sale \n",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85879690_MzAwLTMwMC02M2MxYTUxYzdk.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "4bdrm Apartment in Parklands for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/parklands-highridge/houses-apartments-for-sale/4bdrm-apartment-in-parklands-for-sale-b4a6sDd1wJjJZrj1xiV1sCtW.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 21000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Parklands/Highridge",
+            "neighborhood": "Parklands/Highridge",
+            "city": "Nairobi",
+            "latitude": -1.251796,
+            "longitude": 36.8185479,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Embassy of Ukraine in Kenya, 674, Limuru Road, Muthaiga sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 48648, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "A very good structured house 4 bedroom 3 ensuite.prayer room two bulconies,adequate light.parking...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85880087_MzAwLTQwMC00ZjU4NDYwMGYz.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Bungalow in Ongata Rongai, Nkoroi for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/nkoroi/houses-apartments-for-sale/3bdrm-bungalow-in-ongata-rongai-nkoroi-for-sale-rpczTFWDxcueFVNqzUTmd42g.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 8500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nkoroi",
+            "neighborhood": "Nkoroi",
+            "city": "Nairobi",
+            "latitude": -1.408047,
+            "longitude": 36.7133652,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Nkoroi Catholic Parish, Magadi Road, Olkeri ward, Kajiado North, Kajiado, 00409, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "This is a 3-bedroom bungalow house with an ensuite DSQ for sale in Ongata Rongai, Nkoroi area. \nThe...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85880234_MzAwLTIyNS0wNWU1NTIyNGJk.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Bungalow in Ongata Rongai, Nkoroi for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/nkoroi/houses-apartments-for-sale/3bdrm-bungalow-in-ongata-rongai-nkoroi-for-sale-ld8gKw3kwThREXMMTb6aoB8K.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 7500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nkoroi",
+            "neighborhood": "Nkoroi",
+            "city": "Nairobi",
+            "latitude": -1.408047,
+            "longitude": 36.7133652,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Nkoroi Catholic Parish, Magadi Road, Olkeri ward, Kajiado North, Kajiado, 00409, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "On sale is this is a 3-bedroom bungalow sitting on a eighth acre plot in for sale in Ongata Rongai,...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85880133_MzAwLTIyNS1hNjBhMmUyNzEw.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Bungalow in Ongata Rongai, Nkoroi for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/nkoroi/houses-apartments-for-sale/3bdrm-bungalow-in-ongata-rongai-nkoroi-for-sale-bw0ooVPipOiG4Xl9W0peR1Ni.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 7500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nkoroi",
+            "neighborhood": "Nkoroi",
+            "city": "Nairobi",
+            "latitude": -1.408047,
+            "longitude": 36.7133652,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Nkoroi Catholic Parish, Magadi Road, Olkeri ward, Kajiado North, Kajiado, 00409, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "This is a 3-bedroom bungalow sitting on a eighth acre plot in for sale in Ongata Rongai, Nkoroi...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85879740_MzAwLTIyNS0yMTMwNTY0Yjkz.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "Furnished 4bdrm Apartment in Kibiku for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/kibiku/houses-apartments-for-sale/furnished-4bdrm-apartment-in-kibiku-for-sale-oFXCYpCWeOeSlbaCRl8D9WA6.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 13000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kibiku",
+            "neighborhood": "Kibiku",
+            "city": "Nairobi",
+            "latitude": -1.2799939,
+            "longitude": 36.9583987,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kibiku Road, Mihango, Njiru, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 00520, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Sitting on 50/100, \nOn compound well phaced, small farm inside, ✓4 bedrooms and SQ attached on a...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/81984784_MzAwLTIxNy1iYTQ0ODFiYjM1LTE.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Apartment in Brookside, Lower Kabete for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/lower-kabete/houses-apartments-for-sale/3bdrm-apartment-in-brookside-lower-kabete-for-sale-kuK2MKe84PqnSKFNajz3pGHR.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 23000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Lower Kabete",
+            "neighborhood": "Lower Kabete",
+            "city": "Nairobi",
+            "latitude": -1.2403033,
+            "longitude": 36.7523519,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Lower Kabete, Kitisuru ward, Kangemi division, Westlands, Nairobi, 00604, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Apartment – Brookside, Westlands\nA spacious apartment is available for rent at Apartment, located in...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85574187_MzAwLTUzMy02YTQ1NDkxMzNk.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "6bdrm Apartment in Parklands for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/parklands-highridge/houses-apartments-for-sale/6bdrm-apartment-in-parklands-for-sale-2CEEjYT4pD912WeuN7YQDnjH.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 55000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Parklands/Highridge",
+            "neighborhood": "Parklands/Highridge",
+            "city": "Nairobi",
+            "latitude": -1.251796,
+            "longitude": 36.8185479,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Embassy of Ukraine in Kenya, 674, Limuru Road, Muthaiga sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 48648, Kenya"
+        },
+        "features": {
+            "bedrooms": 6,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "6 Bedroom Duplex Apartment for Sale – in Parklands Parklands\nExperience luxury urban living in this...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85582141_MzAwLTQwMC1kNTU2OTRiYzQz.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Apartment in Westlands, Raphta Road Area for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/raphta-road-area/houses-apartments-for-sale/3bdrm-apartment-in-westlands-raphta-road-area-for-sale-oJ9Qh4I8HU37eR98Uv0RqxMg.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 15500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Raphta Road Area",
+            "neighborhood": "Raphta Road Area",
+            "city": "Nairobi",
+            "latitude": -1.28333,
+            "longitude": 36.83333,
+            "location_accuracy": "Unknown"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Our iconic 26-floor residential masterpiece offers a prestigious address and a lifestyle defined by...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/83174083_MzAwLTQwMC04ZDkxMjI3NTgy.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Apartment in Parklands for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/parklands-highridge/houses-apartments-for-sale/3bdrm-apartment-in-parklands-for-sale-kfzCzruit2WuKyvkSKRJQjtK.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 23000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Parklands/Highridge",
+            "neighborhood": "Parklands/Highridge",
+            "city": "Nairobi",
+            "latitude": -1.251796,
+            "longitude": 36.8185479,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Embassy of Ukraine in Kenya, 674, Limuru Road, Muthaiga sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 48648, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "3 Bedroom Apartment for Sale – Parklands\n, this modern residential development offers spacious...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85568573_MzAwLTE2OS00ZmJkMjM2MjEw.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Bungalow in Booster, Kibiku for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/kibiku/houses-apartments-for-sale/3bdrm-bungalow-in-booster-kibiku-for-sale-plPJe9rflMPSM10D5NAuGhFZ.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 7500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kibiku",
+            "neighborhood": "Kibiku",
+            "city": "Nairobi",
+            "latitude": -1.2799939,
+            "longitude": 36.9583987,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kibiku Road, Mihango, Njiru, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 00520, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "This property offers a comfortable living space on a generous 1⁄4 acre. ",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85725784_MzAwLTQwMC1iZGU4ZWRhMDcz.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "2bdrm Bungalow in Kenol Town, Kimorori/Wempa for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/kimorori-wempa/houses-apartments-for-sale/2bdrm-bungalow-in-kenol-town-kimorori-wempa-for-sale-AY498ATRXzkvGTukbjpeWJ3I.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 4800000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kimorori/Wempa",
+            "neighborhood": "Kimorori/Wempa",
+            "city": "Nairobi",
+            "latitude": -1.0175185,
+            "longitude": 37.071383,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Delmonte Shop, Thika, Kenya, Meru-Nairobi Highway, Mugumo-ini ward, Gatanga, Murang`a, 01000, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Newly built house for sale in kenol(kenol marua road)\noffer price: kes 4.8m \nattactive offer for...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85879229_MzAwLTIwMC0wZmE2MzZmNTlk.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "3bdrm Apartment in Parklands for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/parklands-highridge/houses-apartments-for-sale/3bdrm-apartment-in-parklands-for-sale-wiigSFFLyC0tIwhMrVuhfj6g.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 20000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Parklands/Highridge",
+            "neighborhood": "Parklands/Highridge",
+            "city": "Nairobi",
+            "latitude": -1.251796,
+            "longitude": 36.8185479,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Embassy of Ukraine in Kenya, 674, Limuru Road, Muthaiga sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 48648, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "3 Bedroom Apartment for Sale – Parklands\nA spacious 3-bedroom apartment is available for sale in the...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/85687143_MzAwLTIyNS1iMmVlZTQyN2Jl.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "Furnished 6bdrm Duplex in Baharini, Kiplombe for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/kiplombe/houses-apartments-for-sale/furnished-6bdrm-duplex-in-baharini-kiplombe-for-sale-rnyAKZJuqOSScjdz4PnaeUcr.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 11500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kiplombe",
+            "neighborhood": "Kiplombe",
+            "city": "Nairobi",
+            "latitude": 0.6025907,
+            "longitude": 35.2344964,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kiplombe ward, Turbo, Uasin Gishu, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "2 houses, 3br each newly built in a 1/4 acre. Suitable for large/extended family. It's currently a...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/82855261_MzAwLTIyNS04ZThmMDhlYzQy.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "4bdrm Maisonette in Katani for sale",
+        "provider": "Jiji",
+        "url": "https://jiji.co.ke/katani/houses-apartments-for-sale/4bdrm-maisonette-in-katani-for-sale-zciJkoGGlXD2WrSACsZcezbk.html",
+        "listingType": "Unknown",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 14500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Katani",
+            "neighborhood": "Katani",
+            "city": "Nairobi",
+            "latitude": -1.3802983,
+            "longitude": 36.973057,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "KATANI, Matathani ward, Mavoko, Machakos, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "4-Bedroom All En-Suite Maisonette – Urgent Sale\nPlot: 50 × 100 ft\n4 spacious bedrooms, all...",
+        "images": [
+            "https://pictures-kenya.jijistatic.com/82968202_MzAwLTIyNS02Njc0MThjZGY0.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "Unknown Jiji Seller",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified"
+    },
+    {
+        "title": "5 Bed Townhouse with En Suite in Lavington",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-townhouse-with-en-suite-in-lavington-6763957",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 65000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Lavington Nairobi",
+            "neighborhood": "Lavington Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2739822,
+            "longitude": 36.781804,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya High School, Mijikenda Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Nairobi, 54102, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Swimming Pool",
+            "Backup Generator",
+            "Garden"
+        ],
+        "description": "📍 Lavington, Nairobi\nSpacious Modern 5 Bedroom Townhouse for Sale & Rent in Lavington\n\nLocated in a secure gated community, this elegant townhouse offers generous living spaces, modern finishes, and excellent amenities in one of Nairobi's most sought-after neighborhoods.\n\nFeatures:\n• 6 spacious bedrooms\n• Swimming pool\n• Private backyard garden\n• Fully fitted kitchen\n• Full backup generator\n• Secure gated community\n• Ample water storage\n\nSale Price: KES 65Million\nRent: KES 350,000 per month\n\nA perfect home for families seeking comfort, privacy, and convenience in Lavington.\n\nFor viewing and inquiries, call: **********",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/ZsRZyBjTEPGS4TVRpFT7Kg/-/_1w6IUmDdh-bQwvbAgLzc9GwA/10aaeec82e8dd8c0ecc5fc04fcdeb3dae31c1aaa.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/xt61C9KfOzrGpAqv_L9YCA/-/_1w6IUmDdh-bQwvbAgLzc9GwA/b690528ebafd6c94fd8815925e4530cffdefcd2c.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/48MKgMSZUzE3xx6fgnTh-Q/-/_1w6IUmDdh-bQwvbAgLzc9GwA/12afbcf3f77949579bbb5f748a1e1ddf8397c64f.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bed House with En Suite in Karen",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-house-with-en-suite-in-karen-6742578",
+        "listingType": "Unknown",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 190000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Karen Nairobi",
+            "neighborhood": "Karen Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.3230438,
+            "longitude": 36.7035212,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Escape Room Kenya, 320, Ngong Road, Karen, Karen ward, Langata, Nairobi, 00505, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 2023.43
+        },
+        "amenities": [
+            "Gym",
+            "Swimming Pool",
+            "Garden"
+        ],
+        "description": "Prime Gated Community | Brand New | Private Pool & Gym | ½ Acre\n\nDiscover unparalleled elegance in this stunning, newly built 6-bedroom townhouse located in one of Karen's most exclusive gated communities. Designed for the discerning buyer seeking space, privacy, and modern luxury, this exceptional home sits on a generous half-acre plot and offers a sophisticated lifestyle in Nairobi's prestigious Karen suburb.\n\nProperty Highlights:\n6 Spacious En-Suite Bedrooms - All master suites feature generous proportions, high-end finishes, and ample natural light.\nPrivate Swimming Pool - Your own resort-style pool for relaxation and entertaining.\nDedicated Gym Room - Fully equipped private fitness space within the home.\nExpansive Living Areas - Open-plan design with premium contemporary finishes, flowing seamlessly to outdoor entertainment spaces.\nLand Size: ½ Acre (approx. 0.5 acres) - Rare for a townhouse, providing exceptional privacy and garden space.\nBrand New Construction - Modern architecture with top-tier quality materials and craftsmanship.\n\nThis is a low-density development where each residence enjoys complete exclusivity. The secure gated community offers 24-hour security, manicured communal grounds, and a serene environment surrounded by Karen's iconic greenery, horse trails, and upscale amenities.\n\nIdeal for High-End Buyers:\nFamilies seeking a luxurious family home\nExecutives and diplomats looking for privacy and prestige\nInvestors looking for a premium trophy property in one of Nairobi's most sought-after locations\n\nAsking Price: KSh 190 Million (slightly negotiable)\nThis is a rare opportunity to own a turnkey luxury townhouse in Karen with private pool and gym on half an acre. Early viewing is highly recommended as properties of this caliber are limited.\n\nFor viewing and further details, contact the developer's representative.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/oNCw81C60jqe2OYFsmE8dQ/-/_1w6IUmDdh-bQw19QsNb3KCAA/4f62c4b5a8ac713d5c0276cd093a2ea3855f0d6f.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/GG8c7AV3H6euODYLPbDMOg/-/_1w6IUmDdh-bQw19QsNb3KCAA/5ec0cf474d42277e263e6a8916ccf1c990288162.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/KLUD5N0pMheli6xMyFo9vQ/-/_1w6IUmDdh-bQw19QsNb3KCAA/ef844d69160472d74917c352e96ad49dbcbc8298.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed House with Garden in Kiambu Road",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/4-bed-house-with-garden-in-kiambu-road-6704672",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 60000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kiambu Road Nairobi",
+            "neighborhood": "Kiambu Road Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2499761,
+            "longitude": 36.8470733,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya Police Directorate of Criminal Investigations Headquarters, Kiambu Road, Garden Estate sublocation, Roysambu location, Roysambu division, Kasarani, Nairobi, Zimmerman, Nairobi, 00100, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "DSQ",
+            "Parking",
+            "Garden"
+        ],
+        "description": "A 4 bedroom House available for Sale off Kiambu Road. It's built on a quarter acre land.\n\nFeatures\n\n4 bedroom house all ensuite\nSpacious master bedroom with a walk in closet\nSunken lounge well lit\nClosed plan Kitchen with a pantry\nSeparate dining area for up-to 12 people\nFamily room upstairs\nParking for 5 cars\nServant Quarter for two\nWell manicured garden\nBuilt on a quarter acre land\nOwner can fully furnish it at a cost\n\nSelling at 60M as it is. Fully finished at 65M\nFor more details and viewing, Please contact George ************",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/ZcC64rJjJt_PbcxM9RKgCg/-/_1w6IUmDdh-bSwPDXd0sDSBAA/f2e273bf949a8c731473024e0d7bb0d548bf4204.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/xVi3JPMXGEWVCfAnworapw/-/_1w6IUmDdh-bSwPDXd0sDSBAA/acce154f886de840667564c18901e573bdd49f45.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/KcdWHxQOrC5phYu-Is64mg/-/_1w6IUmDdh-bSwPDXd0sDSBAA/e1d7c3c9dc876b352661647de04d17bc11ef42ba.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Townhouse with En Suite at Oloitokitok Road",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/4-bed-townhouse-with-en-suite-at-oloitokitok-road-6752246",
+        "listingType": "Unknown",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 35000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kileleshwa Nairobi",
+            "neighborhood": "Kileleshwa Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2829581,
+            "longitude": 36.7866339,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya Power Sub Station Kileleshwa, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": 9105.43
+        },
+        "amenities": [
+            "DSQ",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Discover refined family living in this elegant and spacious villa located within the exclusive Oloitokitok Villas development in the heart of Kileleshwa. Set in a secure gated community of only 18 villas on 2.25 acres, this beautifully designed home sits on approximately 0.096 acres, offering privacy, comfort, and a serene residential environment.\n\nThe villa features generous living and dining spaces, spacious bedrooms, quality finishes, abundant natural light, and well-planned family living areas. A private garden, detached staff quarters, ample parking, and excellent security make this an ideal home for discerning homeowners or investors seeking a prime Nairobi address.\n\nPerfectly positioned close to leading schools, shopping centres, restaurants, hospitals, and major transport links, this property combines convenience with exclusivity.\n\nProperty Highlights\n\n✓ Prime Kileleshwa Location\n✓ Exclusive Gated Community of Only 18 Villas\n✓ Approx. 0.096 Acres per Villa\n✓ Spacious Family Home with Quality Finishes\n✓ Bright and Airy Living & Dining Areas\n✓ Private Garden & Outdoor Space\n✓ Detached Staff Quarters (DSQ)\n✓ Ample Parking\n✓ 24-Hour Security & Controlled Access\n✓ Excellent Investment and Family Home Opportunity\n\nA rare opportunity to own a prestigious villa in one of Nairobi's most sought-after neighbourhoods.\n\nLuxury, privacy, and convenience come together in this exceptional Kileleshwa residence.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/lSLGZv2G9kfpfmdjV7bHHQ/-/_1w6IUmDdh-bSwzCTdosAoHQA/3323031c394f4ae7181fec8d3861f899bf641b60.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/Vz30FbDr9_KaWtsJT4CFFw/-/_1w6IUmDdh-bSwzCTdosAoHQA/dff1db6a7961a6360dde3adcd9f38ccdf37a0548.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/arrnam9EIrfP6_0EXUoNzA/-/_1w6IUmDdh-bSwzCTdosAoHQA/01c659ffcb630b1bd49cf431a0cd6d12b97559e9.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bed Townhouse with En Suite in Lavington",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-townhouse-with-en-suite-in-lavington-6742612",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 110000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Lavington Nairobi",
+            "neighborhood": "Lavington Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2739822,
+            "longitude": 36.781804,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya High School, Mijikenda Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Nairobi, 54102, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Gym",
+            "Backup Generator",
+            "Security",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Offplan/Ongoing Project\n\nExclusive 5-Bedroom Luxury Villas for Sale\n\nPrice: KSh 110 Million\n\nOwn a home in an exclusive gated community of only 16 luxury villas, designed with elegant French-inspired architecture and modern green technology.\n\nFeatures: • 5 All En-Suite Bedrooms\n• Fully Fitted Kitchen with Integrated Appliances\n• Private Basement for a Gym, Office, or Entertainment Area\n• Spacious Terraces and Balconies\n• Solar Water Heating and Filtration Systems\n• Private Landscaped Garden\n• Backup Generator and Smart Metering\n• 24-Hour Security with CCTV Surveillance\n• Ample Parking\nPlinth areas range from 465-476 sqm, offering spacious and sophisticated living in a secure and serene environment.\n\nFor More Details and Viewing Appointments:\nLeah Imbiti",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/gaGSYrn59a3G5wA1mcRNUw/-/_1w6IUmDdh-bQw19Qs1SA3CwA/b035f937e517dac39b81764d4a8e56538035feda.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/DMXFF8tvrSnwIfGphIcKuA/-/_1w6IUmDdh-bQw19Qs1SA3CwA/23342bd4918ce2c1ccaf6d9fee3c88c3fd804cfc.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/hRfBTLExv_ycveiCWLv9iw/-/_1w6IUmDdh-bQw19Qs1SA3CwA/525db13968d274ab70635fc2e7033493f33904b5.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "Elegant 5 Bedroom Townhouse for Sale in Kyuna",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/elegant-5-bedroom-townhouse-for-sale-in-kyuna-6751779",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 98000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Spring Valley Nairobi",
+            "neighborhood": "Spring Valley Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2601779,
+            "longitude": 36.7969005,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "International Alert Kenya, 22, School Lane, Parklands location, Parklands/Highridge ward, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 00100, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "parkingSpaces": null,
+            "sizeSqm": 510.0
+        },
+        "amenities": [
+            "Swimming Pool",
+            "DSQ",
+            "Balcony",
+            "Parking",
+            "Garden"
+        ],
+        "description": "The property is located within on serene and highly sought after Shanzu Road in Kyuna. This elegant five bedroom all en-suite townhouse offers exceptional family living in one of Nairobi's most secure and green residential neighbourhoods. The house is set within an exclusive gated development of only 15 homes on approximately 2.2 acres. The property combines generous living spaces, privacy, and premium finishes in a quiet and well - maintained environment. The house sits on approximately 1/8th acre and offers about 5,500 sq. ft. of thoughtfully designed living space spread across three levels.\n\nThe property features include:\n\nFive spacious bedrooms, all en-suite\nGrand master suite with walk-in wardrobe\nTwo spacious lounges/family living areas\nCovered balcony overlooking the private garden\nModern kitchen with ample storage\nTwo cloakroom bathrooms for guests\nTwo room DSQ\nPrivate garden\nPrivate parking\nHigh-quality wood flooring and premium finishes\nBright interiors with excellent natural lighting\n\nThe estate's amenities include:\n\nSwimming pool\nBBQ / Entertainment Bandas\nSecure gated compound\nQuiet, green and family-friendly environment\nWell-maintained common areas\nAmple parking and internal roads\n\nThe property is located in a prime location, within 5 minute's drive of:\n\nSpring Valley Shopping Centre\nCarrefour Lower Kabete Road\nSSDS Temple\nInternational schools, hospitals, restaurants and major road connections\n\nThis property is ideal for families, diplomats, expatriates, or investors seeking a premium home in one of Nairobi's most prestigious residential addresses.\n\nAsking Price - Kshs 98 Million (Directly negotiable with owner, no agent fees)",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/BGgWuD-R-6rjZWaU1SGvWg/-/_1w6IUmDdh-bQwvbCgotCoEAA/213ff510c5a1af7a5ca2d56a0d3f432032c3027c.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/jN4mbvHwwUCbGxgdHbbL5w/-/_1w6IUmDdh-bQwvbCgotCoEAA/e453402aa26766964655f934a71093c049926282.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/hCxLswG1vqsKKHCUOBOMPg/-/_1w6IUmDdh-bQwvbCgotCoEAA/82b54f17f5bbb60daa3eb3745097529f4cd1b8b3.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Townhouse with En Suite in Nyali Area",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/4-bed-townhouse-with-en-suite-in-nyali-area-6771587",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 19780000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nyali Mombasa",
+            "neighborhood": "Nyali Mombasa",
+            "city": "Nairobi",
+            "latitude": -4.0554285,
+            "longitude": 39.6820489,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya Marine & Fisheries Research Institute, Mkomani, Mkomani ward, Nyali, Mombasa, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Parking"
+        ],
+        "description": "Luxury 2, 3 & 4 Bedroom Homes for Sale - Vipingo\n\nDiscover refined coastal living in this exclusive 105-acre master-planned estate in Vipingo, just moments from Vipingo Ridge and conveniently located along the Mombasa-Malindi Highway. Designed for both homeowners and investors, the development offers ready 2, 3 & 4-bedroom homes as well as a limited number of quarter-acre self-build plots in a serene, well-planned environment with beautiful ocean views.\n\nFeatures\n\n• Open-plan kitchen\n• Spacious lounge and dining area\n• Rooftop terrace\n• Laundry area\n• Private parking\n\nLifestyle Amenities\n\n• Clubhouse\n• Tennis court\n• Stables\n• Beach club\n• Close to Kuruwitu Marine Sanctuary\n\nPrice\n\nFrom KES 19.78M to KES 40.28M\n\nAn ideal choice for a family home, holiday retreat, or long-term coastal investment.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/x-uTDOHlcu8TzaqmMUj6MQ/-/_1w6IUmDdh-bSwqqwqzzyvAgA/0f7ac5e4efbd579539c1f477a3bbf336420d137a.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/ODztLujlSpFG1OLpvLNeuw/-/_1w6IUmDdh-bSwqqwqzzyvAgA/436647d98370cc1713c628964492d31933de2c67.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/Wzjnvhqb8LUWdQew5H2OaQ/-/_1w6IUmDdh-bSwqqwqzzyvAgA/cd0fa0dd88afc86c1bb50a5abf19e2c116f655d8.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed House with Garden at Migaa Golf Estate",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/4-bed-house-with-garden-at-migaa-golf-estate-6775921",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 35000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kiambu Road Nairobi",
+            "neighborhood": "Kiambu Road Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2499761,
+            "longitude": 36.8470733,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya Police Directorate of Criminal Investigations Headquarters, Kiambu Road, Garden Estate sublocation, Roysambu location, Roysambu division, Kasarani, Nairobi, Zimmerman, Nairobi, 00100, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "DSQ",
+            "Balcony",
+            "Garden"
+        ],
+        "description": "Newly built 4-bedroom townhouse for sale in the prestigious Migaa Golf Estate, set within a secure gated community. Enjoy the exclusivity of estate living with excellent security, well-maintained roads, and access to world-class amenities. Ideal as a family home or investment.\n\nFeatures\n\nSpacious 4 bedrooms all ensuite\nAll rooms are well lit\nLounge that opens to a front garden\nSeparate dining area\nSemi open plan kitchen\nA servant quarter for one\nA family room that opens to a balcony\nBuilt on a eighth of an acre\n\nSelling at 35M. For viewing arrangements, please contact George ************",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/DyS2wzXBwsalGRj82JG-sg/-/_1w6IUmDdh-bSwqqzKvCi3AgA/31a42dcf2c0d9600e5c58a2a2bc211292ee4f3da.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/fK6EdDKeHMRFE5eM4zt-sg/-/_1w6IUmDdh-bSwqqzKvCi3AgA/8542f2f035c4beb5ea69e9990e6852689811020b.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/G4qqdR1Ge0dKWKiylmN-sA/-/_1w6IUmDdh-bSwqqzKvCi3AgA/2fc285bb3f8183709eadf7c8338f8c8af8b40c35.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "6 Bed Townhouse with En Suite in Lavington",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/6-bed-townhouse-with-en-suite-in-lavington-6742614",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 195000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Lavington Nairobi",
+            "neighborhood": "Lavington Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2739822,
+            "longitude": 36.781804,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya High School, Mijikenda Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Nairobi, 54102, Kenya"
+        },
+        "features": {
+            "bedrooms": 6,
+            "bathrooms": 6,
+            "parkingSpaces": null,
+            "sizeSqm": 670.0
+        },
+        "amenities": [
+            "Backup Generator",
+            "DSQ",
+            "Balcony",
+            "Elevator / Lifts",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Ultra-Luxury Living in Lavington - For Sale\n\nExperience refined elegance in these 6 Bedroom + DSQ villas, crafted for space, privacy, and prestige.\n\nKey Features & Amenities:\n\n✔️ Four-Level Villas (Basement, Ground, 1st & 2nd Floor)\n✔️ Approx. 7,200 sqft | 670 sqm\n✔️ 6 All En-Suite Bedrooms\n✔️ Fully Fitted Kitchen with Island\n✔️ Double-Volume Living Room with Automatic Curtains\n✔️ Family Room with Balcony + Private Office\n✔️ Safe Room & Intercom System\n✔️ Private Elevator in Each Villa\n✔️ Spacious Terrace & Landscaped Garden\n✔️ White Bar in the Master Bedroom\n✔️ Skylit Bathrooms\n✔️ 4-Car Basement Parking\n✔️ High-Capacity Power, Solar Heater & Full Backup Generator\n\nPrice: USD 1.5M Only\n\n📍 Location: Lavington",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/-RGAgTnW6y34qUQfbjqvyQ/-/_1w6IUmDdh-bQwu6gg1TzXCAA/9d8ac6ccbdccb23c89ea5e21a271e0d552356e93.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/DJfgYO_zV0S2K-3TCU5WAQ/-/_1w6IUmDdh-bQwu6gg1TzXCAA/bd1f9fbebf1ed7428a4367828035ba441ce59025.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/ybkHgL_5_fY1BSaPst5teQ/-/_1w6IUmDdh-bQwu6gg1TzXCAA/2470f411bf3a444f955df793c6145767090344ec.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "6 Bed Villa with En Suite in Watamu",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/6-bed-villa-with-en-suite-in-watamu-6774570",
+        "listingType": "For Rent",
+        "propertyType": "Villa",
+        "price": {
+            "amount": 78000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Watamu Kilifi",
+            "neighborhood": "Watamu Kilifi",
+            "city": "Nairobi",
+            "latitude": -3.35,
+            "longitude": 40.0166,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Watamu, Kilifi North, Kilifi, Kenya"
+        },
+        "features": {
+            "bedrooms": 6,
+            "bathrooms": 6,
+            "parkingSpaces": null,
+            "sizeSqm": 1200.0
+        },
+        "amenities": [
+            "Swimming Pool",
+            "Backup Generator",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Neverland Villas is one of Watamu's most established luxury properties, renowned for its exceptional guest experience and proven success as a premium short-term rental destination.\n\nSet within approximately 1,200 sqm of beautifully landscaped tropical gardens, the estate has been thoughtfully designed to combine privacy, comfort and effortless indoor-outdoor living. Its unique layout makes it equally perfect as an exclusive private residence, a multi-generational family retreat or a high-performing hospitality investment.\n\nThe property currently comprises two independent fully furnished villas, comfortably accommodating up to 10 guests, all centred around a private swimming pool and elegant outdoor entertaining areas.\n\nAn additional 100 sqm upper floor has already been constructed and is ready to be completed, increasing the accommodation to up to 14 guests while further enhancing both the property's value and its income potential.\n\nThe estate offers approximately 340 sqm of total built area and includes two fully equipped kitchens, spacious living areas, air-conditioned bedrooms, a private swimming pool, tropical gardens, an outdoor bar, private well, backup generator and secure private parking.\n\nNeverland Villas is a rare opportunity to acquire one of Watamu's most recognised private estates-a property that combines timeless tropical architecture, proven rental performance and outstanding future potential.\n\nPrivate viewings by appointment only.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/M2vKQwiHlKW2aJ6IizAyMg/-/_1w6IUmDdh-bTQMte0IDvXAAA/16c2f4a0a624c3c3e12dd0eb2d2d47b20d00100d.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/sVO27Jv4WL-d1g1wGkYa1A/-/_1w6IUmDdh-bTQMte0IDvXAAA/cf39cc1ac0344bc6c5651045b63b5954cb84165e.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/0s5IbT3Id_kvnHoQ92TjcQ/-/_1w6IUmDdh-bTQMte0IDvXAAA/a9142fafe4c5859058c33ca49dafc444b4a4ea55.png"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bed Townhouse with En Suite in Lavington",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-townhouse-with-en-suite-in-lavington-6763919",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 110000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Lavington Nairobi",
+            "neighborhood": "Lavington Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2739822,
+            "longitude": 36.781804,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya High School, Mijikenda Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Nairobi, 54102, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Garden"
+        ],
+        "description": "📍Lavington,Nairobi🇰🇪\n\nExecutive 5-Bedroom Townhouse for Sale\n\nExperience refined living in this exceptional 5-bedroom townhouse located in the prestigious Lavington neighborhood. Designed for modern family living, the home offers generous spaces, elegant finishes, and a serene, secure environment.\nKey Features:\n\n5 Spacious Bedrooms, All En-Suite\nExpansive Lounge Opening to a Private Garden\nElegant Dining Area with Garden Access\nFully Fitted Modern Kitchen with Premium Island\nPantry and Separate Laundry Area with External Kitchen\nFamily/TV Room\nPrivate Balconies for the Master Suite and One Additional Bedroom\nLuxurious Master Bathroom with Jacuzzi and Separate Shower\nAbundant Natural Lighting Throughout\nQuiet, Secure, and Prestigious Gated Community\n\nSelling at KSh 110 Million\n\nFor more details and viewing contact us on **********",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/P68-R1fX4h6z8asMO0-9cw/-/_1w6IUmDdh-bTQ1MwytaA8FQA/0dcb9abe33c0b8ed08f89dad1e384cd7b85078ae.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/kDb6Tq3XW_18etdz2a3SHA/-/_1w6IUmDdh-bTQ1MwytaA8FQA/0e9b2f252d508429c4e34f229c07ac302051da69.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/zC-rG2iLxUYjA8eDuXQhdg/-/_1w6IUmDdh-bTQ1MwytaA8FQA/914d530f135c7743c003269e5636570013769b60.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "3 Bed Townhouse with En Suite at Dagoretti Road",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/3-bed-townhouse-with-en-suite-at-dagoretti-road-6579765",
+        "listingType": "Unknown",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 22500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Gikambura Kiambu",
+            "neighborhood": "Gikambura Kiambu",
+            "city": "Nairobi",
+            "latitude": -1.2833,
+            "longitude": 36.6333,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Gikambura, Karai ward, Kikuyu, Kiambu, 00109, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "parkingSpaces": null,
+            "sizeSqm": 223.0
+        },
+        "amenities": [
+            "Borehole",
+            "DSQ",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Atana Terraces, Gikambura is an exclusive boutique townhouse development designed for discerning homeowners who value privacy, space, and refined living within a serene natural setting. Comprising only nine semi-detached four-bedroom townhouses, this intimate community offers a rare balance of architectural elegance, functionality, and breathtaking scenery set against the sweeping vistas of the Ngong Hills and the Nairobi skyline.\nThoughtfully planned for modern family living, each home is bathed in natural light, with large French windows that frame panoramic views and seamlessly connect indoor spaces to the outdoors. The interiors are airy, generously proportioned, and meticulously finished, delivering both comfort and sophistication in equal measure.\nResidences\nEach townhouse features:\n• Three spacious bedrooms, designed for comfort and privacy\n• Spacious bedrooms all ensuite\n• A separate dining area\n• Fully fitted wardrobes with quality joinery\n• Master bedroom on its own level with a terrace and walk in closet\n• A bright, expansive living and dining area ideal for family life and entertaining\n• A modern kitchen complemented by a dedicated cleaning yard with provisions for a washing machine and dryer\n• Servant's quarter (DSQ) for added convenience\n• A rooftop terrace with a kitchen and barbecue area\n• Solar water heating\n• Master bedroom on its own level with a terrace and walk in closet\n• A private yard and garden, perfect for relaxation, children's play, or outdoor hosting\nEstate Features\nAtana Terraces has been carefully curated to enhance everyday living:\n• Cabro-paved internal roads and elegant street lighting throughout the estate\n• Permanent on-site borehole water, ensuring reliability year-round\n• Common area services for a well-managed, orderly environment\n• Ample parking for two cars per unit\n• Secure, quiet surroundings within a leafy and prestigious suburb\nLocation & Lifestyle\nSituated in Gikambura, one of Nairobi's most sought-after residential encl",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/FG-huye0GgeWsD3NYaxl3w/-/_1w6IUmDdh-bSwqqyqzNzUAgA/4e9e1019c54efc539683eb293fea92cf5ffc7ce6.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/JASMA06did8OK-Oze3D4zA/-/_1w6IUmDdh-bSwqqyqzNzUAgA/1cd812cc02d7d01938f46931f409c7ea342d4e43.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/k0HwzOATl3-H7gFSj9qFPg/-/_1w6IUmDdh-bSwqqyqzNzUAgA/5a8e276f175835557d8ed2c48d1bad6398eb6d52.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "3 Bed Townhouse with En Suite at Mombasa Road",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/3-bed-townhouse-with-en-suite-at-mombasa-road-6705811",
+        "listingType": "Unknown",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 18000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Athi River Eastern",
+            "neighborhood": "Athi River Eastern",
+            "city": "Nairobi",
+            "latitude": -1.4575405,
+            "longitude": 36.9792001,
+            "location_accuracy": "Unknown"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "3-Bedroom semi-detached Mansionate kshs 18.18m installment.(standard)\n3-Bedroom semi-detached Mansionate kshs 20.28m(super)\n3-Bedroom Mansionate-22.48m.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/6wLp4hyDUS88q7Mmx4TezQ/-/_1w6IUmDdh-bSwIis9z9wkDwA/2778c3ec489026a33d1522101665bc7254af4aee.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/Oiq-EapXbtVQcHJyF_KKMQ/-/_1w6IUmDdh-bSwIis9z9wkDwA/ce45191f747bdad2d8eee6eae54c47764d9603cf.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/1nqKNkBPHh4M82U8B4LFWQ/-/_1w6IUmDdh-bSwIis9z9wkDwA/12c3cfb5e2f2d63849845ed4db2e76f24deda8a6.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "3 Bed Villa with En Suite at Burguret",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/3-bed-villa-with-en-suite-at-burguret-6680533",
+        "listingType": "Unknown",
+        "propertyType": "Villa",
+        "price": {
+            "amount": 33000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nanyuki Laikipia",
+            "neighborhood": "Nanyuki Laikipia",
+            "city": "Nairobi",
+            "latitude": 0.012019,
+            "longitude": 37.0765773,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya Women Finance Bank, Nyeri-Nanyuki Road, Nanyuki, Laikipia East, Laikipia, 10400, Kenya"
+        },
+        "features": {
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "DSQ",
+            "Garden"
+        ],
+        "description": "Discover this beautifully maintained 3-bedroom home in Burguret, one of Nanyuki's most sought-after locations, just under 200m from the tarmac and near Aberdare Royal Cottages & the airstrip.\n\nSet on slightly under half an acre, this property offers the perfect blend of serene countryside living and high-quality finishes.\n\n✨ Property Highlights:\n• 3 spacious bedrooms\n• German-fitted kitchen & premium imported finishes\n• Well-insulated walls for comfort in all seasons\n• 1-bedroom guest house\n• Large outdoor store\n• Staff quarters for 2\n• Well-kept garden in pristine condition\n\nSelect furniture pieces available upon request.\n\nWhether you're looking for a family home, holiday retreat, or investment in Nanyuki's growing market, this property ticks all the boxes.\n\n💰 Asking Price: KSh 33M\n\n📞 ************\n\n#nanyuki #burguret #housesforsale #kenyarealestate #luxuryliving",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/F5CZKQGR2vsP4ttuIWJ9cw/-/_1w6IUmDdh-bSwIiu9Kts8DwA/f852526bd7e33ca4667f5fbf611e9d1621eeff5b.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/agMo-qimDEh9Whaf6ub3sg/-/_1w6IUmDdh-bSwIiu9Kts8DwA/c5516925013c6567c7cf5b09f0b3372dc756a428.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/tgX-EcOYdqjM-Js0gPz0dg/-/_1w6IUmDdh-bSwIiu9Kts8DwA/b52428d90f9fd23c1f6dedfd959820701d4fb9c7.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bed Townhouse with En Suite at Kileleshwa",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-townhouse-with-en-suite-at-kileleshwa-6772412",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 72500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Kileleshwa Nairobi",
+            "neighborhood": "Kileleshwa Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2829581,
+            "longitude": 36.7866339,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya Power Sub Station Kileleshwa, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "parkingSpaces": null,
+            "sizeSqm": 550.0
+        },
+        "amenities": [
+            "DSQ",
+            "Balcony",
+            "Parking",
+            "Garden"
+        ],
+        "description": "5-bedroom all en-suite townhouses with dsq for sale in kileleshwa - from kes72.5m\nan exclusive collection of 6 elegant townhouses in kaputei gardens, kileleshwa, set on approximately 0.75 acres.\n-`\n\nwith title\nkey features\n5 bedrooms, all en-suite\nparquet flooring in all bedrooms and lounge\nspacious lounge with separate dining area\nlarge closed kitchen with pantry\ndsq\nguest bedroom on the ground floor\nguest cloakroom\nmaster suite with balcony, bathtub, and shower cubicle\n5th en-suite bedroom on the top floor\nample water storage\nparking\nprivate garden\na rare opportunity to own a refined family home in one of kileleshwa's most sought-after address.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/_6a67lvs7UMIPJf5gGPdSw/-/_1w6IUmDdh-bQw19SsKteyCgA/8236742a04639e55b2730573c5cbb5fe53dcecb4.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/cCfFx38iDNM-B63P0Jcq_Q/-/_1w6IUmDdh-bQw19SsKteyCgA/fcfdb1fed88a0480cdf6e8d03b59db41ec9e340c.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/JQYPYCwJb2yf89Qh_HtNdg/-/_1w6IUmDdh-bQw19SsKteyCgA/4d0357399b8828df53c920db6ed5067d204b3f7f.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Bed Townhouse with En Suite in Runda",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/4-bed-townhouse-with-en-suite-in-runda-6760170",
+        "listingType": "Unknown",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 93000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Runda Nairobi",
+            "neighborhood": "Runda Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2059819,
+            "longitude": 36.7929592,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "THIKA MOTOR DEALERS (TMD KENYA), Northern Bypass, Karura sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 43563, Kenya"
+        },
+        "features": {
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "Experience refined family living in this beautifully designed 4-bedroom all en-suite residence, nestled within a secure and serene gated community. Sitting on a generous ½-acre plot, this home offers the perfect blend of space, comfort, privacy, and modern convenience.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/7V0kxWmmKPJ2cXQ-Zjx1YQ/-/_1w6IUmDdh-bTQMtfUPNW0HAA/a76b791648b7594e83e311334d1638c4eed78da0.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/n57akx7FNTmLwvIks1OBzA/-/_1w6IUmDdh-bTQMtfUPNW0HAA/46559d7ca6772a55488e46e50e68b3c51bdcb752.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/Rvs8xxKgonJcJr_UhcrVTg/-/_1w6IUmDdh-bTQMtfUPNW0HAA/022225af0d78dbdccbb7ff8c0b2bc1580f141fd8.png"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bed House with En Suite in Runda",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-house-with-en-suite-in-runda-6696532",
+        "listingType": "For Rent",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 580000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Runda Nairobi",
+            "neighborhood": "Runda Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2059819,
+            "longitude": 36.7929592,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "THIKA MOTOR DEALERS (TMD KENYA), Northern Bypass, Karura sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 43563, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Borehole",
+            "Parking",
+            "Garden"
+        ],
+        "description": "RUNDA\n\n5 Bedroom Standalone House To Let\nAll rooms are ensuite\n\nRent: USD 4,500/month\n\n✨ Features:\nNewly renovated with modern finishes\n• All bedrooms en-suite\n• Spacious living room with fireplace\n• Mature private garden\n• Full power backup\n• Borehole water supply\n• Electric perimeter fence\n• Quiet, secure neighborhood\nParking & Extras: • 2 lockable garages\n• 2 shaded parking spaces\n• 3 roomed Designated Servants quarter\nClose proximity to International schools, Restaurants, Supamarkets, hospitals",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/d13J43uBJKsD-sEx9JvXGg/-/_1w6IUmDdh-bSwqCrPpCDVEgA/fce6aabe1d669137dbe0f2427f0d706e2971cdce.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/WdxEixxeWARYNWkf76Qedw/-/_1w6IUmDdh-bSwqCrPpCDVEgA/73fad54399b0012e14af64cfe717b4ac0b30514f.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/tCno0EbRQmwBB1C5LHW0sg/-/_1w6IUmDdh-bSwqCrPpCDVEgA/8417d76f5c81b584218c2d70ef294ee3e1e823e8.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bed Townhouse with En Suite in Lavington",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/5-bed-townhouse-with-en-suite-in-lavington-6771010",
+        "listingType": "For Rent",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 270000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Lavington Nairobi",
+            "neighborhood": "Lavington Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2739822,
+            "longitude": 36.781804,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "Kenya High School, Mijikenda Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Zimmerman, Nairobi, 54102, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "DSQ",
+            "Parking",
+            "Garden"
+        ],
+        "description": "5 Bedroom House for Rent in Lavington - KSh 270,000 Per Month\n\nSpacious 5 Bedroom House for Rent in Lavington, Nairobi\n\nDiscover comfortable family living in the prestigious suburb of Lavington. This elegant 5-bedroom house offers generous living spaces, privacy, and a secure environment, making it an excellent choice for families, diplomats, and expatriates seeking a prime Nairobi address.\n\nProperty Features\n\n5 spacious bedrooms\nMaster bedroom ensuite\nLarge living room with separate dining area\nModern kitchen with ample storage\nFamily/TV room\nDomestic Staff Quarters (DSQ)\nPrivate garden\nAmple parking space\nLaundry area\nBackup water supply\nSecure and quiet neighborhood\n24-hour security\n\nPrime Lavington Location\n\nConveniently located close to:\n\nInternational schools\nShopping malls and supermarkets\nHospitals and healthcare facilities\nRestaurants and entertainment hubs\nEasy access to Westlands, Kilimani, Karen, and Nairobi CBD\n\nRent\n\n💰 KSh 270,000 per month\n\nThis beautiful home combines space, convenience, and security in one of Nairobi's most sought-after residential neighborhoods.\n\nIdeal For\n\nFamilies\nDiplomats\nExpatriates\nCorporate executives\n\nBook a viewing today and secure this exceptional 5-bedroom home in Lavington.\n\n5 bedroom house for rent in Lavington, house to let in Lavington Nairobi, Lavington rental homes, family house for rent Nairobi, 5 bedroom villa for rent Lavington, house with DSQ Lavington, executive home to let Nairobi, luxury house for rent Lavington, BuyRent Kenya properties, homes for rent in Nairobi.\n\n5 Bedroom House for Rent in Lavington | KSh 270,000 | BuyRent Kenya\n\nSpacious 5-bedroom house for rent in Lavington, Nairobi at KSh 270,000 per month. Features DSQ, private garden, ample parking, and secure surroundings. Ideal for families and expatriates. Contact **********",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/XHL1XB1WpHPW3d6J1pJqMQ/-/_1w6IUmDdh-bSwqCqvoKDcAgA/8a77ae44c7aa78e58054985c298d07f19923fab0.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/llViQ8-ubvuSoE4Vb_YtGw/-/_1w6IUmDdh-bSwqCqvoKDcAgA/1d9774cebb79350aa34d6443ba0933f42e5287e5.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/NZLBHnOz1vrQ4iX9XckAbQ/-/_1w6IUmDdh-bSwqCqvoKDcAgA/33ec6dd805115cfb33747125f77908bc018fef0c.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "2 Bed Townhouse with En Suite at Peponi Rd",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/2-bed-townhouse-with-en-suite-at-peponi-rd-6702572",
+        "listingType": "For Rent",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 195000000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Spring Valley Nairobi",
+            "neighborhood": "Spring Valley Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2601779,
+            "longitude": 36.7969005,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "International Alert Kenya, 22, School Lane, Parklands location, Parklands/Highridge ward, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 00100, Kenya"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Borehole",
+            "Backup Generator",
+            "Parking",
+            "Garden"
+        ],
+        "description": "Available for rent on Peponi rd - Spring valley.\nUnfurnished\nNaturely 2-Bedroom guestwing,all ensuite on Peponi rd-Spring Valley.\nDiscover this spacious and charming 2-bedroom, 2-bathroom Guest wing nestled within a secure gated community in the serene Spring Valley- Peponi rd. Overlooking karura forest giving it Excellent views through the windows.\nAnd very close to Westlands shopping malls,village markets.Schools like international school and Braeburn etc.\nFeatures:\n• Bright and airy bedrooms\n• private garden - perfect for outdoor relaxation\n• Pet-friendly environment\n•Ample parking for both residents and .\n\nAmenities Included:\nSecurity, gardening, garbage collection, borehole water, and full backup power\nIt is a UN/EU approved compound.\nSpring valley, Nairobi, Kenya\n\nRent : $1500month (inclusive of service charges)\nOccupation: 1st May 2026.",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/jaUtf6gVrJYU6HqjaYtzLw/-/_1w6IUmDdh-bSwPDXdMis9GwA/73d0fb14a4564756939527886a08ccfbeffbf5a3.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/t8D-M69yN0PVdspMipfgtA/-/_1w6IUmDdh-bSwPDXdMis9GwA/72525eaf699ddf4dbbc1e4e9a9c56a8eccededc0.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/_bEZTFNXEF2fx3C_Mi0_MQ/-/_1w6IUmDdh-bSwPDXdMis9GwA/edc9e6869b64c991b2c79a9c3819044d41cd8bcf.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "2 Bed House with En Suite at Muthaiga",
+        "provider": "PigiaMe",
+        "url": "https://www.pigiame.co.ke/listings/2-bed-house-with-en-suite-at-muthaiga-6768366",
+        "listingType": "For Rent",
+        "propertyType": "Unknown",
+        "price": {
+            "amount": 130000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Muthaiga Nairobi",
+            "neighborhood": "Muthaiga Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.2590216,
+            "longitude": 36.8135607,
+            "location_accuracy": "Approximate_Radius",
+            "geocoded_address_osm": "BAPS Shayona Restaurants, Muthaiga, Nairobi, Kusi Lane, Highridge sublocation, Highridge location, Highridge division, Westlands, Nairobi, Zimmerman, Soko ya Mawe, Nairobi, 00606, Kenya"
+        },
+        "features": {
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Backup Generator",
+            "Garden"
+        ],
+        "description": "Furnished 2 BR house to let in New Muthaiga\nLocated within a serene gated community close to the karura forest.\n\nFeatures include\n-2 Bedrooms\n-2 Bathrooms\n-Open plan kitchen\n-Shared garden\n-Generator",
+        "images": [
+            "https://i.roamcdn.net/sdc-bn/default/58317cd236f36059667cd6d7adf4ef45/931e6375d92550d71da350cecb5212b3/-/cde-bn-production/client-8/GCNPPL3u2rnGIRTMgSyjJLDr4JxXNxguGwucOMPS.png",
+            "https://i.roamcdn.net/sdc-bn/default/ac749424271d39f8d3a2015f1b4c92d1/26dc04dac6b73c820cd36cca61c03d4b/-/cde-bn-production/client-8/uXd9NwVjkGJRxd64Rt7qmRRUwjCk94yrtIddAMNP.png",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/-_jDYmsUghO9BaexBiw89A/-/_1w6IUmDdh-bTQrCIv1aLQHAA/be463f41d7407978064ab6bf82e2db33f96eb6d1.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/FiAPRf4xNca5vhCrybAgUQ/-/_1w6IUmDdh-bTQrCIv1aLQHAA/4df5a8bd0cd458ca7f8f178b06fb3518e6d1e910.jpg",
+            "https://i.roamcdn.net/hz/pi/listing-thumb-543w/YT4Y2AUlNVpcxHed0blE0Q/-/_1w6IUmDdh-bTQrCIv1aLQHAA/0c7936a5d74a85ccc71838c033e0ad8de584cc0c.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PigiaMe",
+            "phone_numbers": [],
+            "emails": [],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Unverified_Classified",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "50 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-ngelani-katani-syokimau-mulolongo-machakos-9BLXK",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 500000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 202343.0
+        },
+        "amenities": [],
+        "description": "50 acres of land suitable for a quarry are available in Ngelani, Katani.\nThis rectangular parcel of land is located next to a river and is rich in murram and stones.\nMain electricity is nearby, making it easy to connect.\nThe access road to the property is an all-weather road, and the land is freehold.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/50-acres-of-land-for-sale-in-ngelani-katani-ideal-for-quarry-rzVETgBqjkklBcoumYLc.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bedroom House",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/5-bedroom-houses-for-sale-off-pan-african-insurance-avenue-runda-nairobi-8BLXK",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 7,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Security",
+            "Parking",
+            "Garden"
+        ],
+        "description": "A 5-bedroom, double-storey, standalone house with all ensuite bathrooms is available for sale in Runda. The property sits on a 0.5-acre plot.\n\n**Ground Floor:**\n\n- Entrance hall\n- Bright and spacious sunken lounge with a veranda that opens to the garden\n- Modern kitchen featuring an island and a pantry\n- Separate dining room\n- Guest bedroom equipped with in-built wardrobes and an ensuite bathroom\n- Study/office room\n- Cloakroom\n\n**Level 1:**\n\n- Main bedroom with a walk-in closet, and an ensuite bathroom,\n- Third, fourth, and fifth bedrooms, each with in-built wardrobes and ensuite bathrooms\n- Family/TV room\n- Kitchenette\n\n**Additional Features:**\n,\n- Staff accommodation for 3, complete with facilities\n- Washing area\n- Solar water heating system\n- Garden\n- Parking space\n- Guard house\n- Perimeter wall with an electric fence\n\nThis property combines luxury and convenience in a desirable location.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/5-bedrooms-house-for-sale-in-runda-umqFUOzmzszha8pm9IrP.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "52 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-off-ruiru-kamiti-rd-ruiru-ruiru-kiambu-9BLXJ",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 210436.72
+        },
+        "amenities": [],
+        "description": "52 acres of land available for development near Tatu City.\nThe land is rectangular and consists of red soil.\nElectricity lines are adjacent to the property, facilitating easy connectivity.\nThe access road is paved with tarmac.\nThis land is ideal for housing projects, subdivisions, or institutional use.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/52-acres-of-land-for-sale-in-ruiru-ky0lrT7c2jdrxJIJnWNC.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "25 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/commercial-land-for-sale-moi-south-lake-rd-naivasha-east-nakuru-8BLXJ",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 700000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 101171.5
+        },
+        "amenities": [],
+        "description": "25 acres of land for redevelopment with approximately 436 metres of lake frontage\nIt is a rectangular flat land\nElectricity is connected to this property\nThe immediate road is tarmacked\nIt is a leasehold property with a term of 50 years from 2001",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/25-acres-of-land-for-sale-at-lake-naivasha-mz57dyRYqUttK1qMSxk6.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "0.329 Acre Plot",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-off-school-lane-westlands-area-westlands-nairobi-4BLXA",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 175000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 1331.42
+        },
+        "amenities": [],
+        "description": "A 0.329-acre plot for development is available for sale along School Lane in Westlands. It is a rectangular flat plot. Electricity and water are already connected to this property. The road leading to this plot is a cabro paved road. This plot is ideal for the development of apartment blocks",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/0329-acre-plot-in-westlands-lS5EtoELFIkjMniuhRZY.jpg",
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/medium/0329-acre-plot-in-westlands-lS5EtoELFIkjMniuhRZY.jpg",
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/medium/021-acre-plot-for-sale-kabarnet-rd-dlYLtMrnYqdIhNtO4hJZ.jpg",
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/medium/0227-acre-property-for-sale-in-ngara-1ylxwRqtPpIeo8epuOuT.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1 Acre Plots In A Gated Community",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/residential-land-for-sale-forest-edge-rd-karen-nairobi-8BLWZ",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 85000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 4046.86
+        },
+        "amenities": [
+            "Borehole"
+        ],
+        "description": "1-acre plots are available for development in a gated community located near the Bomas of Kenya in Karen\nThey are rectangular flat plots\nElectricity is already at the property\nBorehole water is available at the property\nThe perimeter wall surrounds the gated community\n24-hours security",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/1-acre-plots-in-a-gated-community-in-karen-Z5vrlV4Mt88IQEhKT4CH.jpeg",
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/medium/1-acre-plots-in-a-gated-community-in-karen-Z5vrlV4Mt88IQEhKT4CH.jpeg",
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/medium/0227-acre-property-for-sale-in-ngara-1ylxwRqtPpIeo8epuOuT.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4.52 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/commercial-land-for-sale-kutch-rd-syokimau-mulolongo-machakos-4BKMT",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 248000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 18291.81
+        },
+        "amenities": [],
+        "description": "4.52 acres of commercial or industrial land for development fronting two roads in Mlolongo.\nIt is a rectangular flat land with a perimeter wall.\nElectricity lines pass next to this land for easy connection.\nThe immediate roads are tarmac roads.\nIt is a leasehold land.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/452-acres-of-land-for-sale-in-mlolongo-9UuiyJYTBtrLaMSS5N7z.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "4 Acres Of Land For Sale In Mushroom Gardens Estate",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/residential-land-for-sale-mushroom-gardens-estate-kiambu-kiambu-3BKFW",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 300000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 16187.44
+        },
+        "amenities": [
+            "Garden"
+        ],
+        "description": "4 acres of land with mature trees available for development in Mushroom Gardens Estate. It is a rectangular, slightly sloppy land. Electricity and water are connected to this property. The road leading to the land is a cabro road.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/4-acres-of-land-for-sale-in-mushroom-gardens-estate-ir9yiTgCOScZQj7YJIit.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "1/4 Acre Fully Serviced Plots",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/residential-land-for-sale-ruiru-kamiti-rd-ruiru-ruiru-kiambu-8BKER",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 22500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": null
+        },
+        "amenities": [],
+        "description": "1/4-acre fully serviced plots available in a controlled gated community in Ruiru.\n\nAvailable amenities include:\n\n- Tarmac roads\n- Drainage system\n- Sewer line\n- Fibre optic internet\n- Water supply\n- Electricity\n- 24-hour security",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/14-acre-fully-serviced-plots-for-sale-in-ruiru-ufrK9HLcvKY9rBaVgEaz.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Acre Beach Plot",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-kikambala-beach-kikambala-kilifi-3BKDH",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 130000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 20234.3
+        },
+        "amenities": [],
+        "description": "5-acre beach plot with 96 metres of ocean frontage for development in Kikambla.\nThe plot is rectangular and has a slight slope that descends toward the ocean.\nElectricity and water are nearby for easy connection.\nThe immediate road is an all-weather road.\nIt is a leasehold plot with a term of 99 years from 1982.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/5-acre-beach-plot-for-sale-in-kikambala-BqCcQQnVYsuDHadyTNqF.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "A Commercial Townhouse",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/office-space-commercial-properties-for-sale-riverside-drive-riverside-nairobi-2BKDH",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": 6,
+            "sizeSqm": null
+        },
+        "amenities": [
+            "Parking"
+        ],
+        "description": "A commercial townhouse is available for rent in a compound of 7 units in Riverside.\n\nFeatures:\n\n12 working stations\nKitchen\nWashrooms\nInternet\n6 parking\nPerimeter wall\n24-hour security",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/a-commercial-townhouse-for-sale-in-riverside-XGjfxoeC4hxJdNVtWLEV.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "6.1 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-sabaki-athi-river-machakos-4BFNQ",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 110000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 24685.85
+        },
+        "amenities": [],
+        "description": "6.1 acres of land located approximately 2.8 km from Mombasa Road\nThis land is available as a whole parcel or in a 3-acre block\nIt is a rectangular flat land fronting two roads\nThe main electricity is next to this land for easy connection\nThe road leading to this land from Mombasa Road is an all-weather road\nIt is a leasehold with a term of 99 years from 1993",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/61-acres-of-land-for-sale-in-sabaki-athi-river-BG7P92IJx4tU0dRIptcJ.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "18 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-off-magadi-rd-ongata-rongai-kajiado-1BFLV",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 540000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 72843.48
+        },
+        "amenities": [],
+        "description": "18 acres of land near Africa Nazarene University, approximately 3.8 km from Magadi Road.\nThis is a rectangular land with 90% flat terrain.\nThe main electricity is next to this land for easy connection.\nThe immediate road is an all-weather road.\nIt is a freehold land.\nThis land is suitable for real estate or institutional purposes.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/20-acres-of-land-for-sale-in-ongata-rongai-X9vtHtgK9LLKJic9OKGz.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "41 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/agricultural-land-for-sale-timau-meru-meru-9BFLK",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 82000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 165921.26
+        },
+        "amenities": [],
+        "description": "41 acres of land approximately 2 km from Meru-Nanyuki Road\nIt is flat rectangular land\nElectricity is next to this land for connection\nThe access road to this land is an all-weather road\nIt is a freehold land",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/41-acres-of-land-for-sale-in-timau-b3VyPVZzDlmOcFXfYRSU.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "0.21 Acre Plot",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-kabarnet-rd-ngong-rd-nairobi-8BFLK",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 155000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 849.84
+        },
+        "amenities": [],
+        "description": "The property is a 0.21-acre plot located along Kabarnet Road off Ngong Road.\nIt is a rectangular, flat plot.\nThe plot has already been excavated and is ready for\ndevelopment.\nElectricity is readily available next to the plot for easy connection.\nNairobi water pipes are also available next to the plot for connection.\nThe immediate road is a tarmac road.\nThe plot is leasehold with a term of 99 years from 1967.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/021-acre-plot-for-sale-kabarnet-rd-dlYLtMrnYqdIhNtO4hJZ.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/agricultural-land-for-sale-off-kiserian-isinya-rd-isinya-isinya-7BFLK",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 18500000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 20234.3
+        },
+        "amenities": [],
+        "description": "There are 5 acres of flat rectangular land in the Kipeto Area, 2.5 km off the Kiserian-Isinya Road.\nThe electricity lines run adjacent to the land, making it easy to connect.\nAccess to the land is via an all-weather road from the Kiserian-Isinya Road.\nAdditionally, this is a freehold land.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/5-acres-of-land-for-sale-in-kisaju-mRJOOidKKnWfFgySof3r.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "23 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-off-mombasa-rd-athi-river-area-athi-river-machakos-5BEXV",
+        "listingType": "For Sale",
+        "propertyType": "Land",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 93077.78
+        },
+        "amenities": [],
+        "description": "23 acres of land for development, located only 700 meters from Mombasa Road, are available for sale.\nThis land is rectangular in shape and part of it is fenced with a perimeter wall\nElectricity and water are next to this land for easy connection\nThe road leading from Mombasa Road is an all-weather road\nIt is a leasehold land with a term of 99 years from 1984\nThis land is suitable for various purposes such as residential housing and institutional use.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/23-acres-of-land-for-sale-in-athi-river-OFKiKooo8DkdeuwCyDJQ.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "2.5 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-off-thika-super-highway-ruiru-ruiru-kiambu-1BEUV",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 150000000,
+            "currency": "KSh",
+            "period": "Monthly"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 10117.15
+        },
+        "amenities": [],
+        "description": "2.5 acres of land available for development located behind NIBS College.\nIt is a rectangular, flat piece of land.\nThe main electricity lines are passing next to this land for easy connection.\nRuiru water pipes are also located next to this land for easy connection.\nThe main sewer line is nearby for connection.\nThe immediate road is a tarmac road.",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/25-acres-of-land-for-sale-in-ruiru-ERdWNAZFGkDE9pJteePP.jpeg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "15 Acres Of Land",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/land-for-sale-kinangop-rd-naivasha-east-nakuru-4BEUM",
+        "listingType": "For Sale",
+        "propertyType": "Apartment",
+        "price": {
+            "amount": 270000000,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": null,
+            "bathrooms": null,
+            "parkingSpaces": null,
+            "sizeSqm": 60702.9
+        },
+        "amenities": [],
+        "description": "15 acres of land with approximately 275 metres of Kinangop Road frontage and just 200 metres from the Nakuru-Nairobi Highway\nIt is a rectangular, flat land\nThe main electricity is next to this land for easy connection\nThe immediate road is a tarmac road\nIt is a leasehold land with a term of 99 years from 1992",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/15-acres-of-land-for-sale-in-naivasha-hBqQtDDWiC229TtW7cEJ.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    },
+    {
+        "title": "5 Bedroom Townhouses",
+        "provider": "PropertyPro",
+        "url": "https://www.propertypro.co.ke/property/5-bedroom-townhouse-for-sale-syokimau-mulolongo-machakos-6AKVX",
+        "listingType": "For Sale",
+        "propertyType": "Townhouse",
+        "price": {
+            "amount": 0,
+            "currency": "KSh",
+            "period": "Total"
+        },
+        "location": {
+            "raw_text_location": "Nairobi",
+            "neighborhood": "Nairobi",
+            "city": "Nairobi",
+            "latitude": -1.302398,
+            "longitude": 36.8288509,
+            "location_accuracy": "City_Level_Only",
+            "geocoded_address_osm": "Nairobi, Zimmerman, Soko ya Mawe, Nairobi, Kenya"
+        },
+        "features": {
+            "bedrooms": 5,
+            "bathrooms": 4,
+            "parkingSpaces": null,
+            "sizeSqm": 20234.3
+        },
+        "amenities": [
+            "Borehole",
+            "Balcony",
+            "Security",
+            "Parking"
+        ],
+        "description": "5 bedrooms townhouse with 4 bathrooms on three levels in a compound of 92 units sitting on 5 acres of land\n\nGround floor\n\nBright, spacious living room cum dining area\nClosed-fitted kitchen with a pantry\nGuest bedroom with in-built wardrobes and en-suite\nCloakroom\n\nLevel 1\n\nMain bedroom with large in-built wardrobes, en-suite bathroom and a balcony\nThe third and fourth bedrooms with in-built wardrobes and they share a bathroom\n\nLevel 2\n\nFifth bedroom with en-suite bathroom\n\nOthers include\n\nStaff accommodation for 1\nLaundry area\nSolar water heater\nParking\nKids play area in the community\nMavoko water and borehole water\nPerimeter wall with electric fence\n24-hour security",
+        "images": [
+            "https://s3.us-east-2.amazonaws.com/images.propertypro.africa/large/5-bedrooms-townhouses-in-syokimau-7D0Ak0msSaakRIM63TyD.jpg"
+        ],
+        "contact_details": {
+            "agency_name": "PropertyPro",
+            "phone_numbers": [],
+            "emails": [
+                "moji@propertypro.co.ke"
+            ],
+            "whatsapp_link": ""
+        },
+        "source_trust_level": "Verified_Agency",
+        "cross_reference_inconsistencies": []
+    }
+]
